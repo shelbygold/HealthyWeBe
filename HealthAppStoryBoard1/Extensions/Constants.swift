@@ -6,7 +6,7 @@
 //  Copyright © 2019 shelby gold. All rights reserved.
 //
 
-import UIKit.UIColor
+import UIKit
 
 struct  taskTypeConstants {
     static let fitnessTasks = "fitness"
@@ -14,8 +14,47 @@ struct  taskTypeConstants {
     static let nutritionTask = "nutrition"
     static let sleepTask = "sleep"
 }
-extension UIColor {
-    struct healthColors {
+struct healthColors {
+    static let myGreen = UIColor.init(named: "HealthyGreen")
+    static let myOrange = UIColor.init(named: "HealthyOrange")
+    static let myPurple = UIColor.init(named: "HealthyPurple")
+    static let myRed = UIColor.init(named: "HealthyRed")
+    static let myBlack = UIColor.init(named: "HealthyBlack")
+    static let myDarkGray = UIColor.init(named: "HealthyDarkGray")
+    static let myGray = UIColor.init(named: "HealthyGray")
+    static let myWhite = UIColor.white
+}
+struct  spacingConstants {
+    static let outerSpacing: CGFloat = 16
+    static let verticalSpacing: CGFloat = 8
+}
+
+extension UIView {
+    func circleRadius() {
+        self.layer.borderWidth = 2
+        self.layer.masksToBounds = false
+        self.layer.borderColor = healthColors.myBlack?.cgColor
+        self.layer.cornerRadius = self.frame.height/2
+        self.clipsToBounds = true
         
+    }
+    func addCornerRadiusImage(_ radius: CGFloat){
+        self.layer.masksToBounds = true
+        self.layer.cornerRadius = radius
+    }
+    func addShadowImage(_ shadowRadius: CGFloat, shadowOpacity: Float) {
+        self.layer.shadowColor = healthColors.myGray?.cgColor
+        self.layer.shadowOpacity = shadowOpacity
+        self.layer.shadowOffset = CGSize.zero
+        self.layer.shadowRadius = shadowRadius
+    }
+    
+}
+extension Date {
+    func stringWith(dateStyle: DateFormatter.Style, timeStyle: DateFormatter.Style) -> String {
+        let formatter = DateFormatter()
+        formatter.dateStyle = dateStyle
+        formatter.timeStyle = timeStyle
+        return formatter.string(from: self)
     }
 }

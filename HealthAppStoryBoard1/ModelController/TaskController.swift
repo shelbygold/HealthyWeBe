@@ -31,36 +31,32 @@ let dbRef = Firestore.firestore().collection("tasl")
                 print("💩🧜🏻‍♂️ 🧜🏻‍♂️error in \(#function) ; \(error) ; \(error.localizedDescription)")
                 return
         }
-
-        
     }
-    
-//    //Read
-//    func retieveTask(groupID: String){
-//        let retrievedTasks = Firestore.firestore().collection("task")
-//        
-//        retrievedTasks.whereField("Task", isEqualTo: groupID).getDocuments { (querySnapshot, error) in
-//            if let error = error {
-//                print("Error getting documents: ]\(error)")
-//            } else {
-//                for document in querySnapshot!.documents {
-//                    print("\(document.documentID) => \(document.data())" )
-//                }
-//            }
-//        }
-//    }
-//    
-//    func fetchDocuments(groupID: String){
-//        let documents = Firestore.firestore().collection(groupID)
-//        
-//        documents.getDocuments() { (QuerySnapshot, err) in
-//            if let err = err {
-//                print("error getting documents: \(err)")
-//            } else {
-//                for document in QuerySnapshot!.documents {
-//                    print("\(document.documentID) => \(document.data())")
-//                }
-//            }
-//        }
+    }
+    func fetchTasksFor(group: Group, completion: @escaping (Bool) -> Void) {
+        let dispatchGroup = DispatchGroup()
+        var returnTasks: [Task] = []
+        group.taskRef.forEach { (documentRef) in
+            dispatchGroup.enter()
+            documentRef.getDocument(completion: { (snapshot, error) in
+                if let error = error {
+                    print("💩🧜🏻‍♂️ 🧜🏻‍♂️error in \(#function) ; \(error) ; \(error.localizedDescription)")
+                    completion(false)
+                    return
+                }
+                
+                guard let dictionary = snapshot?.data() else { return }
+                
+                let newTasks = Task(dictionary: dictionary)
+                
+                group.tasks.append(newTasks!)
+                returnTasks.append(newTasks!)
+                dispatchGroup.leave()
+            })
+        }
+        dispatchGroup.notify(queue: .main) {
+            group.tasks = returnTasks
+            completion(true)
+        }
     }
 }
