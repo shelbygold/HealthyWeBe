@@ -35,10 +35,15 @@ class CreateProfileViewController: UIViewController {
     }
     */
     @IBAction func addProfilePhotoButtonTapped(_ sender: Any) {
-    AttachmentHandler.shared.showAttachmentActionSheet(vc: UIViewController)
+    AttachmentHandler.shared.showAttachmentActionSheet(vc: self)
+        
+        AttachmentHandler.shared.authorisationStatus(attachmentTypeEnum: .camera, vc: self)
+            AttachmentHandler.shared.authorisationStatus(attachmentTypeEnum: .photoLibrary, vc: self)
     }
     
     @IBAction func createUserButtonTapped(_ sender: Any) {
+        
+        
     }
     
 }
