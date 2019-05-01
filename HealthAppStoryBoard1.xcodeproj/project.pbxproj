@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7AD1C904227A608B00987C66 /* ContactController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD1C903227A608B00987C66 /* ContactController.swift */; };
+		7AD1C906227A609C00987C66 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD1C905227A609C00987C66 /* Contact.swift */; };
 		847387D7E58C4C2E042A7A44 /* Pods_HealthAppStoryBoard1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42152FB07767D27C5D4E0B64 /* Pods_HealthAppStoryBoard1.framework */; };
 		DD4BDED422790A3400F4BD64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD4BDED322790A3400F4BD64 /* Main.storyboard */; };
 		DD867320227A37C3003A0A22 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD86731F227A37C3003A0A22 /* LoginViewController.swift */; };
@@ -42,6 +44,8 @@
 /* Begin PBXFileReference section */
 		3FD974D15EBA1202676CD390 /* Pods-HealthAppStoryBoard1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthAppStoryBoard1.release.xcconfig"; path = "Target Support Files/Pods-HealthAppStoryBoard1/Pods-HealthAppStoryBoard1.release.xcconfig"; sourceTree = "<group>"; };
 		42152FB07767D27C5D4E0B64 /* Pods_HealthAppStoryBoard1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HealthAppStoryBoard1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7AD1C903227A608B00987C66 /* ContactController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactController.swift; sourceTree = "<group>"; };
+		7AD1C905227A609C00987C66 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		DD4BDED322790A3400F4BD64 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		DD86731F227A37C3003A0A22 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DD867321227A37DB003A0A22 /* CreateProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileViewController.swift; sourceTree = "<group>"; };
@@ -51,11 +55,11 @@
 		DD867329227A385D003A0A22 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 		DD86732B227A3879003A0A22 /* PersonalProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalProfileViewController.swift; sourceTree = "<group>"; };
 		DD86732D227A3892003A0A22 /* GroupProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupProfileViewController.swift; sourceTree = "<group>"; };
-		DD86732F227A38B7003A0A22 /* ChooseCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChooseCategoryViewController.swift; path = ../ChooseCategoryViewController.swift; sourceTree = "<group>"; };
-		DD867331227A38C9003A0A22 /* CreateTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CreateTaskViewController.swift; path = ../CreateTaskViewController.swift; sourceTree = "<group>"; };
-		DD867333227A38EA003A0A22 /* GroupChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GroupChatViewController.swift; path = ../GroupChatViewController.swift; sourceTree = "<group>"; };
-		DD867335227A3919003A0A22 /* LeaderBoardTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LeaderBoardTableViewController.swift; path = ../LeaderBoardTableViewController.swift; sourceTree = "<group>"; };
-		DD867337227A3931003A0A22 /* GroupTaskTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GroupTaskTableViewController.swift; path = ../GroupTaskTableViewController.swift; sourceTree = "<group>"; };
+		DD86732F227A38B7003A0A22 /* ChooseCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChooseCategoryViewController.swift; path = "HealthAppStoryBoard1/New Group/ChooseCategoryViewController.swift"; sourceTree = "<group>"; };
+		DD867331227A38C9003A0A22 /* CreateTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CreateTaskViewController.swift; path = "HealthAppStoryBoard1/New Group/CreateTaskViewController.swift"; sourceTree = "<group>"; };
+		DD867333227A38EA003A0A22 /* GroupChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GroupChatViewController.swift; path = "HealthAppStoryBoard1/New Group/GroupChatViewController.swift"; sourceTree = "<group>"; };
+		DD867335227A3919003A0A22 /* LeaderBoardTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LeaderBoardTableViewController.swift; path = "HealthAppStoryBoard1/New Group/LeaderBoardTableViewController.swift"; sourceTree = "<group>"; };
+		DD867337227A3931003A0A22 /* GroupTaskTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GroupTaskTableViewController.swift; path = "HealthAppStoryBoard1/New Group/GroupTaskTableViewController.swift"; sourceTree = "<group>"; };
 		DD86733A227A4FF6003A0A22 /* AttachmentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttachmentHandler.swift; sourceTree = "<group>"; };
 		DD86733C227A5913003A0A22 /* Dashboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		DDE7BED32278F9B4007E1ADD /* UserAuthenticationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthenticationController.swift; sourceTree = "<group>"; };
@@ -131,6 +135,7 @@
 				DDE7BED32278F9B4007E1ADD /* UserAuthenticationController.swift */,
 				DDF536842277E7F500FF313B /* GroupController.swift */,
 				DDF536822277CB9D00FF313B /* TaskController.swift */,
+				7AD1C903227A608B00987C66 /* ContactController.swift */,
 			);
 			path = ModelController;
 			sourceTree = "<group>";
@@ -189,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				DDF5366F227766C000FF313B /* Member.swift */,
+				7AD1C905227A609C00987C66 /* Contact.swift */,
 				DDF5367322776D7700FF313B /* Task.swift */,
 				DDF5367122776B6900FF313B /* Group.swift */,
 			);
@@ -413,6 +419,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AD1C906227A609C00987C66 /* Contact.swift in Sources */,
 				DD867338227A3931003A0A22 /* GroupTaskTableViewController.swift in Sources */,
 				DDF536852277E7F500FF313B /* GroupController.swift in Sources */,
 				DDF536812277C5F700FF313B /* MemberController.swift in Sources */,
@@ -429,6 +436,7 @@
 				DDF53670227766C000FF313B /* Member.swift in Sources */,
 				DDF5367422776D7700FF313B /* Task.swift in Sources */,
 				DD867332227A38C9003A0A22 /* CreateTaskViewController.swift in Sources */,
+				7AD1C904227A608B00987C66 /* ContactController.swift in Sources */,
 				DDE7BED42278F9B4007E1ADD /* UserAuthenticationController.swift in Sources */,
 				DD86733B227A4FF6003A0A22 /* AttachmentHandler.swift in Sources */,
 				DDF536832277CB9D00FF313B /* TaskController.swift in Sources */,
