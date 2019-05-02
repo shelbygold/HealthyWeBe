@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		847387D7E58C4C2E042A7A44 /* Pods_HealthAppStoryBoard1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42152FB07767D27C5D4E0B64 /* Pods_HealthAppStoryBoard1.framework */; };
+		CAF8DC64227A82810006FD18 /* TaskCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF8DC63227A82810006FD18 /* TaskCollectionViewCell.swift */; };
 		DD4BDED422790A3400F4BD64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD4BDED322790A3400F4BD64 /* Main.storyboard */; };
 		DD867320227A37C3003A0A22 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD86731F227A37C3003A0A22 /* LoginViewController.swift */; };
 		DD867322227A37DB003A0A22 /* CreateProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD867321227A37DB003A0A22 /* CreateProfileViewController.swift */; };
@@ -42,6 +43,7 @@
 /* Begin PBXFileReference section */
 		3FD974D15EBA1202676CD390 /* Pods-HealthAppStoryBoard1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthAppStoryBoard1.release.xcconfig"; path = "Target Support Files/Pods-HealthAppStoryBoard1/Pods-HealthAppStoryBoard1.release.xcconfig"; sourceTree = "<group>"; };
 		42152FB07767D27C5D4E0B64 /* Pods_HealthAppStoryBoard1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HealthAppStoryBoard1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAF8DC63227A82810006FD18 /* TaskCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCollectionViewCell.swift; sourceTree = "<group>"; };
 		DD4BDED322790A3400F4BD64 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		DD86731F227A37C3003A0A22 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DD867321227A37DB003A0A22 /* CreateProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				DD867323227A37FE003A0A22 /* CreateGroupViewController.swift */,
 				DD867325227A382A003A0A22 /* ListViewController.swift */,
 				DD867327227A3844003A0A22 /* DashboardViewController.swift */,
+				CAF8DC63227A82810006FD18 /* TaskCollectionViewCell.swift */,
 				DD867329227A385D003A0A22 /* CardViewController.swift */,
 				DD86732B227A3879003A0A22 /* PersonalProfileViewController.swift */,
 				DD86732D227A3892003A0A22 /* GroupProfileViewController.swift */,
@@ -431,6 +434,7 @@
 				DD867332227A38C9003A0A22 /* CreateTaskViewController.swift in Sources */,
 				DDE7BED42278F9B4007E1ADD /* UserAuthenticationController.swift in Sources */,
 				DD86733B227A4FF6003A0A22 /* AttachmentHandler.swift in Sources */,
+				CAF8DC64227A82810006FD18 /* TaskCollectionViewCell.swift in Sources */,
 				DDF536832277CB9D00FF313B /* TaskController.swift in Sources */,
 				DD867320227A37C3003A0A22 /* LoginViewController.swift in Sources */,
 				DD86732A227A385D003A0A22 /* CardViewController.swift in Sources */,
@@ -575,8 +579,8 @@
 			baseConfigurationReference = EF4A8726EE8EED6327B4B6D3 /* Pods-HealthAppStoryBoard1.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UWK99QK89X;
-				INFOPLIST_FILE = /Users/shelbygold/Desktop/HealthAppStoryBoard1/HealthAppStoryBoard1/Resources/Info.plist;
+				DEVELOPMENT_TEAM = J8Z88H6B28;
+				INFOPLIST_FILE = "$(SRCROOT)/HealthAppStoryBoard1/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -593,8 +597,8 @@
 			baseConfigurationReference = 3FD974D15EBA1202676CD390 /* Pods-HealthAppStoryBoard1.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UWK99QK89X;
-				INFOPLIST_FILE = /Users/shelbygold/Desktop/HealthAppStoryBoard1/HealthAppStoryBoard1/Resources/Info.plist;
+				DEVELOPMENT_TEAM = J8Z88H6B28;
+				INFOPLIST_FILE = "$(SRCROOT)/HealthAppStoryBoard1/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
