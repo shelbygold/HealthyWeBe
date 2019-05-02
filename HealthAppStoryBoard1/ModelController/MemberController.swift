@@ -41,8 +41,8 @@ class MemberController{
                 completion(nil, error)
                 return
             }
-            guard let dictionary = snapShot?.data() else {return}
-            let newMember = Member.init(dictionary: dictionary)
+            guard let snap = snapShot else {return}
+            let newMember = Member.init(docSnapshot: snap)
             completion(newMember, nil)
         }
     }

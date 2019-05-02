@@ -57,11 +57,11 @@
 		DD867329227A385D003A0A22 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 		DD86732B227A3879003A0A22 /* PersonalProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalProfileViewController.swift; sourceTree = "<group>"; };
 		DD86732D227A3892003A0A22 /* GroupProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupProfileViewController.swift; sourceTree = "<group>"; };
-		DD86732F227A38B7003A0A22 /* ChooseCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChooseCategoryViewController.swift; path = "HealthAppStoryBoard1/New Group/ChooseCategoryViewController.swift"; sourceTree = "<group>"; };
-		DD867331227A38C9003A0A22 /* CreateTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CreateTaskViewController.swift; path = "HealthAppStoryBoard1/New Group/CreateTaskViewController.swift"; sourceTree = "<group>"; };
-		DD867333227A38EA003A0A22 /* GroupChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GroupChatViewController.swift; path = "HealthAppStoryBoard1/New Group/GroupChatViewController.swift"; sourceTree = "<group>"; };
-		DD867335227A3919003A0A22 /* LeaderBoardTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LeaderBoardTableViewController.swift; path = "HealthAppStoryBoard1/New Group/LeaderBoardTableViewController.swift"; sourceTree = "<group>"; };
-		DD867337227A3931003A0A22 /* GroupTaskTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GroupTaskTableViewController.swift; path = "HealthAppStoryBoard1/New Group/GroupTaskTableViewController.swift"; sourceTree = "<group>"; };
+		DD86732F227A38B7003A0A22 /* ChooseCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChooseCategoryViewController.swift; path = ../ChooseCategoryViewController.swift; sourceTree = "<group>"; };
+		DD867331227A38C9003A0A22 /* CreateTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CreateTaskViewController.swift; path = ../CreateTaskViewController.swift; sourceTree = "<group>"; };
+		DD867333227A38EA003A0A22 /* GroupChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GroupChatViewController.swift; path = ../GroupChatViewController.swift; sourceTree = "<group>"; };
+		DD867335227A3919003A0A22 /* LeaderBoardTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LeaderBoardTableViewController.swift; path = ../LeaderBoardTableViewController.swift; sourceTree = "<group>"; };
+		DD867337227A3931003A0A22 /* GroupTaskTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GroupTaskTableViewController.swift; path = ../GroupTaskTableViewController.swift; sourceTree = "<group>"; };
 		DD86733A227A4FF6003A0A22 /* AttachmentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttachmentHandler.swift; sourceTree = "<group>"; };
 		DD86733C227A5913003A0A22 /* Dashboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		DDE7BED32278F9B4007E1ADD /* UserAuthenticationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthenticationController.swift; sourceTree = "<group>"; };
@@ -587,7 +587,7 @@
 			baseConfigurationReference = EF4A8726EE8EED6327B4B6D3 /* Pods-HealthAppStoryBoard1.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = J8Z88H6B28;
+				DEVELOPMENT_TEAM = UWK99QK89X;
 				INFOPLIST_FILE = "$(SRCROOT)/HealthAppStoryBoard1/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -605,7 +605,7 @@
 			baseConfigurationReference = 3FD974D15EBA1202676CD390 /* Pods-HealthAppStoryBoard1.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = J8Z88H6B28;
+				DEVELOPMENT_TEAM = UWK99QK89X;
 				INFOPLIST_FILE = "$(SRCROOT)/HealthAppStoryBoard1/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
