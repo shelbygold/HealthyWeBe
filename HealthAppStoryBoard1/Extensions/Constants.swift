@@ -30,10 +30,15 @@ struct  spacingConstants {
 }
 
 extension UIView {
-    func circleRadius() {
+    func border(){
         self.layer.borderWidth = 2
-        self.layer.masksToBounds = false
-        self.layer.borderColor = healthColors.myBlack?.cgColor
+        self.layer.borderColor = healthColors.myRed?.cgColor
+    }
+    
+    func circleRadius() {
+        self.layer.borderWidth = 3
+        self.layer.masksToBounds = true
+        self.layer.borderColor = healthColors.myGray?.cgColor
         self.layer.cornerRadius = self.frame.height/2
         self.clipsToBounds = true
         

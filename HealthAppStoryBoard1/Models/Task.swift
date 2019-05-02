@@ -51,15 +51,15 @@ class Task{
     }
     
     var asDict: [String:Any] {
-        return ["type": taskType,
-                "title": taskTitle,
-                "taskID": UUID,
+        return ["taskType": taskType,
+                "taskTitle": taskTitle,
+                "taskUUID": UUID,
                 "taskRef": taskUUID,
-                "points": taskPoints,
-                "image": taskImage,
+                "taskPoints": taskPoints,
+                "taskImage": taskImage,
                 "groupID": taskGroupID,
-                "beginDate": taskBeginDate,
-                "endDate": taskEndDate,
+                "taskBeginDate": taskBeginDate,
+                "taskEndDate": taskEndDate,
                 "group": group]
         
     }

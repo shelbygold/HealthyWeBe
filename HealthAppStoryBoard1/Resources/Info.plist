@@ -39,5 +39,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>This app uses your camera set profile pic</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>This app uses the photo library to set the profile pic</string>
 </dict>
 </plist>

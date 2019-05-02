@@ -19,13 +19,10 @@ class MemberController{
     
     let dbRef = Firestore.firestore().collection("Member")
     
-    func createUSer(userName:String, userImage:String, userBio: String, userEmail: String, userPassword: String, userPoints: Int, userUUID: DocumentReference, userGroups: [DocumentReference], groups: [Group]){
-        
+    func createMemberFrom(member: Member) {
         let documentRef = dbRef.document()
-        
-        let newUser = Member(userName: userName, userEmail: userEmail, userPassword: userPassword, userBio: userBio, userPoints: userPoints, userPic: userImage, userDoc: documentRef, groups: userGroups, myGroups: groups)
-        
-        let dict = newUser.asDict
+    
+        let dict = member.asDict
         documentRef.setData(dict) { (error) in
             if let error = error{
                 print("💩🧜🏻‍♂️ 🧜🏻‍♂️error in \(#function) ; \(error) ; \(error.localizedDescription)")
@@ -33,6 +30,11 @@ class MemberController{
             }
         }
     }
+    
+//    func createUSer(userFirstName:String, userLastName: String, userImage: UIImage, userBio: String, userEmail: String, userPassword: String){
+//
+//
+//    }
     func fetchMemberFrom(Authorized: User, completion: @escaping (Member?, Error?) -> Void){
         dbRef.document(Authorized.uid).getDocument { (snapShot, error) in
             if let error = error{

@@ -30,8 +30,8 @@ class AttachmentHandler: NSObject{
     }
     //MARK: - Constants
     struct Constants {
-        static let actionFileTypeHeading = "Add a File"
-        static let actionFileTypeDescription = "Choose a filetype to add..."
+        static let actionFileTypeHeading = "Add picture"
+        static let actionFileTypeDescription = "Choose where you would like to pick your image..."
         static let camera = "Camera"
         static let phoneLibrary = "Phone Library"
 //        static let video = "Video"

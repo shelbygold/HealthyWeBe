@@ -10,57 +10,68 @@ import Foundation
 import Firebase
 
 class Member {
-    var username: String
+    var userFirstName: String
+    var userLastName: String
     var useremail: String
     var userPassword: String
     var userBio: String
     var userPoints: Int
-    var userProfilePic: String
-    var userUUID: DocumentReference
+    var userProfilePic: UIImage
+    var userUUID: String
     var groupsRef: [DocumentReference]
     var myGroups: [Group]
-    let UUID: String
+    let memberRef: DocumentReference?
     
-    init(userName:String, userEmail:String, userPassword: String, userBio: String, userPoints: Int, userPic: String, userDoc: DocumentReference, groups: [DocumentReference], myGroups: [Group]) {
-    
+    init(userFirstName:String, userLastName: String, userEmail:String, userPassword: String, userBio: String, userPoints: Int = 0, userPic: UIImage, userUUID: String, memberRef: DocumentReference? = nil, groups: [DocumentReference] = [], myGroups: [Group] = []) {
+        
         self.groupsRef = groups
         self.useremail = userEmail
         self.userPassword = userPassword
-        self.username = userName
+        self.userFirstName = userFirstName
+        self.userLastName = userLastName
         self.userBio = userBio
         self.userPoints = userPoints
         self.userProfilePic = userPic
-        self.userUUID = userDoc
-        self.UUID = userUUID.documentID
+        self.userUUID = userUUID
+        self.memberRef = memberRef
         self.myGroups = myGroups
     }
     
-    convenience init?(dictionary: [String: Any]){
+    convenience init?(docSnapshot: DocumentSnapshot){
+        
+        let memberRef = MemberController.shared.dbRef.document(docSnapshot.documentID)
+        
         guard
-            let memberName = dictionary["memberName"] as? String,
+            let dictionary = docSnapshot.data(),
+            let memberFirstName = dictionary["memberFirstName"] as? String,
+            let memberLastName = dictionary["memberLastName"] as? String,
             let memberPassword = dictionary["memberPassword"] as? String,
+//            let memberRef = dictionary["memberRef"] as? DocumentReference,
             let groupRef = dictionary["groupRef"] as? [DocumentReference],
             let memberEmail = dictionary["memberEmail"] as? String,
-            let profilePic = dictionary["profilePic"] as? String,
+            let profilePic = dictionary["profilePic"] as? UIImage,
             let memberPoints = dictionary["memberPoints"] as? Int,
             let bio = dictionary["memberBio"] as? String,
-            let userUUID = dictionary["userUUID"] as? DocumentReference,
+            let userUUID = dictionary["userUUID"] as? String,
             let myGroups = dictionary["myGroups"] as? [Group]
-            else {return nil}
-        self.init(userName:memberName, userEmail:memberEmail, userPassword: memberPassword, userBio: bio, userPoints: memberPoints, userPic: profilePic, userDoc: userUUID, groups: groupRef, myGroups: myGroups)
+            else {print("conenience Init"); return nil }
+        self.init(userFirstName:memberFirstName, userLastName: memberLastName, userEmail: memberEmail, userPassword: memberPassword, userBio: bio, userPoints: memberPoints, userPic: profilePic, userUUID: userUUID, memberRef: memberRef, groups: groupRef, myGroups: myGroups)
+        
+       
         
     }
     
     var asDict: [String:Any] {
-        return ["bio": userBio,
-                "email": useremail,
-                "name": username,
-                "password": userPassword,
-                "points": userPoints,
-                "profilePic": userProfilePic,
+        return ["memberBio": userBio,
+                "memberEmail": useremail,
+                "memberFirstName": userFirstName,
+                "memberLastName": userLastName,
+                "memberPassword": userPassword,
+                "memberPoints": userPoints,
+//                "profilePic": userProfilePic,
                 "userUUID": userUUID,
-                "UUID": UUID,
+//                "memberRef": memberRef as Any,
                 "myGroups": myGroups,
-                "groups": groupsRef]
+                "groupRef": groupsRef]
     }
 }
