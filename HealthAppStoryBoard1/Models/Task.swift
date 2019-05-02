@@ -9,7 +9,8 @@
 import Foundation
 import Firebase
 
-class Task{
+class Task {
+	
     let taskTitle: String
     let taskType: String
     let taskImage: String
@@ -17,11 +18,10 @@ class Task{
     let taskBeginDate: Date
     let taskEndDate: Date
     let taskGroupID: String
-    let taskUUID: DocumentReference
+	let taskUUID: DocumentReference
     let UUID: String
     let group: Group
-    
-    
+	
     init(taskTitle: String, taskType: String, taskImage:String, taskPoints: Int, taskBeginDate: Date = Date(), taskEndDate: Date, taskUUID: DocumentReference, group: Group){
         
         self.taskTitle = taskTitle
@@ -35,6 +35,7 @@ class Task{
         self.group = group
         self.UUID = taskUUID.documentID
     }
+	
     convenience init?(dictionary: [String: Any]){
         guard
         let title = dictionary["taskTitle"] as? String,
@@ -47,7 +48,6 @@ class Task{
         let group = dictionary["group"] as? Group
             else {return nil}
         self.init(taskTitle: title, taskType: type, taskImage: image, taskPoints: points, taskBeginDate: begin, taskEndDate: end, taskUUID: taskUUID, group: group)
-    
     }
     
     var asDict: [String:Any] {
@@ -64,3 +64,4 @@ class Task{
         
     }
 }
+
