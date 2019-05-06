@@ -126,6 +126,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="utD-95-taD"/>
                     </view>
+                    <connections>
+                        <outlet property="bioTextField" destination="SVP-NQ-MMz" id="viV-SZ-BKl"/>
+                        <outlet property="emailTextField" destination="Gau-eo-lIm" id="i2s-HU-yHI"/>
+                        <outlet property="firstNameTextField" destination="u4L-ZC-4B1" id="Bdc-yi-wqT"/>
+                        <outlet property="lastNameTextField" destination="vey-ch-w6n" id="bNJ-Qh-mOS"/>
+                        <outlet property="passwordTextField" destination="55H-va-Dbj" id="1aS-aT-KNa"/>
+                        <outlet property="profilePicImageView" destination="WMs-a7-g4r" id="mTK-i4-3QP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eph-CS-Mt7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
