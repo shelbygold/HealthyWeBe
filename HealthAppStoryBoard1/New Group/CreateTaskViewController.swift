@@ -40,7 +40,7 @@ class CreateTaskViewController: UIViewController, UITextFieldDelegate{
     
     func getDate(string: String) -> Date? {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+        dateFormatter.dateFormat = "MM/dd/yy, h:mm a"
         dateFormatter.timeZone = TimeZone.current
         dateFormatter.locale = Locale.current
         return dateFormatter.date(from: string)
@@ -109,18 +109,19 @@ class CreateTaskViewController: UIViewController, UITextFieldDelegate{
     }
     @IBAction func submitButtonTapped(_ sender: Any) {
         
-        guard let taskType = taskTypeLabel.text,
+        guard
+let taskType = taskTypeLabel.text,
             let addText = addTaskField.text,
             let beginDate = beginDateTextField.text,
             let endDate = endDateTextField.text,
             let beginD = getDate(string: beginDate),
-            let endD = getDate(string: endDate) else {return}
+            let endD = getDate(string: endDate) else {print("error with som task labels"); return}
         
         
         guard let group = GroupController.shared.currentGroup else {print("errorwith group"); return}
         let groupRef = group.groupUUID
         
-        TaskController.shared.createTask(title: addText, type: taskType, points: points, beginDate: beginD, endDate: endD, group: group, groupRef: groupRef)
+        TaskController.shared.createTask(title: addText, type: taskType, points: points, beginDate: beginD, endDate: endD, groupRef: groupRef)
     }
     
         

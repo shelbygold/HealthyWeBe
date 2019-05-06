@@ -13,16 +13,15 @@ class Task {
 	
     let taskTitle: String
     let taskType: String
-    
     let taskPoints: Int
     let taskBeginDate: Date
     let taskEndDate: Date
     let taskGroupID: DocumentReference
 	let taskUUID: DocumentReference
     let UUID: String
-    let group: Group
+
 	
-    init(taskTitle: String, taskType: String, taskPoints: Int, taskBeginDate: Date = Date(), taskEndDate: Date, taskUUID: DocumentReference, group: Group){
+    init(taskTitle: String, taskType: String, taskPoints: Int, taskBeginDate: Date = Date(), taskEndDate: Date, taskUUID: DocumentReference){
         
         self.taskTitle = taskTitle
         self.taskType = taskType
@@ -31,7 +30,6 @@ class Task {
         self.taskEndDate = taskEndDate
         self.taskUUID = taskUUID
         self.taskGroupID = taskUUID
-        self.group = group
         self.UUID = taskUUID.documentID
     }
 	
@@ -42,22 +40,20 @@ class Task {
         let points = dictionary["taskPoints"] as? Int,
         let begin = dictionary["taskBeginDate"] as? Date,
         let end = dictionary["taskEndDate"] as? Date,
-        let taskUUID = dictionary["taskUUID"] as? DocumentReference,
-        let group = dictionary["group"] as? Group
+        let taskUUID = dictionary["taskGroupUUID"] as? DocumentReference
             else {return nil}
-        self.init(taskTitle: title, taskType: type, taskPoints: points, taskBeginDate: begin, taskEndDate: end, taskUUID: taskUUID, group: group)
+        self.init(taskTitle: title, taskType: type, taskPoints: points, taskBeginDate: begin, taskEndDate: end, taskUUID: taskUUID)
     }
     
     var asDict: [String:Any] {
         return ["taskType": taskType,
                 "taskTitle": taskTitle,
-                "taskUUID": UUID,
+                "taskGroupUUID": UUID,
                 "taskRef": taskUUID,
                 "taskPoints": taskPoints,
                 "groupID": taskGroupID,
                 "taskBeginDate": taskBeginDate,
-                "taskEndDate": taskEndDate,
-                "group": group]
+                "taskEndDate": taskEndDate]
         
     }
 }
