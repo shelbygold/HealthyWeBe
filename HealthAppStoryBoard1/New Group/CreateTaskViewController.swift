@@ -31,7 +31,6 @@ class CreateTaskViewController: UIViewController, UITextFieldDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         taskTypeLabel.text = taskType
-        setTaskViewColor(taskType: taskType)
         setTaskImage(taskType: taskType)
         beginDateTextField.inputView = beginDatePicker
         endDateTextField.inputView = endDatePicker
@@ -61,25 +60,19 @@ class CreateTaskViewController: UIViewController, UITextFieldDelegate{
     func setTaskImage(taskType: String){
         if taskType == "fitness"{
             taskImageView.image = #imageLiteral(resourceName: "ShadRunner")
-        } else if taskType == "mindfullness" {
-            taskImageView.image = #imageLiteral(resourceName: "shadedMeditation")
-        } else if taskType == "nutrition" {
-            taskImageView.image = #imageLiteral(resourceName: "Eaten Pear")
-        } else if taskType == "sleep" {
-            taskImageView.image = #imageLiteral(resourceName: "weighIN")
-        }
-    }
-    func setTaskViewColor(taskType: String){
-        if taskType == "fitness"{
             taskImageView.backgroundColor = healthColors.myRed
         } else if taskType == "mindfullness" {
+            taskImageView.image = #imageLiteral(resourceName: "shadedMeditation")
             taskImageView.backgroundColor = healthColors.myPurple
         } else if taskType == "nutrition" {
+            taskImageView.image = #imageLiteral(resourceName: "Eaten Pear")
             taskImageView.backgroundColor = healthColors.myGreen
         } else if taskType == "sleep" {
+            taskImageView.image = #imageLiteral(resourceName: "weighIN")
             taskImageView.backgroundColor = healthColors.myOrange
         }
     }
+    
     
     @IBAction func beginTextField(_ sender: UITextField) {
         beginDateTextField.text = beginDatePicker.date.stringWith(dateStyle: .short, timeStyle: .short)

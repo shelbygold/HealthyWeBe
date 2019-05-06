@@ -1435,7 +1435,6 @@
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VCH-Hy-cee">
                                         <rect key="frame" x="93.666666666666671" y="82.333333333333329" width="187.66666666666663" height="187.66666666666669"/>
-                                        <color key="backgroundColor" name="HealthyRed"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="VCH-Hy-cee" secondAttribute="height" id="T03-qU-WES"/>
                                         </constraints>
