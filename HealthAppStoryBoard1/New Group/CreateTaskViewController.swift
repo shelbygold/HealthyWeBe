@@ -109,8 +109,7 @@ class CreateTaskViewController: UIViewController, UITextFieldDelegate{
     }
     @IBAction func submitButtonTapped(_ sender: Any) {
         
-        guard let taskImage = taskImageView.image,
-            let taskType = taskTypeLabel.text,
+        guard let taskType = taskTypeLabel.text,
             let addText = addTaskField.text,
             let beginDate = beginDateTextField.text,
             let endDate = endDateTextField.text,
@@ -121,7 +120,7 @@ class CreateTaskViewController: UIViewController, UITextFieldDelegate{
         guard let group = GroupController.shared.currentGroup else {print("errorwith group"); return}
         let groupRef = group.groupUUID
         
-        TaskController.shared.createTask(title: addText, image: taskImage, type: taskType, points: points, beginDate: beginD, endDate: endD, group: group, groupRef: groupRef)
+        TaskController.shared.createTask(title: addText, type: taskType, points: points, beginDate: beginD, endDate: endD, group: group, groupRef: groupRef)
     }
     
         

@@ -19,11 +19,11 @@ class TaskController {
     
 let dbRef = Firestore.firestore().collection("task")
 
-    func createTask(title: String, image: UIImage, type: String, points: Int, beginDate: Date, endDate: Date, group: Group, groupRef: DocumentReference) {
+    func createTask(title: String, type: String, points: Int, beginDate: Date, endDate: Date, group: Group, groupRef: DocumentReference) {
         
         let documentRef = dbRef.document()
         
-        let newTask = Task(taskTitle: title, taskType: type, taskImage: image, taskPoints: points, taskBeginDate: beginDate, taskEndDate: endDate, taskUUID: documentRef, group: group)
+        let newTask = Task(taskTitle: title, taskType: type, taskPoints: points, taskBeginDate: beginDate, taskEndDate: endDate, taskUUID: documentRef, group: group)
         
         let dict = newTask.asDict
         documentRef.setData(dict) { (error) in

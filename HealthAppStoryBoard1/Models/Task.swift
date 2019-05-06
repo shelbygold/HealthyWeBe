@@ -13,7 +13,7 @@ class Task {
 	
     let taskTitle: String
     let taskType: String
-    let taskImage: UIImage
+    
     let taskPoints: Int
     let taskBeginDate: Date
     let taskEndDate: Date
@@ -22,11 +22,10 @@ class Task {
     let UUID: String
     let group: Group
 	
-    init(taskTitle: String, taskType: String, taskImage:UIImage, taskPoints: Int, taskBeginDate: Date = Date(), taskEndDate: Date, taskUUID: DocumentReference, group: Group){
+    init(taskTitle: String, taskType: String, taskPoints: Int, taskBeginDate: Date = Date(), taskEndDate: Date, taskUUID: DocumentReference, group: Group){
         
         self.taskTitle = taskTitle
         self.taskType = taskType
-        self.taskImage = taskImage
         self.taskPoints = taskPoints
         self.taskBeginDate = taskBeginDate
         self.taskEndDate = taskEndDate
@@ -40,14 +39,13 @@ class Task {
         guard
         let title = dictionary["taskTitle"] as? String,
         let type = dictionary["taskType"] as? String,
-        let image = dictionary["taskImage"] as? UIImage,
         let points = dictionary["taskPoints"] as? Int,
         let begin = dictionary["taskBeginDate"] as? Date,
         let end = dictionary["taskEndDate"] as? Date,
         let taskUUID = dictionary["taskUUID"] as? DocumentReference,
         let group = dictionary["group"] as? Group
             else {return nil}
-        self.init(taskTitle: title, taskType: type, taskImage: image, taskPoints: points, taskBeginDate: begin, taskEndDate: end, taskUUID: taskUUID, group: group)
+        self.init(taskTitle: title, taskType: type, taskPoints: points, taskBeginDate: begin, taskEndDate: end, taskUUID: taskUUID, group: group)
     }
     
     var asDict: [String:Any] {
@@ -56,7 +54,6 @@ class Task {
                 "taskUUID": UUID,
                 "taskRef": taskUUID,
                 "taskPoints": taskPoints,
-                "taskImage": taskImage,
                 "groupID": taskGroupID,
                 "taskBeginDate": taskBeginDate,
                 "taskEndDate": taskEndDate,
