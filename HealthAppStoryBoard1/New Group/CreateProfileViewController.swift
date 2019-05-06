@@ -115,8 +115,8 @@ class CreateProfileViewController: UIViewController {
                     })
                     dispatchGroup.notify(queue: .main, execute: {
                         // Go to Tab bar controller
-                        let storyboard = UIStoryboard(name: "MainStoryBoard", bundle: nil)
-                        let viewController = storyboard.instantiateViewController(withIdentifier: "tabBar")
+                        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                        let viewController = storyboard.instantiateViewController(withIdentifier: "createGroup")
                         let appDelegate = UIApplication.shared.delegate as! AppDelegate
                         appDelegate.window?.rootViewController = viewController
                     })

@@ -75,7 +75,7 @@ class CreateGroupViewController: UIViewController {
             dispatchGroup.notify(queue: .main, execute: {
                 // Go to Tab bar controller
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                let viewController = storyboard.instantiateViewController(withIdentifier: "GroupProfile")
+                let viewController = storyboard.instantiateViewController(withIdentifier: "tabBar")
                 let appDelegate = UIApplication.shared.delegate as! AppDelegate
                 appDelegate.window?.rootViewController = viewController
             })

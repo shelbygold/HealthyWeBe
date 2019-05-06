@@ -224,7 +224,7 @@
         <!--Create Group View Controller-->
         <scene sceneID="O68-lv-6MU">
             <objects>
-                <viewController id="nI5-A2-hO4" customClass="CreateGroupViewController" customModule="HealthAppStoryBoard1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="createGroup" id="nI5-A2-hO4" customClass="CreateGroupViewController" customModule="HealthAppStoryBoard1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fks-9i-fxj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -320,7 +320,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="26V-Py-7Db" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-308" y="996"/>
+            <point key="canvasLocation" x="905" y="928"/>
         </scene>
         <!--List View Controller-->
         <scene sceneID="0Bv-Wd-7ld">
@@ -465,7 +465,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="akl-Zo-kak"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="ic_account_circle.png" id="ed5-fd-OIk"/>
+                    <tabBarItem key="tabBarItem" title="" image="tasks" selectedImage="tasks" id="ed5-fd-OIk"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AMs-5J-ABF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -717,7 +717,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="b0o-o0-2Ga"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="ic_account_circle.png" id="kPU-9q-TL6"/>
+                    <tabBarItem key="tabBarItem" title="" image="profileICon" selectedImage="profileICon" id="kPU-9q-TL6"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GrQ-Rg-PTd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -852,7 +852,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="H8d-1K-YsW"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" image="ic_account_circle.png" id="Dak-PH-um9"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="GoupIcon" selectedImage="groupSelected" id="Dak-PH-um9"/>
                     <connections>
                         <outlet property="groupNameLabel" destination="LBO-R2-OD6" id="dbI-I6-GL4"/>
                         <outlet property="groupProfileImageView" destination="tBj-DM-1Go" id="5Tb-KA-lkg"/>
@@ -1568,8 +1568,11 @@
     <resources>
         <image name="CommentCloud" width="492" height="462"/>
         <image name="Compose" width="108" height="106"/>
+        <image name="GoupIcon" width="80" height="56"/>
         <image name="addButton" width="312" height="312"/>
-        <image name="ic_account_circle.png" width="60" height="60"/>
+        <image name="groupSelected" width="80" height="56"/>
+        <image name="profileICon" width="80" height="80"/>
+        <image name="tasks" width="80" height="80"/>
         <image name="thumbs-up" width="116" height="125"/>
         <namedColor name="HealthyBlack">
             <color red="0.29019607843137257" green="0.29019607843137257" blue="0.29019607843137257" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

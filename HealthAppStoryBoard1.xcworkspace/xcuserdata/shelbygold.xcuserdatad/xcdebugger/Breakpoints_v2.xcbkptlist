@@ -42,7 +42,7 @@
                   moduleName = "HealthAppStoryBoard1"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shelbygold/Desktop/HealthAppStoryBoard1/HealthAppStoryBoard1/New%20Group/LoginViewController.swift"
-                  timestampString = "578854879.998379"
+                  timestampString = "578874195.01957"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "27"
@@ -57,7 +57,7 @@
                   moduleName = "HealthAppStoryBoard1"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shelbygold/Desktop/HealthAppStoryBoard1/HealthAppStoryBoard1/New%20Group/LoginViewController.swift"
-                  timestampString = "578854880.002476"
+                  timestampString = "578874195.023809"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "28"
@@ -106,7 +106,7 @@
                   moduleName = "HealthAppStoryBoard1"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shelbygold/Desktop/HealthAppStoryBoard1/HealthAppStoryBoard1/New%20Group/LoginViewController.swift"
-                  timestampString = "578854880.0227211"
+                  timestampString = "578874195.040005"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "41"
@@ -121,7 +121,7 @@
                   moduleName = "HealthAppStoryBoard1"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shelbygold/Desktop/HealthAppStoryBoard1/HealthAppStoryBoard1/New%20Group/LoginViewController.swift"
-                  timestampString = "578854880.026247"
+                  timestampString = "578874195.043853"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "42"
@@ -153,13 +153,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HealthAppStoryBoard1/Models/Member.swift"
-            timestampString = "578604665.162202"
+            filePath = "HealthAppStoryBoard1/New Group/CreateTaskViewController.swift"
+            timestampString = "578874194.381315"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
-            landmarkName = "init(docSnapshot:)"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
+            landmarkName = "submitButtonTapped(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -169,109 +169,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HealthAppStoryBoard1/Models/Member.swift"
-            timestampString = "578604665.162347"
+            filePath = "HealthAppStoryBoard1/New Group/CreateTaskViewController.swift"
+            timestampString = "578874373.88219"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
-            landmarkName = "init(docSnapshot:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HealthAppStoryBoard1/Models/Member.swift"
-            timestampString = "578604665.162469"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
-            landmarkName = "init(docSnapshot:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HealthAppStoryBoard1/Models/Member.swift"
-            timestampString = "578604665.162587"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
-            landmarkName = "init(docSnapshot:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HealthAppStoryBoard1/Models/Member.swift"
-            timestampString = "578604665.162704"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
-            landmarkName = "init(docSnapshot:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HealthAppStoryBoard1/Models/Member.swift"
-            timestampString = "578604665.162824"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
-            landmarkName = "init(docSnapshot:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HealthAppStoryBoard1/Models/Member.swift"
-            timestampString = "578604665.162937"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
-            landmarkName = "init(docSnapshot:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HealthAppStoryBoard1/Models/Member.swift"
-            timestampString = "578604665.16309"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
-            landmarkName = "init(docSnapshot:)"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
+            landmarkName = "submitButtonTapped(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
