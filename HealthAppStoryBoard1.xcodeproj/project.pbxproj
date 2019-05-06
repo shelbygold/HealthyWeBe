@@ -54,17 +54,17 @@
 		DD4D955A227CA6A10096CD82 /* HealthTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthTextField.swift; sourceTree = "<group>"; };
 		DD86731F227A37C3003A0A22 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DD867321227A37DB003A0A22 /* CreateProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileViewController.swift; sourceTree = "<group>"; };
-		DD867323227A37FE003A0A22 /* CreateGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CreateGroupViewController.swift; path = ../StoryBoards/CreateGroupViewController.swift; sourceTree = "<group>"; };
+		DD867323227A37FE003A0A22 /* CreateGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupViewController.swift; sourceTree = "<group>"; };
 		DD867325227A382A003A0A22 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		DD867327227A3844003A0A22 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		DD867329227A385D003A0A22 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 		DD86732B227A3879003A0A22 /* PersonalProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalProfileViewController.swift; sourceTree = "<group>"; };
 		DD86732D227A3892003A0A22 /* GroupProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupProfileViewController.swift; sourceTree = "<group>"; };
-		DD86732F227A38B7003A0A22 /* ChooseCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChooseCategoryViewController.swift; path = ../ChooseCategoryViewController.swift; sourceTree = "<group>"; };
-		DD867331227A38C9003A0A22 /* CreateTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CreateTaskViewController.swift; path = ../CreateTaskViewController.swift; sourceTree = "<group>"; };
-		DD867333227A38EA003A0A22 /* GroupChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GroupChatViewController.swift; path = ../GroupChatViewController.swift; sourceTree = "<group>"; };
-		DD867335227A3919003A0A22 /* LeaderBoardTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LeaderBoardTableViewController.swift; path = ../LeaderBoardTableViewController.swift; sourceTree = "<group>"; };
-		DD867337227A3931003A0A22 /* GroupTaskTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GroupTaskTableViewController.swift; path = ../GroupTaskTableViewController.swift; sourceTree = "<group>"; };
+		DD86732F227A38B7003A0A22 /* ChooseCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseCategoryViewController.swift; sourceTree = "<group>"; };
+		DD867331227A38C9003A0A22 /* CreateTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTaskViewController.swift; sourceTree = "<group>"; };
+		DD867333227A38EA003A0A22 /* GroupChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupChatViewController.swift; sourceTree = "<group>"; };
+		DD867335227A3919003A0A22 /* LeaderBoardTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderBoardTableViewController.swift; sourceTree = "<group>"; };
+		DD867337227A3931003A0A22 /* GroupTaskTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTaskTableViewController.swift; sourceTree = "<group>"; };
 		DD86733A227A4FF6003A0A22 /* AttachmentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttachmentHandler.swift; sourceTree = "<group>"; };
 		DD86733C227A5913003A0A22 /* Dashboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		DDD0A9A7227BE0E3004475D2 /* datePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = datePicker.swift; sourceTree = "<group>"; };
@@ -73,7 +73,7 @@
 		DDEFEE732270CA78009F29E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDEFEE7A2270CA79009F29E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DDEFEE7D2270CA7A009F29E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		DDEFEE7F2270CA7A009F29E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Resources/Info.plist; sourceTree = "<group>"; };
+		DDEFEE7F2270CA7A009F29E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DDEFEE852270DB93009F29E1 /* DailTasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailTasksViewController.swift; sourceTree = "<group>"; };
 		DDF5366F227766C000FF313B /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
 		DDF5367122776B6900FF313B /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
@@ -106,34 +106,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		DD86731E227A3786003A0A22 /* New Group */ = {
+		CA6D4B422280FCB400E4A584 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				DD86731F227A37C3003A0A22 /* LoginViewController.swift */,
-				DD867321227A37DB003A0A22 /* CreateProfileViewController.swift */,
-				DD867323227A37FE003A0A22 /* CreateGroupViewController.swift */,
-				DD867325227A382A003A0A22 /* ListViewController.swift */,
-				DD867327227A3844003A0A22 /* DashboardViewController.swift */,
-				CAF8DC63227A82810006FD18 /* TaskCollectionViewCell.swift */,
-				DD867329227A385D003A0A22 /* CardViewController.swift */,
-				DD86732B227A3879003A0A22 /* PersonalProfileViewController.swift */,
-				DD86732D227A3892003A0A22 /* GroupProfileViewController.swift */,
-				DD867339227A3A0C003A0A22 /* New Group */,
+				DDE7BED22278E55E007E1ADD /* ModelController */,
+				DDF53677227772C700FF313B /* ViewControllers */,
 			);
-			path = "New Group";
-			sourceTree = "<group>";
-		};
-		DD867339227A3A0C003A0A22 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-				DD86732F227A38B7003A0A22 /* ChooseCategoryViewController.swift */,
-				DD867331227A38C9003A0A22 /* CreateTaskViewController.swift */,
-				DD4D955A227CA6A10096CD82 /* HealthTextField.swift */,
-				DD867333227A38EA003A0A22 /* GroupChatViewController.swift */,
-				DD867335227A3919003A0A22 /* LeaderBoardTableViewController.swift */,
-				DD867337227A3931003A0A22 /* GroupTaskTableViewController.swift */,
-			);
-			path = "New Group";
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		DDE7BED22278E55E007E1ADD /* ModelController */ = {
@@ -151,7 +130,6 @@
 		DDEFEE672270CA78009F29E1 = {
 			isa = PBXGroup;
 			children = (
-				DDD0A9A7227BE0E3004475D2 /* datePicker.swift */,
 				DDEFEE722270CA78009F29E1 /* HealthAppStoryBoard1 */,
 				DDEFEE712270CA78009F29E1 /* Products */,
 				E89C9EC4C901EA95E50EBC04 /* Pods */,
@@ -170,13 +148,10 @@
 		DDEFEE722270CA78009F29E1 /* HealthAppStoryBoard1 */ = {
 			isa = PBXGroup;
 			children = (
-				DD86731E227A3786003A0A22 /* New Group */,
-				DDF5367A2277730D00FF313B /* StoryBoards */,
-				DDE7BED22278E55E007E1ADD /* ModelController */,
-				DDF53679227772F400FF313B /* Models */,
-				DDF53678227772E300FF313B /* Extensions */,
-				DDF53677227772C700FF313B /* ViewControllers */,
 				DDF5367B2277732200FF313B /* Resources */,
+				DDF53679227772F400FF313B /* Models */,
+				DDF5367A2277730D00FF313B /* Views */,
+				CA6D4B422280FCB400E4A584 /* Controllers */,
 			);
 			path = HealthAppStoryBoard1;
 			sourceTree = "<group>";
@@ -184,8 +159,22 @@
 		DDF53677227772C700FF313B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				DD86731F227A37C3003A0A22 /* LoginViewController.swift */,
+				DD867321227A37DB003A0A22 /* CreateProfileViewController.swift */,
+				DD867323227A37FE003A0A22 /* CreateGroupViewController.swift */,
+				DD867325227A382A003A0A22 /* ListViewController.swift */,
+				DD867327227A3844003A0A22 /* DashboardViewController.swift */,
+				CAF8DC63227A82810006FD18 /* TaskCollectionViewCell.swift */,
+				DD867329227A385D003A0A22 /* CardViewController.swift */,
+				DD86732B227A3879003A0A22 /* PersonalProfileViewController.swift */,
+				DD86732D227A3892003A0A22 /* GroupProfileViewController.swift */,
+				DD86732F227A38B7003A0A22 /* ChooseCategoryViewController.swift */,
+				DD867331227A38C9003A0A22 /* CreateTaskViewController.swift */,
+				DD4D955A227CA6A10096CD82 /* HealthTextField.swift */,
+				DD867333227A38EA003A0A22 /* GroupChatViewController.swift */,
+				DD867335227A3919003A0A22 /* LeaderBoardTableViewController.swift */,
+				DD867337227A3931003A0A22 /* GroupTaskTableViewController.swift */,
 				DDEFEE852270DB93009F29E1 /* DailTasksViewController.swift */,
-				DDEFEE7F2270CA7A009F29E1 /* Info.plist */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -210,22 +199,25 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		DDF5367A2277730D00FF313B /* StoryBoards */ = {
+		DDF5367A2277730D00FF313B /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				DD4BDED322790A3400F4BD64 /* Main.storyboard */,
 				DD86733C227A5913003A0A22 /* Dashboard.storyboard */,
 				DDEFEE7C2270CA7A009F29E1 /* LaunchScreen.storyboard */,
 			);
-			path = StoryBoards;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		DDF5367B2277732200FF313B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				DDD0A9A7227BE0E3004475D2 /* datePicker.swift */,
+				DDEFEE7F2270CA7A009F29E1 /* Info.plist */,
 				DDEFEE7A2270CA79009F29E1 /* Assets.xcassets */,
 				DDEFEE732270CA78009F29E1 /* AppDelegate.swift */,
 				DDF5367E2277B58600FF313B /* GoogleService-Info.plist */,
+				DDF53678227772E300FF313B /* Extensions */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -595,7 +587,7 @@
 			baseConfigurationReference = EF4A8726EE8EED6327B4B6D3 /* Pods-HealthAppStoryBoard1.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UWK99QK89X;
+				DEVELOPMENT_TEAM = J8Z88H6B28;
 				INFOPLIST_FILE = "$(SRCROOT)/HealthAppStoryBoard1/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -613,7 +605,7 @@
 			baseConfigurationReference = 3FD974D15EBA1202676CD390 /* Pods-HealthAppStoryBoard1.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UWK99QK89X;
+				DEVELOPMENT_TEAM = J8Z88H6B28;
 				INFOPLIST_FILE = "$(SRCROOT)/HealthAppStoryBoard1/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
