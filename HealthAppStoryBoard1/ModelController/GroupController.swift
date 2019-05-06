@@ -13,22 +13,21 @@ class GroupController {
     
     static let shared = GroupController()
     private init (){
-//        fetchGroupsFor(user: UserController.shared.users.first!) { (groups) in
-//            groups.forEach({ (group) in
-//                TaskController.shared.fetchTasksFor(group: group, completion: <#T##<<error type>>#>)
-//            })
-//        }
+
     }
+    var currentGroup: Group?
     
     var groups: [Group] = []
     
     let dbRef = Firestore.firestore().collection("group")
     
-    func createGroup(groupName:String, groupimage:String, groupSlogan:String, groupOwner: DocumentReference, groupPoint: Int, groupTasks: [DocumentReference], groupUsers: [Member], userRef: [DocumentReference], task: [Task]) {
+    func createGroup(groupName:String, groupimage:UIImage, groupSlogan:String, groupOwner: DocumentReference, groupPoint: Int = 0, groupTasks: [DocumentReference] = [], userRef: [DocumentReference], task: [Task] = [], completion: @escaping (Bool) -> Void) {
         
         let documentRef = dbRef.document()
+       
+        let newGroup = Group(groupName: groupName, groupSlogan: groupSlogan, groupImage: groupimage, userRef: userRef, groupOwner: groupOwner, groupUUID: documentRef)
         
-        let newGroup = Group(groupName: groupName, groupSlogan: groupSlogan, groupPoints: groupPoint, groupImage: groupimage, groupUsers: groupUsers, userRef: userRef, groupOwner: groupOwner, groupUUID: documentRef, tasksRefs: groupTasks, task: task)
+//        let newGroup = Group(groupName: groupName, groupSlogan: groupSlogan, groupPoints: groupPoint, groupImage: groupimage, groupUsers: groupUsers, userRef: userRef, groupOwner: groupOwner, groupUUID: documentRef, tasksRefs: groupTasks, task: task)
         
         let dict = newGroup.asDict
         documentRef.setData(dict) { (error) in
@@ -36,6 +35,8 @@ class GroupController {
                 print("💩🧜🏻‍♂️ 🧜🏻‍♂️error in \(#function) ; \(error) ; \(error.localizedDescription)")
                 return
             }
+                MemberController.shared.addGroupToUser(group: newGroup, completion: completion)
+            self.currentGroup = newGroup
         }
     }
     func fetchGroupsFor(user: Member, completion: @escaping ([Group]) -> Void) {
@@ -54,7 +55,8 @@ class GroupController {
                 
                 let newGroup = Group(dictionary: dictionary)
                 
-                user.myGroups.append(newGroup!)
+                self.currentGroup = newGroup
+                
                 returnGroups.append(newGroup!)
                 dispatchGroup.leave()
             })

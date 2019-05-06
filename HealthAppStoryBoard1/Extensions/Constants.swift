@@ -63,3 +63,11 @@ extension Date {
         return formatter.string(from: self)
     }
 }
+extension UIView {
+    
+    func presentLoginAlert(errorMessage: Error){
+        let alertController = UIAlertController.init(title: "Something went wrong", message: errorMessage.localizedDescription, preferredStyle: .alert)
+        let dismiss = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+        alertController.addAction(dismiss)
+    }
+}

@@ -13,16 +13,16 @@ class Task {
 	
     let taskTitle: String
     let taskType: String
-    let taskImage: String
+    let taskImage: UIImage
     let taskPoints: Int
     let taskBeginDate: Date
     let taskEndDate: Date
-    let taskGroupID: String
+    let taskGroupID: DocumentReference
 	let taskUUID: DocumentReference
     let UUID: String
     let group: Group
 	
-    init(taskTitle: String, taskType: String, taskImage:String, taskPoints: Int, taskBeginDate: Date = Date(), taskEndDate: Date, taskUUID: DocumentReference, group: Group){
+    init(taskTitle: String, taskType: String, taskImage:UIImage, taskPoints: Int, taskBeginDate: Date = Date(), taskEndDate: Date, taskUUID: DocumentReference, group: Group){
         
         self.taskTitle = taskTitle
         self.taskType = taskType
@@ -31,7 +31,7 @@ class Task {
         self.taskBeginDate = taskBeginDate
         self.taskEndDate = taskEndDate
         self.taskUUID = taskUUID
-        self.taskGroupID = taskUUID.documentID
+        self.taskGroupID = taskUUID
         self.group = group
         self.UUID = taskUUID.documentID
     }
@@ -40,7 +40,7 @@ class Task {
         guard
         let title = dictionary["taskTitle"] as? String,
         let type = dictionary["taskType"] as? String,
-        let image = dictionary["taskImage"] as? String,
+        let image = dictionary["taskImage"] as? UIImage,
         let points = dictionary["taskPoints"] as? Int,
         let begin = dictionary["taskBeginDate"] as? Date,
         let end = dictionary["taskEndDate"] as? Date,

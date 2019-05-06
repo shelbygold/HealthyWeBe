@@ -9,6 +9,7 @@
 import UIKit
 
 import FirebaseStorage
+import Firebase
 
 class CreateProfileViewController: UIViewController {
     
@@ -19,6 +20,13 @@ class CreateProfileViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var bioTextField: UITextField!
     
+    
+    let imageFileName = MemberController.shared.dbRef.document().documentID
+    
+    
+    var imageRef: StorageReference {
+    return Storage.storage().reference().child("profileImages")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,40 +53,53 @@ class CreateProfileViewController: UIViewController {
         let lastName = lastNameTextField.text,
         let bio = bioTextField.text,
         let myPic = profilePicImageView.image else {return}
-        
-      
-    
-//        let storageRef = Storage.storage().reference()
-//
-//        let uploadData = UIImage.pngData(self.profilePicImageView.image!)()
-//        guard let data = uploadData else {return}
-//        storageRef.putData(data, metadata: nil, completion: { (metaData, error) in
-//            if let error = error{
-//                print("💩🧜🏻‍♂️ 🧜🏻‍♂️error in \(#function) ; \(error) ; \(error.localizedDescription)")
-//                return
-//            }
-//            print(metaData)
-//        })
-        
-        
         UserAuthenticationController.shared.createNewUser(email: email, password: password) { (User, error) in
             if let error = error{
                 print("💩🧜🏻‍♂️ 🧜🏻‍♂️error in \(#function) ; \(error) ; \(error.localizedDescription)")
+                self.presentLoginAlert(errorMessage: error)
                 return
             }
             guard let user = User else {return}
             
+        
+            
             let uuid = user.uid
-            let member = Member(userFirstName: firstName, userLastName: lastName, userEmail: email, userPassword: password, userBio: bio, userPic: myPic, userUUID: uuid)
-            MemberController.shared.createMemberFrom(member: member)
+            
+            let docRef =
+        MemberController.shared.dbRef.document(uuid)
+
+            
+            let member = Member(userFirstName: firstName, userLastName: lastName, userEmail: email, userPassword: password, userBio: bio, userPic: myPic, userUUID: uuid, memberRef: docRef)
+            MemberController.shared.createMemberFrom(member: member, uuid: uuid)
+            
+            MemberController.shared.currentUser = member
             
             
+            guard let image = self.profilePicImageView.image else {return}
+            guard let imageData = UIImage.pngData(image)() else {return}
             
+            let uploadImageRef = self.imageRef.child(self.imageFileName)
+            let uploadTask = uploadImageRef.putData(imageData, metadata: nil, completion: { (storageMetaData, error) in
+                print("Upload task finished")
+                if let error = error{
+                    print("💩🧜🏻‍♂️ 🧜🏻‍♂️error in \(#function) ; \(error) ; \(error.localizedDescription)")
+                    self.presentLoginAlert(errorMessage: error)
+                    return
+                }
+                print(storageMetaData ?? "NO MetaData")
+            })
             
+            uploadTask.observe(.progress, handler: { (snapShot) in
+                print(snapShot.progress ?? "No Progress")
+            })
+            
+            uploadTask.resume()
             
         MemberController.shared.fetchMemberFrom(Authorized: user, completion: { (member, error) in
                 if let error = error{
                     print("💩🧜🏻‍♂️ 🧜🏻‍♂️error in \(#function) ; \(error) ; \(error.localizedDescription)")
+                    self.presentLoginAlert(errorMessage: error)
+                    
                     return
                 }
                 guard let member = member else {return}
@@ -104,5 +125,10 @@ class CreateProfileViewController: UIViewController {
         }
             
         }
+    func presentLoginAlert(errorMessage: Error){
+        let alertController = UIAlertController.init(title: "Something went wrong", message: errorMessage.localizedDescription, preferredStyle: .alert)
+        let dismiss = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+        alertController.addAction(dismiss)
+    }
     }
 

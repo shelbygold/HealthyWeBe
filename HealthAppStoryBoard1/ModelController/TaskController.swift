@@ -17,9 +17,9 @@ class TaskController {
     
     var tasks: [Task] = []
     
-let dbRef = Firestore.firestore().collection("tasl")
+let dbRef = Firestore.firestore().collection("task")
 
-    func createTask(title: String, image: String, type: String, points: Int, beginDate: Date, endDate: Date, group: Group) {
+    func createTask(title: String, image: UIImage, type: String, points: Int, beginDate: Date, endDate: Date, group: Group, groupRef: DocumentReference) {
         
         let documentRef = dbRef.document()
         
@@ -38,7 +38,7 @@ let dbRef = Firestore.firestore().collection("tasl")
         var returnTasks: [Task] = []
         group.taskRef.forEach { (documentRef) in
             dispatchGroup.enter()
-            documentRef.getDocument(completion: { (snapshot, error) in
+            documentRef!.getDocument(completion: { (snapshot, error) in
                 if let error = error {
                     print("💩🧜🏻‍♂️ 🧜🏻‍♂️error in \(#function) ; \(error) ; \(error.localizedDescription)")
                     completion(false)

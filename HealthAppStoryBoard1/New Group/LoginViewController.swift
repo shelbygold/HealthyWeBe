@@ -27,12 +27,14 @@ class LoginViewController: UIViewController {
         UserAuthenticationController.shared.signinUser(email: email, password: password) { (user, error) in
             if let error = error{
                 print("💩🧜🏻‍♂️ 🧜🏻‍♂️error in \(#function) ; \(error) ; \(error.localizedDescription)")
+                self.presentLoginAlert(errorMessage: error)
                 return
             }
             guard let user = user else {return}
             MemberController.shared.fetchMemberFrom(Authorized: user, completion: { (member, error) in
                 if let error = error{
                     print("💩🧜🏻‍♂️ 🧜🏻‍♂️error in \(#function) ; \(error) ; \(error.localizedDescription)")
+                   self.presentLoginAlert(errorMessage: error)
                     return
                 }
                 guard let member = member else {return}
@@ -57,4 +59,10 @@ class LoginViewController: UIViewController {
             })
         }
     }
+    func presentLoginAlert(errorMessage: Error){
+        let alertController = UIAlertController.init(title: "Something went wrong", message: errorMessage.localizedDescription, preferredStyle: .alert)
+        let dismiss = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+        alertController.addAction(dismiss)
+    }
+    
 }

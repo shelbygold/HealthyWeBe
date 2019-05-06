@@ -12,6 +12,7 @@
 		847387D7E58C4C2E042A7A44 /* Pods_HealthAppStoryBoard1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42152FB07767D27C5D4E0B64 /* Pods_HealthAppStoryBoard1.framework */; };
 		CAF8DC64227A82810006FD18 /* TaskCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF8DC63227A82810006FD18 /* TaskCollectionViewCell.swift */; };
 		DD4BDED422790A3400F4BD64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD4BDED322790A3400F4BD64 /* Main.storyboard */; };
+		DD4D955B227CA6A10096CD82 /* HealthTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4D955A227CA6A10096CD82 /* HealthTextField.swift */; };
 		DD867320227A37C3003A0A22 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD86731F227A37C3003A0A22 /* LoginViewController.swift */; };
 		DD867322227A37DB003A0A22 /* CreateProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD867321227A37DB003A0A22 /* CreateProfileViewController.swift */; };
 		DD867324227A37FE003A0A22 /* CreateGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD867323227A37FE003A0A22 /* CreateGroupViewController.swift */; };
@@ -27,6 +28,7 @@
 		DD867338227A3931003A0A22 /* GroupTaskTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD867337227A3931003A0A22 /* GroupTaskTableViewController.swift */; };
 		DD86733B227A4FF6003A0A22 /* AttachmentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD86733A227A4FF6003A0A22 /* AttachmentHandler.swift */; };
 		DD86733D227A5913003A0A22 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD86733C227A5913003A0A22 /* Dashboard.storyboard */; };
+		DDD0A9A8227BE0E3004475D2 /* datePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD0A9A7227BE0E3004475D2 /* datePicker.swift */; };
 		DDE7BED42278F9B4007E1ADD /* UserAuthenticationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE7BED32278F9B4007E1ADD /* UserAuthenticationController.swift */; };
 		DDEFEE742270CA78009F29E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEFEE732270CA78009F29E1 /* AppDelegate.swift */; };
 		DDEFEE7B2270CA79009F29E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDEFEE7A2270CA79009F29E1 /* Assets.xcassets */; };
@@ -49,6 +51,7 @@
 		7AD1C905227A609C00987C66 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		CAF8DC63227A82810006FD18 /* TaskCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCollectionViewCell.swift; sourceTree = "<group>"; };
 		DD4BDED322790A3400F4BD64 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		DD4D955A227CA6A10096CD82 /* HealthTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthTextField.swift; sourceTree = "<group>"; };
 		DD86731F227A37C3003A0A22 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DD867321227A37DB003A0A22 /* CreateProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileViewController.swift; sourceTree = "<group>"; };
 		DD867323227A37FE003A0A22 /* CreateGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CreateGroupViewController.swift; path = ../StoryBoards/CreateGroupViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +67,7 @@
 		DD867337227A3931003A0A22 /* GroupTaskTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GroupTaskTableViewController.swift; path = ../GroupTaskTableViewController.swift; sourceTree = "<group>"; };
 		DD86733A227A4FF6003A0A22 /* AttachmentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttachmentHandler.swift; sourceTree = "<group>"; };
 		DD86733C227A5913003A0A22 /* Dashboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
+		DDD0A9A7227BE0E3004475D2 /* datePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = datePicker.swift; sourceTree = "<group>"; };
 		DDE7BED32278F9B4007E1ADD /* UserAuthenticationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthenticationController.swift; sourceTree = "<group>"; };
 		DDEFEE702270CA78009F29E1 /* HealthAppStoryBoard1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthAppStoryBoard1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDEFEE732270CA78009F29E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +128,7 @@
 			children = (
 				DD86732F227A38B7003A0A22 /* ChooseCategoryViewController.swift */,
 				DD867331227A38C9003A0A22 /* CreateTaskViewController.swift */,
+				DD4D955A227CA6A10096CD82 /* HealthTextField.swift */,
 				DD867333227A38EA003A0A22 /* GroupChatViewController.swift */,
 				DD867335227A3919003A0A22 /* LeaderBoardTableViewController.swift */,
 				DD867337227A3931003A0A22 /* GroupTaskTableViewController.swift */,
@@ -146,6 +151,7 @@
 		DDEFEE672270CA78009F29E1 = {
 			isa = PBXGroup;
 			children = (
+				DDD0A9A7227BE0E3004475D2 /* datePicker.swift */,
 				DDEFEE722270CA78009F29E1 /* HealthAppStoryBoard1 */,
 				DDEFEE712270CA78009F29E1 /* Products */,
 				E89C9EC4C901EA95E50EBC04 /* Pods */,
@@ -436,11 +442,13 @@
 				DD86732E227A3892003A0A22 /* GroupProfileViewController.swift in Sources */,
 				DD867330227A38B7003A0A22 /* ChooseCategoryViewController.swift in Sources */,
 				DD867322227A37DB003A0A22 /* CreateProfileViewController.swift in Sources */,
+				DD4D955B227CA6A10096CD82 /* HealthTextField.swift in Sources */,
 				DDF53670227766C000FF313B /* Member.swift in Sources */,
 				DDF5367422776D7700FF313B /* Task.swift in Sources */,
 				DD867332227A38C9003A0A22 /* CreateTaskViewController.swift in Sources */,
 				7AD1C904227A608B00987C66 /* ContactController.swift in Sources */,
 				DDE7BED42278F9B4007E1ADD /* UserAuthenticationController.swift in Sources */,
+				DDD0A9A8227BE0E3004475D2 /* datePicker.swift in Sources */,
 				DD86733B227A4FF6003A0A22 /* AttachmentHandler.swift in Sources */,
 				CAF8DC64227A82810006FD18 /* TaskCollectionViewCell.swift in Sources */,
 				DDF536832277CB9D00FF313B /* TaskController.swift in Sources */,

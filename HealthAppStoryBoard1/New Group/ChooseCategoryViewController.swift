@@ -16,15 +16,33 @@ class ChooseCategoryViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func segueOver(type: String){
+        let dispatchGroup = DispatchGroup()
+        dispatchGroup.notify(queue: .main, execute: {
+            // Go to Tab bar controller
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let viewController = storyboard.instantiateViewController(withIdentifier: "taskCreate") as? CreateTaskViewController
+            viewController?.taskType = type
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            appDelegate.window?.rootViewController = viewController
+            
+        })
     }
-    */
-
+    
+    @IBAction func fitnessButtontapped(_ sender: Any) {
+        segueOver(type: "fitness")
+    }
+    @IBAction func mindfullButtonTapped(_ sender: Any) {
+       segueOver(type: "mindfullness")
+    }
+    @IBAction func nutritionButtonTapped(_ sender: Any) {
+        segueOver(type: "nutrition")
+    }
+    @IBAction func sleepButtonTapped(_ sender: Any) {
+       segueOver(type: "sleep")
+    }
+    
+    @IBAction func inviteFriendsButtonTapped(_ sender: Any) {
+    }
+    
 }
