@@ -13,7 +13,7 @@ class Group{
     var groupName: String
     var groupSlogan: String
     var groupPoints: Int
-    var groupImage: UIImage
+    var groupImage: UIImage?
 
     var userRef: [DocumentReference]
     var groupUUID: DocumentReference
@@ -24,7 +24,7 @@ class Group{
     
     
     
-    init(groupName: String, groupSlogan: String, groupPoints: Int = 0, groupImage: UIImage, userRef: [DocumentReference], groupOwner: DocumentReference, groupUUID: DocumentReference, tasksRefs: [DocumentReference] = [], task: [Task] = []) {
+    init(groupName: String, groupSlogan: String, groupPoints: Int = 0, groupImage: UIImage?, userRef: [DocumentReference], groupOwner: DocumentReference, groupUUID: DocumentReference, tasksRefs: [DocumentReference] = [], task: [Task] = []) {
         
         self.groupName = groupName
         self.groupSlogan = groupSlogan
@@ -45,19 +45,17 @@ class Group{
         let name = dictionary["groupName"] as? String,
         let slogan = dictionary["groupSlogan"] as? String,
         let points = dictionary["groupPoints"] as? Int,
-        let image = dictionary["groupImage"] as? UIImage,
         let userRef = dictionary["userRef"] as? [DocumentReference],
         let groupOwner = dictionary["groupOwner"] as? DocumentReference,
         let groupUUID = dictionary["groupUUID"] as? DocumentReference,
         let taskRef = dictionary["taskRef"] as? [DocumentReference],
         let tasks = dictionary["tasks"] as? [Task]
-        else { return nil }
-        self.init(groupName: name, groupSlogan: slogan, groupPoints: points, groupImage: image, userRef: userRef, groupOwner: groupOwner, groupUUID: groupUUID, tasksRefs: taskRef , task: tasks)
+			else { print("Group init from dict failed. Missing data") ; return nil }
+        self.init(groupName: name, groupSlogan: slogan, groupPoints: points, groupImage: nil, userRef: userRef, groupOwner: groupOwner, groupUUID: groupUUID, tasksRefs: taskRef , task: tasks)
     }
     
     var asDict: [String:Any] {
         return ["groupName" : groupName,
-//                "groupImage" : groupImage,
                 "groupSlogan" : groupSlogan,
                 "groupOwner": groupOwner,
                 "groupPoints": groupPoints,

@@ -45,14 +45,13 @@ class Member {
             let memberFirstName = dictionary["memberFirstName"] as? String,
             let memberLastName = dictionary["memberLastName"] as? String,
             let memberPassword = dictionary["memberPassword"] as? String,
-//            let memberRef = dictionary["memberRef"] as? DocumentReference,
             let groupRef = dictionary["groupRef"] as? [DocumentReference],
             let memberEmail = dictionary["memberEmail"] as? String,
             let memberPoints = dictionary["memberPoints"] as? Int,
             let bio = dictionary["memberBio"] as? String,
             let userUUID = dictionary["userUUID"] as? String
         
-            else {print("conenience Init"); return nil }
+            else {print("Member init from docSnapshot failed (missing data)"); return nil }
         self.init(userFirstName:memberFirstName, userLastName: memberLastName, userEmail: memberEmail, userPassword: memberPassword, userBio: bio, userPoints: memberPoints, userPic: nil, userUUID: userUUID, memberRef: memberRef, groups: groupRef)
         
        
@@ -66,7 +65,6 @@ class Member {
                 "memberLastName": userLastName,
                 "memberPassword": userPassword,
                 "memberPoints": userPoints,
-//                "profilePic": userProfilePic,
                 "userUUID": userUUID,
                 "memberRef": memberRef as Any,
                 "groupRef": groupsRef]
