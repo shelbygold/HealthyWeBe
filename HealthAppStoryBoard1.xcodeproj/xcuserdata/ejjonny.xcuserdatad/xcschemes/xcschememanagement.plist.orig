@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>HealthAppStoryBoard1.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+<<<<<<< HEAD
+			<integer>19</integer>
+=======
+			<integer>35</integer>
+>>>>>>> e74057eb3046be068799e6bd753670fde6f16fd3
+		</dict>
+	</dict>
+</dict>
+</plist>
