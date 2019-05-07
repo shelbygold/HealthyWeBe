@@ -47,7 +47,6 @@ class Group{
         let name = dictionary["groupName"] as? String,
         let slogan = dictionary["groupSlogan"] as? String,
         let points = dictionary["groupPoints"] as? Int,
-        let image = dictionary["groupImage"] as? UIImage,
         let userRef = dictionary["userRef"] as? [DocumentReference],
         let groupOwner = dictionary["groupOwner"] as? DocumentReference,
         let groupUUID = dictionary["groupUUID"] as? DocumentReference,

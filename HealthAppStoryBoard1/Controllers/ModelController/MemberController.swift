@@ -19,7 +19,7 @@ class MemberController{
     
     var users: [Member] = []
     
-    let dbRef = Firestore.firestore().collection("Member")
+    let dbRef = Firestore.firestore().collection("member")
     
     
     func createMemberFrom(member: Member, uuid: String) {
