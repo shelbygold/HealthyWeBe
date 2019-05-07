@@ -5,13 +5,15 @@ target 'HealthAppStoryBoard1' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 
+  # Pods for HealthAppStoryBoard1
+
 pod 'Firebase/Core'
 pod 'Firebase/Firestore'
 pod 'Firebase/Auth'
-pod 'FirebaseUI'
+pod 'Firebase/Storage'
 
+  # Silence pod warnings
 
-  # Pods for HealthAppStoryBoard1
+inhibit_all_warnings!
 
 end
-
