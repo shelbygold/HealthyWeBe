@@ -8,9 +8,9 @@ target 'HealthAppStoryBoard1' do
 pod 'Firebase/Core'
 pod 'Firebase/Firestore'
 pod 'Firebase/Auth'
-pod 'FirebaseUI'
+pod 'Firebase/Storage'
 
-
+inhibit_all_warnings!
   # Pods for HealthAppStoryBoard1
 
 end
