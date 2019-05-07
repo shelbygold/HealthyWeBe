@@ -33,38 +33,6 @@
             endingLineNumber = "27"
             landmarkName = "signInButtonTapped(_:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "HealthAppStoryBoard1.LoginViewController.signInButtonTapped(Any) -&gt; ()"
-                  moduleName = "HealthAppStoryBoard1"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/shelbygold/Desktop/HealthAppStoryBoard1/HealthAppStoryBoard1/New%20Group/LoginViewController.swift"
-                  timestampString = "578876625.441293"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "27"
-                  endingLineNumber = "27"
-                  offsetFromSymbolStart = "1049">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRUser&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in HealthAppStoryBoard1.LoginViewController.signInButtonTapped(Any) -&gt; ()"
-                  moduleName = "HealthAppStoryBoard1"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/shelbygold/Desktop/HealthAppStoryBoard1/HealthAppStoryBoard1/New%20Group/LoginViewController.swift"
-                  timestampString = "578876625.445202"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28"
-                  offsetFromSymbolStart = "247">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -97,38 +65,6 @@
             endingLineNumber = "41"
             landmarkName = "signInButtonTapped(_:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;HealthAppStoryBoard1.Member&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 (Swift.Optional&lt;__C.FIRUser&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in HealthAppStoryBoard1.LoginViewController.signInButtonTapped(Any) -&gt; ()"
-                  moduleName = "HealthAppStoryBoard1"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/shelbygold/Desktop/HealthAppStoryBoard1/HealthAppStoryBoard1/New%20Group/LoginViewController.swift"
-                  timestampString = "578876625.4615149"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "41"
-                  endingLineNumber = "41"
-                  offsetFromSymbolStart = "1401">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Array&lt;HealthAppStoryBoard1.Group&gt;) -&gt; () in closure #1 (Swift.Optional&lt;HealthAppStoryBoard1.Member&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 (Swift.Optional&lt;__C.FIRUser&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in HealthAppStoryBoard1.LoginViewController.signInButtonTapped(Any) -&gt; ()"
-                  moduleName = "HealthAppStoryBoard1"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/shelbygold/Desktop/HealthAppStoryBoard1/HealthAppStoryBoard1/New%20Group/LoginViewController.swift"
-                  timestampString = "578876625.4656"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "42"
-                  endingLineNumber = "42"
-                  offsetFromSymbolStart = "145">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -145,6 +81,197 @@
             endingLineNumber = "42"
             landmarkName = "signInButtonTapped(_:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HealthAppStoryBoard1/Controllers/ViewControllers/GroupProfileViewController.swift"
+            timestampString = "578900282.077523"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "downloadImage(group:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HealthAppStoryBoard1/Controllers/ViewControllers/GroupProfileViewController.swift"
+            timestampString = "578900282.078356"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "groupImageRef"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HealthAppStoryBoard1/Controllers/ViewControllers/GroupProfileViewController.swift"
+            timestampString = "578900282.079061"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "GroupProfileViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HealthAppStoryBoard1.GroupProfileViewController.currentGroup.getter : Swift.Optional&lt;HealthAppStoryBoard1.Group&gt;"
+                  moduleName = "HealthAppStoryBoard1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shelbygold/Desktop/HealthAppStoryBoard1/HealthAppStoryBoard1/Controllers/ViewControllers/GroupProfileViewController.swift"
+                  timestampString = "578899919.263773"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HealthAppStoryBoard1.GroupProfileViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; HealthAppStoryBoard1.GroupProfileViewController"
+                  moduleName = "HealthAppStoryBoard1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shelbygold/Desktop/HealthAppStoryBoard1/HealthAppStoryBoard1/Controllers/ViewControllers/GroupProfileViewController.swift"
+                  timestampString = "578899919.268562"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "728">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HealthAppStoryBoard1.GroupProfileViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;HealthAppStoryBoard1.GroupProfileViewController&gt;"
+                  moduleName = "HealthAppStoryBoard1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shelbygold/Desktop/HealthAppStoryBoard1/HealthAppStoryBoard1/Controllers/ViewControllers/GroupProfileViewController.swift"
+                  timestampString = "578899919.2729599"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "642">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HealthAppStoryBoard1/Controllers/ViewControllers/GroupProfileViewController.swift"
+            timestampString = "578900282.079453"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "findGroupImageFileName(group:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HealthAppStoryBoard1/Controllers/ViewControllers/CreateGroupViewController.swift"
+            timestampString = "578900282.079807"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "nextButtonTapped(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HealthAppStoryBoard1/Controllers/ViewControllers/CreateGroupViewController.swift"
+            timestampString = "578900282.079874"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "nextButtonTapped(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HealthAppStoryBoard1/Controllers/ViewControllers/GroupProfileViewController.swift"
+            timestampString = "578900282.079953"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "downloadImage(group:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HealthAppStoryBoard1.GroupProfileViewController.downloadImage(group: HealthAppStoryBoard1.Group) -&gt; ()"
+                  moduleName = "HealthAppStoryBoard1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shelbygold/Desktop/HealthAppStoryBoard1/HealthAppStoryBoard1/Controllers/ViewControllers/GroupProfileViewController.swift"
+                  timestampString = "578900179.523711"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "709">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in HealthAppStoryBoard1.GroupProfileViewController.downloadImage(group: HealthAppStoryBoard1.Group) -&gt; ()"
+                  moduleName = "HealthAppStoryBoard1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shelbygold/Desktop/HealthAppStoryBoard1/HealthAppStoryBoard1/Controllers/ViewControllers/GroupProfileViewController.swift"
+                  timestampString = "578900179.529114"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "267">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

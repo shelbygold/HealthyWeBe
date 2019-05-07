@@ -12,13 +12,15 @@ import FirebaseStorage
 class CreateGroupViewController: UIViewController {
     
     
+    static let shared = CreateGroupViewController()
+    
     @IBOutlet weak var addImageButton: UIButton!
     @IBOutlet weak var groupNameTextField: UITextField!
     @IBOutlet weak var groupProfileImageView: UIImageView!
     @IBOutlet weak var sloganTextField: UITextField!
     
     let groupImageFileName =
-        GroupController.shared.dbRef.document().documentID
+       GroupController.shared.dbRef.document().documentID
     
     var groupImageRef: StorageReference {
         return Storage.storage().reference().child("groupImages")
@@ -54,16 +56,32 @@ class CreateGroupViewController: UIViewController {
             let dispatchGroup = DispatchGroup()
             if success {
                 dispatchGroup.enter()
-                guard let imageData = UIImage.pngData(groupPic)() else {return}
+                
+                
                 
                 
                 let uploadGroupImageRef = self.groupImageRef.child(self.groupImageFileName)
+                
+                guard let imageData = UIImage.pngData(groupPic)() else {return}
+                
                 let uploadTask = uploadGroupImageRef.putData(imageData, metadata: nil) { (storagemetaData, error) in
                     if let error = error{
                         print("💩🧜🏻‍♂️ 🧜🏻‍♂️error in \(#function) ; \(error) ; \(error.localizedDescription)")
                         return
                     }
-                    
+                    uploadGroupImageRef.downloadURL(completion: { (urls, error) in
+                        if let error = error{
+                            print("💩🧜🏻‍♂️ 🧜🏻‍♂️error in \(#function) ; \(error) ; \(error.localizedDescription)")
+                            return
+                        }
+                        guard let urls = urls,
+                            let group = GroupController.shared.currentGroup else {return}
+                        var grouURL = group.groupImageURL
+                        grouURL = urls.absoluteString
+                        
+                        GroupController.shared.currentGroup?.groupImageURL = urls.absoluteString
+                       
+                    })
                     print(storagemetaData ?? "NO METADATA")
                 }
                 uploadTask.observe(.progress) { (snapShot) in

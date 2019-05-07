@@ -66,23 +66,4 @@ class MemberController{
             completion(true)
         })
     }
-//    func downloadImage(){
-//    
-//        let downloadImageRef = groupImageRef.child(groupImageFileName)
-//        let downloadTask = downloadImageRef.getData(maxSize: 1024 * 1024 * 12) { (data, error) in
-//            if let error = error{
-//                print("💩🧜🏻‍♂️ 🧜🏻‍♂️error in \(#function) ; \(error) ; \(error.localizedDescription)")
-//                return
-//            }
-//            
-//            if let data = data {
-//                let image = UIImage(data: data)
-//                self.groupProfileImageView.image = image
-//            }
-//        }
-//        downloadTask.observe(.progress) { (snapshot) in
-//            print(snapshot.progress ?? "NO more progress")
-//        }
-//        downloadTask.resume()
-//    }
 }

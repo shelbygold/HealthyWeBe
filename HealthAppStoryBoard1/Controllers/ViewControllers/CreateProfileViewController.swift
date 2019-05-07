@@ -51,8 +51,7 @@ class CreateProfileViewController: UIViewController {
             let password = passwordTextField.text,
         let firstName = firstNameTextField.text,
         let lastName = lastNameTextField.text,
-        let bio = bioTextField.text,
-        let myPic = profilePicImageView.image else {return}
+        let bio = bioTextField.text else {return}
         UserAuthenticationController.shared.createNewUser(email: email, password: password) { (User, error) in
             if let error = error{
                 print("💩🧜🏻‍♂️ 🧜🏻‍♂️error in \(#function) ; \(error) ; \(error.localizedDescription)")
@@ -67,33 +66,47 @@ class CreateProfileViewController: UIViewController {
             
             let docRef =
         MemberController.shared.dbRef.document(uuid)
-
-            
-            let member = Member(userFirstName: firstName, userLastName: lastName, userEmail: email, userPassword: password, userBio: bio, userPic: myPic, userUUID: uuid, memberRef: docRef)
-            MemberController.shared.createMemberFrom(member: member, uuid: uuid)
-            
-            MemberController.shared.currentUser = member
-            
             
             guard let image = self.profilePicImageView.image else {return}
+            
+            let location = Storage.storage().reference().child(self.imageFileName)
+            
             guard let imageData = UIImage.pngData(image)() else {return}
             
-            let uploadImageRef = self.imageRef.child(self.imageFileName)
-            let uploadTask = uploadImageRef.putData(imageData, metadata: nil, completion: { (storageMetaData, error) in
+            let uploadTask = location.putData(imageData, metadata: nil, completion: { (storageMetaData, error) in
                 print("Upload task finished")
                 if let error = error{
                     print("💩🧜🏻‍♂️ 🧜🏻‍♂️error in \(#function) ; \(error) ; \(error.localizedDescription)")
                     self.presentLoginAlert(errorMessage: error)
                     return
                 }
+                location.downloadURL(completion: { (urls, error) in
+                    if let error = error{
+                        print("💩🧜🏻‍♂️ 🧜🏻‍♂️error in \(#function) ; \(error) ; \(error.localizedDescription)")
+                        return
+                    }
+                    
+                    guard let urls = urls,
+                    let member = MemberController.shared.currentUser else {return}
+                    var userURL = member.userPicURL
+                    userURL = urls.absoluteString
+                    MemberController.shared.currentUser?.userPicURL = urls.absoluteString
+                    
+                    print("\(urls)")
+                })
+            
                 print(storageMetaData ?? "NO MetaData")
             })
             
-            uploadTask.observe(.progress, handler: { (snapShot) in
-                print(snapShot.progress ?? "No Progress")
-            })
             
-            uploadTask.resume()
+            let member = Member(userFirstName: firstName, userLastName: lastName, userEmail: email, userPassword: password, userBio: bio, userPic: image, userUUID: uuid, memberRef: docRef)
+            
+            MemberController.shared.createMemberFrom(member: member, uuid: uuid)
+            
+            
+            MemberController.shared.currentUser = member
+            
+        
             
         MemberController.shared.fetchMemberFrom(Authorized: user, completion: { (member, error) in
                 if let error = error{
@@ -120,6 +133,10 @@ class CreateProfileViewController: UIViewController {
                         let appDelegate = UIApplication.shared.delegate as! AppDelegate
                         appDelegate.window?.rootViewController = viewController
                     })
+                    uploadTask.observe(.progress, handler: { (snapShot) in
+                        print(snapShot.progress ?? "No Progress")
+                    })
+                    uploadTask.resume()
                 })
             })
         }

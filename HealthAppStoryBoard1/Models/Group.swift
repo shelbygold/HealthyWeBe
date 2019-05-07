@@ -13,7 +13,8 @@ class Group{
     var groupName: String
     var groupSlogan: String
     var groupPoints: Int
-    var groupImage: UIImage
+    var groupImage: UIImage?
+    var groupImageURL: String
 
     var userRef: [DocumentReference]
     var groupUUID: DocumentReference
@@ -24,12 +25,13 @@ class Group{
     
     
     
-    init(groupName: String, groupSlogan: String, groupPoints: Int = 0, groupImage: UIImage, userRef: [DocumentReference], groupOwner: DocumentReference, groupUUID: DocumentReference, tasksRefs: [DocumentReference] = [], task: [Task] = []) {
+    init(groupName: String, groupSlogan: String, groupPoints: Int = 0, groupImage: UIImage, userRef: [DocumentReference], groupOwner: DocumentReference, groupUUID: DocumentReference, tasksRefs: [DocumentReference] = [], task: [Task] = [], groupImageURL: String = "") {
         
         self.groupName = groupName
         self.groupSlogan = groupSlogan
         self.groupPoints = groupPoints
         self.groupImage = groupImage
+        self.groupImageURL = groupImageURL
         self.userRef = userRef
         self.groupOwner = groupOwner
         self.groupUUID = groupUUID
@@ -50,14 +52,14 @@ class Group{
         let groupOwner = dictionary["groupOwner"] as? DocumentReference,
         let groupUUID = dictionary["groupUUID"] as? DocumentReference,
         let taskRef = dictionary["taskRef"] as? [DocumentReference],
-        let tasks = dictionary["tasks"] as? [Task]
+        let tasks = dictionary["tasks"] as? [Task],
+            let groupImageURL = dictionary["groupImageURL"] as? String
         else { return nil }
-        self.init(groupName: name, groupSlogan: slogan, groupPoints: points, groupImage: image, userRef: userRef, groupOwner: groupOwner, groupUUID: groupUUID, tasksRefs: taskRef , task: tasks)
+    self.init(groupName: name, groupSlogan: slogan, groupPoints: points, groupImage: image, userRef: userRef, groupOwner: groupOwner, groupUUID: groupUUID, tasksRefs: taskRef , task: tasks, groupImageURL: groupImageURL)
     }
     
     var asDict: [String:Any] {
         return ["groupName" : groupName,
-//                "groupImage" : groupImage,
                 "groupSlogan" : groupSlogan,
                 "groupOwner": groupOwner,
                 "groupPoints": groupPoints,
@@ -65,7 +67,8 @@ class Group{
                 "groupUUID": groupUUID,
                 "taskRef": taskRef,
                 "tasks": tasks,
-                "UUID": UUID]
+                "UUID": UUID,
+        "groupImageURL": groupImageURL]
         
     }
 }

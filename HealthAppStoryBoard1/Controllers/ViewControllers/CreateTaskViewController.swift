@@ -30,6 +30,7 @@ class CreateTaskViewController: UIViewController, UITextFieldDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        pointsLabel.text = "\(points)"
         taskTypeLabel.text = taskType
         setTaskImage(taskType: taskType)
         beginDateTextField.inputView = beginDatePicker

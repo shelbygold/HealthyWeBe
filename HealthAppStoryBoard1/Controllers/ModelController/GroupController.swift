@@ -26,8 +26,7 @@ class GroupController {
         let documentRef = dbRef.document()
        
         let newGroup = Group(groupName: groupName, groupSlogan: groupSlogan, groupImage: groupimage, userRef: userRef, groupOwner: groupOwner, groupUUID: documentRef)
-        
-//        let newGroup = Group(groupName: groupName, groupSlogan: groupSlogan, groupPoints: groupPoint, groupImage: groupimage, groupUsers: groupUsers, userRef: userRef, groupOwner: groupOwner, groupUUID: documentRef, tasksRefs: groupTasks, task: task)
+    
         
         let dict = newGroup.asDict
         documentRef.setData(dict) { (error) in

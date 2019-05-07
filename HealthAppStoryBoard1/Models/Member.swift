@@ -17,11 +17,12 @@ class Member {
     var userBio: String
     var userPoints: Int
     var userProfilePic: UIImage?
+    var userPicURL: String
     var userUUID: String
     var groupsRef: [DocumentReference]
     let memberRef: DocumentReference
     
-    init(userFirstName:String, userLastName: String, userEmail:String, userPassword: String, userBio: String, userPoints: Int = 0, userPic: UIImage?, userUUID: String, memberRef: DocumentReference, groups: [DocumentReference] = []) {
+    init(userFirstName:String, userLastName: String, userEmail:String, userPassword: String, userBio: String, userPoints: Int = 0, userPic: UIImage?, userPicURL: String = "", userUUID: String, memberRef: DocumentReference, groups: [DocumentReference] = []) {
         
         self.groupsRef = groups
         self.useremail = userEmail
@@ -31,6 +32,7 @@ class Member {
         self.userBio = userBio
         self.userPoints = userPoints
         self.userProfilePic = userPic
+        self.userPicURL = userPicURL
         self.userUUID = userUUID
         self.memberRef = memberRef
       
@@ -45,7 +47,7 @@ class Member {
             let memberFirstName = dictionary["memberFirstName"] as? String,
             let memberLastName = dictionary["memberLastName"] as? String,
             let memberPassword = dictionary["memberPassword"] as? String,
-//            let memberRef = dictionary["memberRef"] as? DocumentReference,
+            let memberImageURL = dictionary["memberPicURL"] as? String,
             let groupRef = dictionary["groupRef"] as? [DocumentReference],
             let memberEmail = dictionary["memberEmail"] as? String,
             let memberPoints = dictionary["memberPoints"] as? Int,
@@ -53,7 +55,7 @@ class Member {
             let userUUID = dictionary["userUUID"] as? String
         
             else {print("conenience Init"); return nil }
-        self.init(userFirstName:memberFirstName, userLastName: memberLastName, userEmail: memberEmail, userPassword: memberPassword, userBio: bio, userPoints: memberPoints, userPic: nil, userUUID: userUUID, memberRef: memberRef, groups: groupRef)
+        self.init(userFirstName:memberFirstName, userLastName: memberLastName, userEmail: memberEmail, userPassword: memberPassword, userBio: bio, userPoints: memberPoints, userPic: nil, userPicURL: memberImageURL, userUUID: userUUID, memberRef: memberRef, groups: groupRef)
         
        
         
@@ -66,7 +68,7 @@ class Member {
                 "memberLastName": userLastName,
                 "memberPassword": userPassword,
                 "memberPoints": userPoints,
-//                "profilePic": userProfilePic,
+                "memberPicURL": userPicURL,
                 "userUUID": userUUID,
                 "memberRef": memberRef as Any,
                 "groupRef": groupsRef]

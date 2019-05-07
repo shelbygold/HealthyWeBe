@@ -8,17 +8,24 @@
 
 import UIKit
 import FirebaseStorage
+import Firebase
 
 class GroupProfileViewController: UIViewController {
-
+    
     @IBOutlet weak var groupProfileImageView: UIImageView!
     @IBOutlet weak var groupNameLabel: UILabel!
     @IBOutlet weak var totalGroupPoints: UILabel!
     @IBOutlet weak var numberOfMembersLabel: UILabel!
     @IBOutlet weak var sloganLabel: UIStackView!
     
-    let groupImageFileName =
-        GroupController.shared.dbRef.document().documentID
+
+    let currentGroup = GroupController.shared.currentGroup
+    
+    func findGroupImageFileName(group: Group) -> String{
+        let groupRef = group.groupUUID.documentID
+        
+        return groupRef
+    }
     
     
     var groupImageRef: StorageReference {
@@ -27,13 +34,16 @@ class GroupProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-     
-
+        downloadImage(group: currentGroup!)
     }
     
-    func downloadImage(){
-        let downloadImageRef = groupImageRef.child(groupImageFileName)
-        let downloadTask = downloadImageRef.getData(maxSize: 1024 * 1024 * 12) { (data, error) in
+    
+    
+    func downloadImage(group: Group) {
+        let downloadURL = GroupController.shared.currentGroup?.groupImageURL
+        let storageRef = Storage.storage().reference(forURL: downloadURL!)
+        
+        storageRef.getData(maxSize: 1024 * 1024 * 12) { (data, error) in
             if let error = error{
                 print("💩🧜🏻‍♂️ 🧜🏻‍♂️error in \(#function) ; \(error) ; \(error.localizedDescription)")
                 return
@@ -42,12 +52,14 @@ class GroupProfileViewController: UIViewController {
             if let data = data {
                 let image = UIImage(data: data)
                 self.groupProfileImageView.image = image
+                
             }
         }
-        downloadTask.observe(.progress) { (snapshot) in
-            print(snapshot.progress ?? "NO more progress")
-        }
-        downloadTask.resume()
+//        downloadImage.observe(.progress) { (snapshot) in
+//            print(snapshot.progress ?? "NO more progress")
+//        }
+//
+//        downloadImage.resume()
     }
     
     @IBAction func groupTabButtons(_ sender: Any) {
