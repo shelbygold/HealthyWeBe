@@ -15,53 +15,57 @@ class GroupController {
 	private init (){
 		
 	}
-	var currentGroup: Group?
 	
 	var groups: [Group] = []
 	
 	let dbRef = Firestore.firestore().collection("group")
+    
+    func createGroupFrom(group: Group, uuid: String){
+
+        let docRef = dbRef.document(uuid)
+        let dict = group.asDict
+        docRef.setData(dict) { (error) in
+            if let error = error{
+                print("💩🧜🏻‍♂️ 🧜🏻‍♂️error in \(#function) ; \(error) ; \(error.localizedDescription)")
+                return
+            }
+            self.groups.append(group)
+        }
+    }
+
 	
-	func createGroup(groupName:String, groupimage:UIImage, groupSlogan:String, groupOwner: DocumentReference, groupPoint: Int = 0, groupTasks: [DocumentReference] = [], userRef: [DocumentReference], task: [Task] = [], completion: @escaping (Bool) -> Void) {
-		
-		let documentRef = dbRef.document()
-		
-		let newGroup = Group(groupName: groupName, groupSlogan: groupSlogan, groupImage: groupimage, userRef: userRef, groupOwner: groupOwner, groupUUID: documentRef)
-		
-		let dict = newGroup.asDict
-		documentRef.setData(dict) { (error) in
-			if let error = error {
-				print("💩🧜🏻‍♂️ 🧜🏻‍♂️error in \(#function) ; \(error) ; \(error.localizedDescription)")
-				return
-			}
-			MemberController.shared.addGroupToUser(group: newGroup, completion: completion)
-			self.currentGroup = newGroup
-		}
-	}
-	
-	func fetchGroupsFor(user: Member, completion: @escaping ([Group]) -> Void) {
-		let dispatchGroup = DispatchGroup()
-		var returnGroups: [Group] = []
-		user.groupsRef.forEach { (documentRef) in
-			dispatchGroup.enter()
-			documentRef.getDocument(completion: { (snapshot, error) in
-				if let error = error {
-					print("💩🧜🏻‍♂️ 🧜🏻‍♂️error in \(#function) ; \(error) ; \(error.localizedDescription)")
-					completion([])
-					return
-				}
-				
-				guard let dictionary = snapshot?.data() else { print("Fetched group does not have data") ; return }
-				
-				let newGroup = Group(dictionary: dictionary)
-				
-				guard newGroup != nil else { print("Group was optional") ; return }
-				self.currentGroup = newGroup
-				returnGroups.append(newGroup!)
-				dispatchGroup.leave()
-			})
-		}
-		dispatchGroup.notify(queue: .main) {
-			completion(returnGroups)
-		}
-	}
+    func fetchGroups(for member: Member, completion: @escaping ([Group]?,Error?) -> Void) {
+        dbRef.whereField("memberUUIDs", arrayContains: member.userUUID).getDocuments { [weak self] (snapshot, error) in
+            if let error = error{
+                print("💩🧜🏻‍♂️ 🧜🏻‍♂️error in \(#function) ; \(error) ; \(error.localizedDescription)")
+                completion([], error)
+                return
+            }
+            guard let snapshot = snapshot else {return}
+            let groups = snapshot.documents.compactMap { Group(docSnapshot: $0)  }
+            self?.groups = groups
+            completion(self?.groups,nil)
+        }
+    }
+    
+    func add(_ task: Task, to group: Group, completion: @escaping (Bool) -> Void) {
+        group.taskRef.append(task.taskRef)
+        group.tasks.append(task)
+        save(group, completion: completion)
+    }
+    func addURL(_ groupURL: URL, to group: Group, completion: @escaping (Bool) -> Void) {
+        group.groupImageURL = groupURL.absoluteString
+        save(group, completion: completion)
+    }
+    func save(_ group: Group, completion: @escaping (Bool) -> Void) {
+        
+        group.groupRef.setData(group.asDict, completion: { (error) in
+            if let error = error{
+                print("💩🧜🏻‍♂️ 🧜🏻‍♂️error in \(#function) ; \(error) ; \(error.localizedDescription)")
+                return
+            }
+            completion(true)
+        })
+    }
 }
+

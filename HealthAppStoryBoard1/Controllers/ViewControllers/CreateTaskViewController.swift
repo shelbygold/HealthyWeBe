@@ -11,8 +11,6 @@ import UIKit
 
 class CreateTaskViewController: UIViewController, UITextFieldDelegate{
     
-    
-    
     @IBOutlet weak var taskImageView: UIImageView!
     @IBOutlet weak var taskTypeLabel: UILabel!
     @IBOutlet weak var addTaskField: UITextField!
@@ -22,17 +20,19 @@ class CreateTaskViewController: UIViewController, UITextFieldDelegate{
     let beginDatePicker = UIDatePicker()
     let endDatePicker = UIDatePicker()
     
-    var taskType: String!
+    var taskCategory: TaskCategory?
     var points: Int = 0
+    var group: Group?
     
     var datePicker:UIDatePicker = UIDatePicker()
     let toolBar = UIToolbar()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        guard let taskCategory = taskCategory else { return }
         pointsLabel.text = "\(points)"
-        taskTypeLabel.text = taskType
-        setTaskImage(taskType: taskType)
+        taskTypeLabel.text = taskCategory.rawValue
+        setTaskImage(taskCategory: taskCategory)
         beginDateTextField.inputView = beginDatePicker
         endDateTextField.inputView = endDatePicker
         beginDatePicker.addTarget(self, action: #selector(setDateTextField(_:)), for: .valueChanged)
@@ -58,20 +58,9 @@ class CreateTaskViewController: UIViewController, UITextFieldDelegate{
         }
     }
     
-    func setTaskImage(taskType: String){
-        if taskType == "fitness"{
-            taskImageView.image = #imageLiteral(resourceName: "ShadRunner")
-            taskImageView.backgroundColor = healthColors.myRed
-        } else if taskType == "mindfullness" {
-            taskImageView.image = #imageLiteral(resourceName: "shadedMeditation")
-            taskImageView.backgroundColor = healthColors.myPurple
-        } else if taskType == "nutrition" {
-            taskImageView.image = #imageLiteral(resourceName: "Eaten Pear")
-            taskImageView.backgroundColor = healthColors.myGreen
-        } else if taskType == "sleep" {
-            taskImageView.image = #imageLiteral(resourceName: "weighIN")
-            taskImageView.backgroundColor = healthColors.myOrange
-        }
+    func setTaskImage(taskCategory: TaskCategory){
+        taskImageView.image = taskCategory.image
+        view.backgroundColor = taskCategory.backGroundColor
     }
     
     
@@ -81,7 +70,6 @@ class CreateTaskViewController: UIViewController, UITextFieldDelegate{
     @IBAction func endDateTextField(_ sender: UITextField) {
         
     }
-    
     
     func doDatePicker(){
         self.datePicker = UIDatePicker(frame: CGRect(x: 0, y: self.view.frame.size.height - 220, width: self.view.frame.size.width, height: 216))
@@ -117,19 +105,40 @@ let taskType = taskTypeLabel.text,
             let endDate = endDateTextField.text,
             let beginD = getDate(string: beginDate),
             let endD = getDate(string: endDate) else {print("error with som task labels"); return}
+        let taskUUID = TaskController.shared.dbRef.document().documentID
+        let taskRef = TaskController.shared.dbRef.document()
         
+        let group = GroupController.shared.groups.first!
+        let groupRef = group.groupRef
         
-        guard let group = GroupController.shared.currentGroup else {print("errorwith group"); return}
-        let groupRef = group.groupUUID
+        let newTask = Task(taskTitle: addText, taskType: taskType, taskBeginDate: beginD, taskEndDate: endD, taskUUID: taskUUID, taskGroupRef: groupRef, taskOwnerRef: groupRef, taskRef: taskRef)
+        newTask.taskOwnerUUID = group.groupUUID
         
-        TaskController.shared.createTask(title: addText, type: taskType, points: points, beginDate: beginD, endDate: endD, groupRef: groupRef)
+        TaskController.shared.createTaskFrom(task: newTask, uuid: taskUUID)
+        
+        GroupController.shared.add(newTask, to: group) { (success) in
+            if success {
+                DispatchQueue.main.async {
+                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                    let viewController = storyboard.instantiateViewController(withIdentifier: "tabBar")
+                    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                    appDelegate.window?.rootViewController = viewController
+                }
+            }
+        }
     }
     
         
     
     @IBAction func cancelButtonTapped(_ sender: Any) {
-        let viewcontroller = GroupTaskTableViewController.init()
-        navigationController?.popToViewController(viewcontroller, animated: true)
+        let dispatchGroup = DispatchGroup()
+        dispatchGroup.notify(queue: .main, execute: {
+            // Go to Tab bar controller
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let viewController = storyboard.instantiateViewController(withIdentifier: "GroupProfile")
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            appDelegate.window?.rootViewController = viewController
+        })
     }
     
     

@@ -17,32 +17,33 @@ class GroupProfileViewController: UIViewController {
     @IBOutlet weak var totalGroupPoints: UILabel!
     @IBOutlet weak var numberOfMembersLabel: UILabel!
     @IBOutlet weak var sloganLabel: UIStackView!
+    @IBOutlet weak var tabSegmentControl: UISegmentedControl!
     
-
-    let currentGroup = GroupController.shared.currentGroup
-    
-    func findGroupImageFileName(group: Group) -> String{
-        let groupRef = group.groupUUID.documentID
-        
-        return groupRef
-    }
-    
-    
-    var groupImageRef: StorageReference {
-        return Storage.storage().reference().child("groupImages")
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        downloadImage(group: currentGroup!)
+        
+        
     }
     
-    
-    
+    @IBAction func groupTabButtons(_ sender: UISegmentedControl) {
+        switch tabSegmentControl.selectedSegmentIndex {
+        case 0:
+            performSegue(withIdentifier: "Page1", sender: self)
+        case 1:
+            performSegue(withIdentifier: "Page2", sender: self)
+        case 2:
+            performSegue(withIdentifier: "Page3", sender: self)
+        case 3:
+            performSegue(withIdentifier: "Page4", sender: self)
+        default:
+            break;
+        }
+    }
+    //MARK: hard code fix
     func downloadImage(group: Group) {
-        let downloadURL = GroupController.shared.currentGroup?.groupImageURL
-        let storageRef = Storage.storage().reference(forURL: downloadURL!)
-        
+        let downloadURL = GroupController.shared.groups.remove(at: 0).groupImageURL
+        let storageRef = Storage.storage().reference(forURL: downloadURL)
         storageRef.getData(maxSize: 1024 * 1024 * 12) { (data, error) in
             if let error = error{
                 print("💩🧜🏻‍♂️ 🧜🏻‍♂️error in \(#function) ; \(error) ; \(error.localizedDescription)")
@@ -55,14 +56,5 @@ class GroupProfileViewController: UIViewController {
                 
             }
         }
-//        downloadImage.observe(.progress) { (snapshot) in
-//            print(snapshot.progress ?? "NO more progress")
-//        }
-//
-//        downloadImage.resume()
     }
-    
-    @IBAction func groupTabButtons(_ sender: Any) {
-    }
-    
 }

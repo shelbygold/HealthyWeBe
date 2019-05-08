@@ -12,34 +12,21 @@ class ChooseCategoryViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
-    func segueOver(type: String){
-        let dispatchGroup = DispatchGroup()
-        dispatchGroup.notify(queue: .main, execute: {
-            // Go to Tab bar controller
+    func segueOver(type: TaskCategory){
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let viewController = storyboard.instantiateViewController(withIdentifier: "taskCreate") as? CreateTaskViewController
-            viewController?.taskType = type
+            viewController?.taskCategory = type
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             appDelegate.window?.rootViewController = viewController
-            
-        })
     }
     
-    @IBAction func fitnessButtontapped(_ sender: Any) {
-        segueOver(type: "fitness")
-    }
-    @IBAction func mindfullButtonTapped(_ sender: Any) {
-       segueOver(type: "mindfullness")
-    }
-    @IBAction func nutritionButtonTapped(_ sender: Any) {
-        segueOver(type: "nutrition")
-    }
-    @IBAction func sleepButtonTapped(_ sender: Any) {
-       segueOver(type: "sleep")
+    @IBAction func categoryTapped(_ sender: UIButton) {
+        guard let restorationID = sender.restorationIdentifier,
+            let category = TaskCategory(rawValue: restorationID)
+            else { return }
+        segueOver(type: category)
     }
     
     @IBAction func inviteFriendsButtonTapped(_ sender: Any) {

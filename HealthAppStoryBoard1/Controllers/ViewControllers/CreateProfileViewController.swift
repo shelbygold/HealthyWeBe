@@ -25,7 +25,7 @@ class CreateProfileViewController: UIViewController {
     
     
     var imageRef: StorageReference {
-    return Storage.storage().reference().child("profileImages")
+        return Storage.storage().reference().child("profileImages")
     }
     
     override func viewDidLoad() {
@@ -49,9 +49,9 @@ class CreateProfileViewController: UIViewController {
     @IBAction func createUserButtonTapped(_ sender: Any) {
         guard let email = emailTextField.text,
             let password = passwordTextField.text,
-        let firstName = firstNameTextField.text,
-        let lastName = lastNameTextField.text,
-        let bio = bioTextField.text else {return}
+            let firstName = firstNameTextField.text,
+            let lastName = lastNameTextField.text,
+            let bio = bioTextField.text else {return}
         UserAuthenticationController.shared.createNewUser(email: email, password: password) { (User, error) in
             if let error = error{
                 print("💩🧜🏻‍♂️ 🧜🏻‍♂️error in \(#function) ; \(error) ; \(error.localizedDescription)")
@@ -60,12 +60,12 @@ class CreateProfileViewController: UIViewController {
             }
             guard let user = User else {return}
             
-        
+            
             
             let uuid = user.uid
             
             let docRef =
-        MemberController.shared.dbRef.document(uuid)
+                MemberController.shared.dbRef.document(uuid)
             
             guard let image = self.profilePicImageView.image else {return}
             
@@ -87,14 +87,17 @@ class CreateProfileViewController: UIViewController {
                     }
                     
                     guard let urls = urls,
-                    let member = MemberController.shared.currentUser else {return}
+                        let member = NetworkClient.shared.currentMember else {return}
                     var userURL = member.userPicURL
                     userURL = urls.absoluteString
-                    MemberController.shared.currentUser?.userPicURL = urls.absoluteString
-                    
+                    member.userPicURL = urls.absoluteString
+                    MemberController.shared.addURLtoUser(member: member, completion: { (success) in
+                        print(success)
+                        
+                    })
                     print("\(urls)")
                 })
-            
+                
                 print(storageMetaData ?? "NO MetaData")
             })
             
@@ -103,45 +106,24 @@ class CreateProfileViewController: UIViewController {
             
             MemberController.shared.createMemberFrom(member: member, uuid: uuid)
             
+            NetworkClient.shared.currentMember = member
             
-            MemberController.shared.currentUser = member
-            
-        
-            
-        MemberController.shared.fetchMemberFrom(Authorized: user, completion: { (member, error) in
-                if let error = error{
-                    print("💩🧜🏻‍♂️ 🧜🏻‍♂️error in \(#function) ; \(error) ; \(error.localizedDescription)")
-                    self.presentLoginAlert(errorMessage: error)
-                    
-                    return
-                }
-                guard let member = member else {return}
-                GroupController.shared.fetchGroupsFor(user: member, completion: { (groups) in
-                    let dispatchGroup = DispatchGroup()
-                    groups.forEach({ (group) in
-                        dispatchGroup.enter()
-                        TaskController.shared.fetchTasksFor(group: group, completion: { (success) in
-                            if success {
-                                dispatchGroup.leave()
-                            }
-                        })
-                    })
+            let dispatchGroup = DispatchGroup()
                     dispatchGroup.notify(queue: .main, execute: {
                         // Go to Tab bar controller
                         let storyboard = UIStoryboard(name: "Main", bundle: nil)
                         let viewController = storyboard.instantiateViewController(withIdentifier: "createGroup")
                         let appDelegate = UIApplication.shared.delegate as! AppDelegate
                         appDelegate.window?.rootViewController = viewController
+                        
+                        uploadTask.observe(.progress, handler: { (snapShot) in
+                            print(snapShot.progress ?? "No Progress")
+                        })
+                        uploadTask.resume()
                     })
-                    uploadTask.observe(.progress, handler: { (snapShot) in
-                        print(snapShot.progress ?? "No Progress")
-                    })
-                    uploadTask.resume()
-                })
-            })
+
         }
-            
-        }
+    }
     func presentLoginAlert(errorMessage: Error){
         let alertController = UIAlertController.init(title: "Something went wrong", message: errorMessage.localizedDescription, preferredStyle: .alert)
         let dismiss = UIAlertAction(title: "Ok", style: .cancel, handler: nil)

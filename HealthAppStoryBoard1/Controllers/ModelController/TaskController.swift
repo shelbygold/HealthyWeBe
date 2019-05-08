@@ -15,48 +15,51 @@ class TaskController {
     static let shared = TaskController()
     private init (){}
     
-    var tasks: [Task] = []
     
 let dbRef = Firestore.firestore().collection("task")
-
-    func createTask(title: String, type: String, points: Int, beginDate: Date, endDate: Date, groupRef: DocumentReference) {
+    
+    func createTaskFrom(task: Task, uuid: String){
+        let docRef = dbRef.document(uuid)
         
-        let documentRef = dbRef.document()
-        
-        let newTask = Task(taskTitle: title, taskType: type, taskPoints: points, taskBeginDate: beginDate, taskEndDate: endDate, taskUUID: documentRef)
-        
-        let dict = newTask.asDict
-        documentRef.setData(dict) { (error) in
+        let dict = task.asDict
+        docRef.setData(dict) { (error) in
             if let error = error{
                 print("💩🧜🏻‍♂️ 🧜🏻‍♂️error in \(#function) ; \(error) ; \(error.localizedDescription)")
                 return
+            }
         }
     }
-    }
-    func fetchTasksFor(group: Group, completion: @escaping (Bool) -> Void) {
-        let dispatchGroup = DispatchGroup()
-        var returnTasks: [Task] = []
-        group.taskRef.forEach { (documentRef) in
-            dispatchGroup.enter()
-            documentRef!.getDocument(completion: { (snapshot, error) in
-                if let error = error {
-                    print("💩🧜🏻‍♂️ 🧜🏻‍♂️error in \(#function) ; \(error) ; \(error.localizedDescription)")
-                    completion(false)
-                    return
-                }
-                
-                guard let dictionary = snapshot?.data() else { return }
-                
-                let newTasks = Task(dictionary: dictionary)
-                
-                group.tasks.append(newTasks!)
-                returnTasks.append(newTasks!)
-                dispatchGroup.leave()
-            })
+    
+    func fetchTasks(for group: Group, completion: @escaping ([Task?], Error?) -> Void){
+        dbRef.whereField("taskOwnerUUID", isEqualTo: group.groupUUID).getDocuments { (snapShot, error) in
+            if let error = error{
+                print("💩🧜🏻‍♂️ 🧜🏻‍♂️error in \(#function) ; \(error) ; \(error.localizedDescription)")
+                completion([], error)
+                return
+            }
+            guard let snapshot = snapShot else {return}
+            group.tasks = snapshot.documents.compactMap {
+                Task(docSnapshot: $0) }
+            completion(group.tasks, nil)
         }
-        dispatchGroup.notify(queue: .main) {
-            group.tasks = returnTasks
+    }
+    
+    func add(_ groupRef: Group, to task: Task, completion: @escaping (Bool) -> Void) {
+        task.taskGroupRef = groupRef.groupRef
+        save(task, completion: completion)
+    }
+    
+    func save(_ task: Task, completion: @escaping (Bool) -> Void) {
+        
+        task.taskRef.setData(task.asDict , completion: {
+            (error) in
+            if let error = error{
+                print("💩🧜🏻‍♂️ 🧜🏻‍♂️error in \(#function) ; \(error)")
+                return
+            }
             completion(true)
-        }
+        })
+        
     }
 }
+    

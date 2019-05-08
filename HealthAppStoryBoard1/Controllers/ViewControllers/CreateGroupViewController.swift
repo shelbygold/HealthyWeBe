@@ -48,48 +48,46 @@ class CreateGroupViewController: UIViewController {
         guard let groupName = groupNameTextField.text,
             let groupslogan = sloganTextField.text,
         let groupPic = groupProfileImageView.image else {return}
-        guard let member = MemberController.shared.currentUser else {print("error with member"); return}
+        guard let member = MemberController.shared.currentMember else {print("error with member"); return}
         let userRef = member.memberRef
+       
+        let groupUUID = GroupController.shared.dbRef.document().documentID
+        let groupRef = GroupController.shared.dbRef.document()
         
+        let imageLocation = Storage.storage().reference().child(self.groupImageFileName)
         
-        GroupController.shared.createGroup(groupName: groupName, groupimage: groupPic, groupSlogan: groupslogan, groupOwner: userRef, userRef: [userRef]) { (success) in
-            let dispatchGroup = DispatchGroup()
-            if success {
-                dispatchGroup.enter()
-                
-                
-                
-                
-                let uploadGroupImageRef = self.groupImageRef.child(self.groupImageFileName)
-                
-                guard let imageData = UIImage.pngData(groupPic)() else {return}
-                
-                let uploadTask = uploadGroupImageRef.putData(imageData, metadata: nil) { (storagemetaData, error) in
-                    if let error = error{
-                        print("💩🧜🏻‍♂️ 🧜🏻‍♂️error in \(#function) ; \(error) ; \(error.localizedDescription)")
-                        return
-                    }
-                    uploadGroupImageRef.downloadURL(completion: { (urls, error) in
-                        if let error = error{
-                            print("💩🧜🏻‍♂️ 🧜🏻‍♂️error in \(#function) ; \(error) ; \(error.localizedDescription)")
-                            return
-                        }
-                        guard let urls = urls,
-                            let group = GroupController.shared.currentGroup else {return}
-                        var grouURL = group.groupImageURL
-                        grouURL = urls.absoluteString
-                        
-                        GroupController.shared.currentGroup?.groupImageURL = urls.absoluteString
-                       
-                    })
-                    print(storagemetaData ?? "NO METADATA")
-                }
-                uploadTask.observe(.progress) { (snapShot) in
-                    print(snapShot.progress ?? "NO PROGRESS")
-                }
-                uploadTask.resume()
-                dispatchGroup.leave()
+        guard let groupimageData = UIImage.pngData(groupPic)() else {return}
+        
+        let newGroup = Group(groupName: groupName, groupSlogan: groupslogan, groupImage: groupPic, userRef: [userRef], groupOwner: userRef, groupRef: groupRef, groupUUID: groupUUID)
+        newGroup.memberUUIDs.append(member.userUUID)
+        
+        imageLocation.putData(groupimageData, metadata: nil) { (storageMetaData, error) in
+            if let error = error{
+                print("💩🧜🏻‍♂️ 🧜🏻‍♂️error in \(#function) ; \(error) ; \(error.localizedDescription)")
+                return
             }
+            imageLocation.downloadURL(completion: { (groupUrl, error) in
+                if let error = error{
+                    print("💩🧜🏻‍♂️ 🧜🏻‍♂️error in \(#function) ; \(error) ; \(error.localizedDescription)")
+                    return
+                }
+                guard let groupURL = groupUrl
+                    else {return}
+
+                GroupController.shared.addURL(groupURL, to: newGroup, completion: { (success) in
+                    if success {
+                        // do something
+                    }
+                })
+            })
+        }
+
+        
+        MemberController.shared.addGroupToUser(group: newGroup) { (success) in
+            print(success)
+        }
+
+        let dispatchGroup = DispatchGroup()
             dispatchGroup.notify(queue: .main, execute: {
                 // Go to Tab bar controller
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -97,6 +95,5 @@ class CreateGroupViewController: UIViewController {
                 let appDelegate = UIApplication.shared.delegate as! AppDelegate
                 appDelegate.window?.rootViewController = viewController
             })
-        }
     }
 }

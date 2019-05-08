@@ -7,24 +7,47 @@
 //
 
 import UIKit
+import FirebaseStorage
 
 class PersonalProfileViewController: UIViewController {
-
+    
+    @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var bioLabel: UILabel!
+    @IBOutlet weak var pointsLabel: UILabel!
+    @IBOutlet weak var numberofGroupsLabel: UILabel!
+    @IBOutlet weak var friendsLabel: UILabel!
+    
+    
+    
+    let member = NetworkClient.shared.currentMember
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        nameLabel.text = member?.userFirstName
+        bioLabel.text = member?.userBio
+        pointsLabel.text = "\(member?.userPoints ?? 0)"
+        numberofGroupsLabel.text = "\(member?.groupsRef.count ?? 0)"
+       profileImageView.addCornerRadiusImage(25)
+        downloadImage(member: member!)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func downloadImage(member: Member) {
+        let downloadURL = member.userPicURL
+        let storageRef = Storage.storage().reference(forURL: downloadURL)
+        storageRef.getData(maxSize: 1024 * 1024 * 12) { (data, error) in
+            if let error = error{
+                print("💩🧜🏻‍♂️ 🧜🏻‍♂️error in \(#function) ; \(error) ; \(error.localizedDescription)")
+                return
+            }
+            if let data = data {
+                let image = UIImage(data: data)
+               self.profileImageView.image = image
+                
+            }
+        }
     }
-    */
+
+   
 
 }
