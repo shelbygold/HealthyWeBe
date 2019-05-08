@@ -13,7 +13,6 @@
 		CAF8DC64227A82810006FD18 /* TaskCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF8DC63227A82810006FD18 /* TaskCollectionViewCell.swift */; };
 		DD4BDED422790A3400F4BD64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD4BDED322790A3400F4BD64 /* Main.storyboard */; };
 		DD4D955B227CA6A10096CD82 /* HealthTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4D955A227CA6A10096CD82 /* HealthTextField.swift */; };
-		DD4E1459228257DE00B5D70A /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4E1458228257DE00B5D70A /* NetworkClient.swift */; };
 		DD4E145B2282771000B5D70A /* GroupListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4E145A2282771000B5D70A /* GroupListTableViewController.swift */; };
 		DD4E145D228342BA00B5D70A /* TaskListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4E145C228342B900B5D70A /* TaskListTableViewController.swift */; };
 		DD867320227A37C3003A0A22 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD86731F227A37C3003A0A22 /* LoginViewController.swift */; };
@@ -21,7 +20,6 @@
 		DD867324227A37FE003A0A22 /* CreateGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD867323227A37FE003A0A22 /* CreateGroupViewController.swift */; };
 		DD867326227A382A003A0A22 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD867325227A382A003A0A22 /* ListViewController.swift */; };
 		DD867328227A3844003A0A22 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD867327227A3844003A0A22 /* DashboardViewController.swift */; };
-		DD86732A227A385D003A0A22 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD867329227A385D003A0A22 /* CardViewController.swift */; };
 		DD86732C227A3879003A0A22 /* PersonalProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD86732B227A3879003A0A22 /* PersonalProfileViewController.swift */; };
 		DD86732E227A3892003A0A22 /* GroupProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD86732D227A3892003A0A22 /* GroupProfileViewController.swift */; };
 		DD867330227A38B7003A0A22 /* ChooseCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD86732F227A38B7003A0A22 /* ChooseCategoryViewController.swift */; };
@@ -36,7 +34,7 @@
 		DDEFEE742270CA78009F29E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEFEE732270CA78009F29E1 /* AppDelegate.swift */; };
 		DDEFEE7B2270CA79009F29E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDEFEE7A2270CA79009F29E1 /* Assets.xcassets */; };
 		DDEFEE7E2270CA7A009F29E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDEFEE7C2270CA7A009F29E1 /* LaunchScreen.storyboard */; };
-		DDEFEE862270DB93009F29E1 /* DailTasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEFEE852270DB93009F29E1 /* DailTasksViewController.swift */; };
+		DDEFEE862270DB93009F29E1 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEFEE852270DB93009F29E1 /* PageViewController.swift */; };
 		DDF53670227766C000FF313B /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF5366F227766C000FF313B /* Member.swift */; };
 		DDF5367222776B6900FF313B /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF5367122776B6900FF313B /* Group.swift */; };
 		DDF5367422776D7700FF313B /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF5367322776D7700FF313B /* Task.swift */; };
@@ -56,7 +54,6 @@
 		CAF8DC63227A82810006FD18 /* TaskCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCollectionViewCell.swift; sourceTree = "<group>"; };
 		DD4BDED322790A3400F4BD64 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		DD4D955A227CA6A10096CD82 /* HealthTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthTextField.swift; sourceTree = "<group>"; };
-		DD4E1458228257DE00B5D70A /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		DD4E145A2282771000B5D70A /* GroupListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupListTableViewController.swift; sourceTree = "<group>"; };
 		DD4E145C228342B900B5D70A /* TaskListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListTableViewController.swift; sourceTree = "<group>"; };
 		DD86731F227A37C3003A0A22 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -64,7 +61,6 @@
 		DD867323227A37FE003A0A22 /* CreateGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupViewController.swift; sourceTree = "<group>"; };
 		DD867325227A382A003A0A22 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		DD867327227A3844003A0A22 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
-		DD867329227A385D003A0A22 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 		DD86732B227A3879003A0A22 /* PersonalProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalProfileViewController.swift; sourceTree = "<group>"; };
 		DD86732D227A3892003A0A22 /* GroupProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupProfileViewController.swift; sourceTree = "<group>"; };
 		DD86732F227A38B7003A0A22 /* ChooseCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseCategoryViewController.swift; sourceTree = "<group>"; };
@@ -81,7 +77,7 @@
 		DDEFEE7A2270CA79009F29E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DDEFEE7D2270CA7A009F29E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DDEFEE7F2270CA7A009F29E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DDEFEE852270DB93009F29E1 /* DailTasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailTasksViewController.swift; sourceTree = "<group>"; };
+		DDEFEE852270DB93009F29E1 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		DDF5366F227766C000FF313B /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
 		DDF5367122776B6900FF313B /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		DDF5367322776D7700FF313B /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
@@ -121,6 +117,41 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		DD4E145E228354A300B5D70A /* CreateViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				DD86731F227A37C3003A0A22 /* LoginViewController.swift */,
+				DD867321227A37DB003A0A22 /* CreateProfileViewController.swift */,
+				DD867323227A37FE003A0A22 /* CreateGroupViewController.swift */,
+				DD86732F227A38B7003A0A22 /* ChooseCategoryViewController.swift */,
+				DD867331227A38C9003A0A22 /* CreateTaskViewController.swift */,
+			);
+			path = CreateViewControllers;
+			sourceTree = "<group>";
+		};
+		DD4E145F2283550200B5D70A /* TabsViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				DD867327227A3844003A0A22 /* DashboardViewController.swift */,
+				CAF8DC63227A82810006FD18 /* TaskCollectionViewCell.swift */,
+				DD4E145C228342B900B5D70A /* TaskListTableViewController.swift */,
+				DD86732B227A3879003A0A22 /* PersonalProfileViewController.swift */,
+				DD86732D227A3892003A0A22 /* GroupProfileViewController.swift */,
+			);
+			path = TabsViewControllers;
+			sourceTree = "<group>";
+		};
+		DD4E14602283557600B5D70A /* ContainerViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				DD867333227A38EA003A0A22 /* GroupChatViewController.swift */,
+				DD867335227A3919003A0A22 /* LeaderBoardTableViewController.swift */,
+				DD867337227A3931003A0A22 /* GroupTaskTableViewController.swift */,
+				DDEFEE852270DB93009F29E1 /* PageViewController.swift */,
+			);
+			path = ContainerViewControllers;
+			sourceTree = "<group>";
+		};
 		DDE7BED22278E55E007E1ADD /* ModelController */ = {
 			isa = PBXGroup;
 			children = (
@@ -129,7 +160,6 @@
 				DDF536842277E7F500FF313B /* GroupController.swift */,
 				DDF536822277CB9D00FF313B /* TaskController.swift */,
 				7AD1C903227A608B00987C66 /* ContactController.swift */,
-				DD4E1458228257DE00B5D70A /* NetworkClient.swift */,
 			);
 			path = ModelController;
 			sourceTree = "<group>";
@@ -166,24 +196,11 @@
 		DDF53677227772C700FF313B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				DD86731F227A37C3003A0A22 /* LoginViewController.swift */,
-				DD4E145A2282771000B5D70A /* GroupListTableViewController.swift */,
-				DD867321227A37DB003A0A22 /* CreateProfileViewController.swift */,
-				DD867323227A37FE003A0A22 /* CreateGroupViewController.swift */,
+				DD4E145E228354A300B5D70A /* CreateViewControllers */,
+				DD4E145F2283550200B5D70A /* TabsViewControllers */,
+				DD4E14602283557600B5D70A /* ContainerViewControllers */,
 				DD867325227A382A003A0A22 /* ListViewController.swift */,
-				DD4E145C228342B900B5D70A /* TaskListTableViewController.swift */,
-				DD867327227A3844003A0A22 /* DashboardViewController.swift */,
-				CAF8DC63227A82810006FD18 /* TaskCollectionViewCell.swift */,
-				DD867329227A385D003A0A22 /* CardViewController.swift */,
-				DD86732B227A3879003A0A22 /* PersonalProfileViewController.swift */,
-				DD86732D227A3892003A0A22 /* GroupProfileViewController.swift */,
-				DD86732F227A38B7003A0A22 /* ChooseCategoryViewController.swift */,
-				DD867331227A38C9003A0A22 /* CreateTaskViewController.swift */,
-				DD4D955A227CA6A10096CD82 /* HealthTextField.swift */,
-				DD867333227A38EA003A0A22 /* GroupChatViewController.swift */,
-				DD867335227A3919003A0A22 /* LeaderBoardTableViewController.swift */,
-				DD867337227A3931003A0A22 /* GroupTaskTableViewController.swift */,
-				DDEFEE852270DB93009F29E1 /* DailTasksViewController.swift */,
+				DD4E145A2282771000B5D70A /* GroupListTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -193,6 +210,7 @@
 			children = (
 				DDF5367522776F0600FF313B /* Constants.swift */,
 				DD86733A227A4FF6003A0A22 /* AttachmentHandler.swift */,
+				DD4D955A227CA6A10096CD82 /* HealthTextField.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -383,11 +401,10 @@
 				DD867334227A38EA003A0A22 /* GroupChatViewController.swift in Sources */,
 				DD867336227A3919003A0A22 /* LeaderBoardTableViewController.swift in Sources */,
 				DDEFEE742270CA78009F29E1 /* AppDelegate.swift in Sources */,
-				DDEFEE862270DB93009F29E1 /* DailTasksViewController.swift in Sources */,
+				DDEFEE862270DB93009F29E1 /* PageViewController.swift in Sources */,
 				DD86732C227A3879003A0A22 /* PersonalProfileViewController.swift in Sources */,
 				DD867324227A37FE003A0A22 /* CreateGroupViewController.swift in Sources */,
 				DDF5367222776B6900FF313B /* Group.swift in Sources */,
-				DD4E1459228257DE00B5D70A /* NetworkClient.swift in Sources */,
 				DD86732E227A3892003A0A22 /* GroupProfileViewController.swift in Sources */,
 				DD867330227A38B7003A0A22 /* ChooseCategoryViewController.swift in Sources */,
 				DD867322227A37DB003A0A22 /* CreateProfileViewController.swift in Sources */,
@@ -404,7 +421,6 @@
 				DD4E145B2282771000B5D70A /* GroupListTableViewController.swift in Sources */,
 				DDF536832277CB9D00FF313B /* TaskController.swift in Sources */,
 				DD867320227A37C3003A0A22 /* LoginViewController.swift in Sources */,
-				DD86732A227A385D003A0A22 /* CardViewController.swift in Sources */,
 				DD867326227A382A003A0A22 /* ListViewController.swift in Sources */,
 				DDF5367622776F0600FF313B /* Constants.swift in Sources */,
 				DD867328227A3844003A0A22 /* DashboardViewController.swift in Sources */,
