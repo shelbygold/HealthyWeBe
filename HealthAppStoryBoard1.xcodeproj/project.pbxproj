@@ -20,6 +20,8 @@
 		DD4E146822839C0800B5D70A /* DownloadImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4E146722839C0800B5D70A /* DownloadImages.swift */; };
 		DD4E146A2283A30500B5D70A /* CreateNewGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4E14692283A30500B5D70A /* CreateNewGroupTableViewCell.swift */; };
 		DD50E8622285D3C800A2C3A9 /* TaskListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD50E8612285D3C800A2C3A9 /* TaskListTableViewCell.swift */; };
+		DD50E8642285EC5C00A2C3A9 /* GroupDashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD50E8632285EC5B00A2C3A9 /* GroupDashboard.storyboard */; };
+		DD50E8662285ED6E00A2C3A9 /* GroupEmbed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD50E8652285ED6E00A2C3A9 /* GroupEmbed.storyboard */; };
 		DD867320227A37C3003A0A22 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD86731F227A37C3003A0A22 /* LoginViewController.swift */; };
 		DD867322227A37DB003A0A22 /* CreateProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD867321227A37DB003A0A22 /* CreateProfileViewController.swift */; };
 		DD867324227A37FE003A0A22 /* CreateGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD867323227A37FE003A0A22 /* CreateGroupViewController.swift */; };
@@ -67,6 +69,8 @@
 		DD4E146722839C0800B5D70A /* DownloadImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImages.swift; sourceTree = "<group>"; };
 		DD4E14692283A30500B5D70A /* CreateNewGroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewGroupTableViewCell.swift; sourceTree = "<group>"; };
 		DD50E8612285D3C800A2C3A9 /* TaskListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TaskListTableViewCell.swift; path = ../TaskListTableViewCell.swift; sourceTree = "<group>"; };
+		DD50E8632285EC5B00A2C3A9 /* GroupDashboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GroupDashboard.storyboard; sourceTree = "<group>"; };
+		DD50E8652285ED6E00A2C3A9 /* GroupEmbed.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GroupEmbed.storyboard; sourceTree = "<group>"; };
 		DD86731F227A37C3003A0A22 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DD867321227A37DB003A0A22 /* CreateProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileViewController.swift; sourceTree = "<group>"; };
 		DD867323227A37FE003A0A22 /* CreateGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupViewController.swift; sourceTree = "<group>"; };
@@ -248,6 +252,8 @@
 			isa = PBXGroup;
 			children = (
 				DD4BDED322790A3400F4BD64 /* Main.storyboard */,
+				DD50E8652285ED6E00A2C3A9 /* GroupEmbed.storyboard */,
+				DD50E8632285EC5B00A2C3A9 /* GroupDashboard.storyboard */,
 				DD86733C227A5913003A0A22 /* Dashboard.storyboard */,
 				DDEFEE7C2270CA7A009F29E1 /* LaunchScreen.storyboard */,
 			);
@@ -338,7 +344,9 @@
 			files = (
 				DDF5367F2277B58700FF313B /* GoogleService-Info.plist in Resources */,
 				DD86733D227A5913003A0A22 /* Dashboard.storyboard in Resources */,
+				DD50E8662285ED6E00A2C3A9 /* GroupEmbed.storyboard in Resources */,
 				DDEFEE7E2270CA7A009F29E1 /* LaunchScreen.storyboard in Resources */,
+				DD50E8642285EC5C00A2C3A9 /* GroupDashboard.storyboard in Resources */,
 				DDEFEE7B2270CA79009F29E1 /* Assets.xcassets in Resources */,
 				DD4BDED422790A3400F4BD64 /* Main.storyboard in Resources */,
 			);

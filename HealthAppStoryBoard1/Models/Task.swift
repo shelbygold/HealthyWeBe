@@ -57,7 +57,7 @@ class Task {
     var isComplete: Bool
     
     
-    init(taskTitle: String, taskType: String, taskPoints: Int = 0, taskBeginDate: Date, taskEndDate: Date, taskUUID: String, taskGroupRef: DocumentReference, taskOwnerRef: DocumentReference,
+    init(taskTitle: String, taskType: String, taskPoints: Int, taskBeginDate: Date, taskEndDate: Date, taskUUID: String, taskGroupRef: DocumentReference, taskOwnerRef: DocumentReference,
          taskRef: DocumentReference, isComplete: Bool = false){
         
         self.taskTitle = taskTitle

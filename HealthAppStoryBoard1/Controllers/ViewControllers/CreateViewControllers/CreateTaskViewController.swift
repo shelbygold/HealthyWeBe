@@ -108,11 +108,13 @@ let taskType = taskTypeLabel.text,
             let endD = getDate(string: endDate) else {print("error with som task labels"); return}
         let taskUUID = TaskController.shared.dbRef.document().documentID
         let taskRef = TaskController.shared.dbRef.document()
+     
         
         guard let group = group else {print("no group passed"); return}
         let groupRef = group.groupRef
         
-        let newTask = Task(taskTitle: addText, taskType: taskType, taskBeginDate: beginD, taskEndDate: endD, taskUUID: taskUUID, taskGroupRef: groupRef, taskOwnerRef: groupRef, taskRef: taskRef)
+        let newTask = Task(taskTitle: addText, taskType: taskType, taskPoints: points, taskBeginDate: beginD, taskEndDate: endD, taskUUID: taskUUID, taskGroupRef: groupRef, taskOwnerRef: groupRef, taskRef: taskRef)
+        
         newTask.taskOwnerUUID = group.groupUUID
         
         TaskController.shared.createTaskFrom(task: newTask, uuid: taskUUID)
