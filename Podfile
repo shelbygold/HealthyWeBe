@@ -9,6 +9,8 @@ pod 'Firebase/Core'
 pod 'Firebase/Firestore'
 pod 'Firebase/Auth'
 pod 'Firebase/Storage'
+pod 'Firebase/Analytics'
+pod 'Firebase/DynamicLinks'
 
 inhibit_all_warnings!
   # Pods for HealthAppStoryBoard1
