@@ -12,49 +12,71 @@ import Firebase
 
 class GroupProfileViewController: UIViewController {
     
+    
     @IBOutlet weak var groupProfileImageView: UIImageView!
-    @IBOutlet weak var groupNameLabel: UILabel!
     @IBOutlet weak var totalGroupPoints: UILabel!
     @IBOutlet weak var numberOfMembersLabel: UILabel!
-    @IBOutlet weak var sloganLabel: UIStackView!
+    @IBOutlet weak var sloganLabel: UILabel!
     @IBOutlet weak var tabSegmentControl: UISegmentedControl!
     
+    var group: Group?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        guard let group = group else {return}
+        
+        DownloadImages.shared.downloadGroupImage(group: group) { (image) in
+            let image = image
+            self.groupProfileImageView.image = image
+        }
+        numberOfMembersLabel.text = "\(group.userRef.count)"
+        sloganLabel.text = group.groupSlogan
         
     }
+    
     
     @IBAction func groupTabButtons(_ sender: UISegmentedControl) {
         switch tabSegmentControl.selectedSegmentIndex {
         case 0:
-            performSegue(withIdentifier: "Page1", sender: self)
+            func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+                if segue.identifier == "Page1" {
+                    let destinVC = segue.destination as? CreateTaskViewController
+                    destinVC?.group = self.group
+                }
+            }
+           
         case 1:
-            performSegue(withIdentifier: "Page2", sender: self)
+            func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+                if segue.identifier == "Page2" {
+                    let destinVC = segue.destination as? CreateTaskViewController
+                    destinVC?.group = self.group
+                }
+            }
         case 2:
-            performSegue(withIdentifier: "Page3", sender: self)
+            func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+                if segue.identifier == "Page3" {
+                    let destinVC = segue.destination as? CreateTaskViewController
+                    destinVC?.group = self.group
+                }
+            }
         case 3:
-            performSegue(withIdentifier: "Page4", sender: self)
+            func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+                if segue.identifier == "Page4" {
+                    let destinVC = segue.destination as? CreateTaskViewController
+                    destinVC?.group = self.group
+                }
+            }
         default:
             break;
         }
     }
-    //MARK: hard code fix
-    func downloadImage(group: Group) {
-        let downloadURL = GroupController.shared.groups.remove(at: 0).groupImageURL
-        let storageRef = Storage.storage().reference(forURL: downloadURL)
-        storageRef.getData(maxSize: 1024 * 1024 * 12) { (data, error) in
-            if let error = error{
-                print("💩🧜🏻‍♂️ 🧜🏻‍♂️error in \(#function) ; \(error) ; \(error.localizedDescription)")
-                return
-            }
-            
-            if let data = data {
-                let image = UIImage(data: data)
-                self.groupProfileImageView.image = image
-                
-            }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "pageView" {
+            let destinVC = segue.destination as? PageViewController
+            destinVC?.group = self.group
         }
     }
+   
 }

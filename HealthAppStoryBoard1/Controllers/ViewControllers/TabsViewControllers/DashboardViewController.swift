@@ -8,63 +8,59 @@
 
 import UIKit
 
-class DashboardViewController: UIViewController {
+class DashboardViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-	@IBOutlet weak var taskCollectionView: UICollectionView!
-	
-	var tasks: [FakeTask] = [
-		FakeTask(taskTitle: "Meditate a lot", type: .mindfulness),
-		FakeTask(taskTitle: "Stairmaster 500000", type: .fitness)
-	]
-	
-	override func viewDidLoad() {
-        super.viewDidLoad()
     
+    @IBOutlet weak var tasktableView: UITableView!
+    
+    var groups = GroupController.shared.groups
+    
+    var storedOffsets = [Int: CGFloat]()
+	
+    
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tasktableView.delegate = self
+        tasktableView.dataSource = self
     }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tasktableView.reloadData()
+    }
+
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return groups.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "taskCells", for: indexPath)
+       return cell
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        guard let tableViewCell = cell as? TasksCardTableViewCell else {return}
+        
+        tableViewCell.collectionViewOffset = storedOffsets[indexPath.row] ?? 0
+        tableViewCell.groupl = groups[indexPath.row]
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 295
+        
+    }
+    
+    func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        guard let tableViewCell = cell as? TasksCardTableViewCell else {return}
+        storedOffsets[indexPath.row] = tableViewCell.collectionViewOffset
+    }
+	
 }
 
-extension DashboardViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-	
-	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-		return tasks.count
-	}
-	
-	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "taskCell", for: indexPath) as! TaskCollectionViewCell
-		cell.layer.cornerRadius = 15
-		cell.layer.shadowColor = UIColor.black.cgColor
-		cell.layer.shadowOpacity = 0.1
-		cell.layer.shadowOffset = CGSize(width: 0, height: 5)
-		cell.layer.shadowRadius = 5
-		cell.task = tasks[indexPath.row]
-		return cell
-	}
-	
-	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-		return CGSize(width: self.view.bounds.width * 0.95, height: collectionView.bounds.height * 0.9)
-	}
-	
-	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-		return self.view.bounds.width * 0.05
-	}
-	
-	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-		return UIEdgeInsets(top: 0, left: self.view.bounds.width * 0.025, bottom: 0, right: self.view.bounds.width * 0.025)
-	}
-}
 
-class FakeTask {
-	
-	enum TaskType {
-		case mindfulness
-		case fitness
-	}
-	
-	var taskTitle: String
-	var type: FakeTask.TaskType
-	
-	init(taskTitle: String, type: FakeTask.TaskType) {
-		self.taskTitle = taskTitle
-		self.type = type
-	}
-}

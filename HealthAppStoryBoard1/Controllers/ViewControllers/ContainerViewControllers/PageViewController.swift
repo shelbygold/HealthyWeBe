@@ -18,6 +18,7 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         self.newVc(viewController: "Page4")]
     }()
     
+    var group: Group?
     
     var pageControl = UIPageControl()
     
@@ -27,8 +28,7 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         self.dataSource = self
         if let firstViewController = orderedViewControllers.first {
             setViewControllers([firstViewController], direction: .forward, animated: true, completion: nil)
-            
-            
+          
         }
         self.delegate = self
         configurePageControl()
@@ -44,10 +44,34 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         pageControl.currentPageIndicatorTintColor = .gray
         self.view.addSubview(pageControl)
     }
+
     
     func newVc(viewController: String) -> UIViewController{
-        return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: viewController)
+        switch viewController {
+        case "Page1":
+            let newViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: viewController) as? ChooseCategoryViewController
+            newViewController?.group = group
+
+            return newViewController ?? UIViewController()
+        case "Page2":
+            let newViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: viewController) as? GroupChatViewController
+            newViewController?.group = group
+            return newViewController ?? UIViewController()
+        case "Page3":
+            let newViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: viewController) as? GroupTaskTableViewController
+            newViewController?.group = group
+            return newViewController ?? UIViewController()
+        case "Page4":
+            let newViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: viewController) as? LeaderBoardTableViewController
+            newViewController?.group = group
+            return newViewController ?? UIViewController()
+
+        default:
+            return UIViewController()
+            
+        }
     }
+    
     
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
         let pageContentViewController = pageViewController.viewControllers![0]
@@ -88,14 +112,11 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         
     }
     
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "Page1" {
+            let destinVC = segue.destination as? CreateTaskViewController
+            destinVC?.group = self.group
+        }
+    }
     
 }

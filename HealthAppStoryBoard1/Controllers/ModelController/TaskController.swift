@@ -44,6 +44,11 @@ let dbRef = Firestore.firestore().collection("task")
         }
     }
     
+    func taskIsComplete(task: Task, completion: @escaping (Bool)-> Void){
+        task.isComplete = !task.isComplete
+        save(task, completion: completion)
+    }
+    
     func add(_ groupRef: Group, to task: Task, completion: @escaping (Bool) -> Void) {
         task.taskGroupRef = groupRef.groupRef
         save(task, completion: completion)

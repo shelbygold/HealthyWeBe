@@ -9,50 +9,48 @@
 import UIKit
 
 class GroupListTableViewController: UITableViewController {
-
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-       
+        
+        
     }
-
+    
+    let groupCount = GroupController.shared.groups.count
     // MARK: - Table view data source
-
+    let groups = GroupController.shared.groups
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return GroupController.shared.groups.count
+        return groupCount + 1
     }
-
-  
+    
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cells", for: indexPath)
-        let group = GroupController.shared.groups[indexPath.row]
-        cell.textLabel?.text =  group.groupName
-        cell.detailTextLabel?.text = group.groupSlogan
-        return cell
+        
+        if groupCount == indexPath.row {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "createCells", for: indexPath) as! CreateNewGroupTableViewCell
+            return cell
+        } else {
+            let group = groups[indexPath.row]
+            let cell = tableView.dequeueReusableCell(withIdentifier: "groupCells", for: indexPath) as! GroupsTableViewCell
+            cell.updateCell(with: group)
+            return cell
+        }
     }
     
-
-    
-    
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-   
-
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "GroupDetailView" , let indexPath = tableView.indexPathForSelectedRow {
+            let group = groups[indexPath.row]
+            let detailVC = segue.destination as? GroupProfileViewController
+            detailVC?.group = group
+        }
     }
- 
-
+    
+    
 }

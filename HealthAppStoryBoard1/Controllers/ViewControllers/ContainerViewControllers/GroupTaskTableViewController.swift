@@ -9,6 +9,9 @@
 import UIKit
 
 class GroupTaskTableViewController: UITableViewController {
+    
+    var group: Group?
+
 
     override func viewDidLoad() {
         super.viewDidLoad()

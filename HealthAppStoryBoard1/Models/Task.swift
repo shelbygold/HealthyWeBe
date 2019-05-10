@@ -43,21 +43,22 @@ enum TaskCategory: String {
 }
 
 class Task {
-	
+    
     var taskTitle: String
     var taskType: String
-   var taskPoints: Int
+    var taskPoints: Int
     var taskBeginDate: Date
     var taskEndDate: Date
     var taskGroupRef: DocumentReference
     var taskOwnerRef: DocumentReference
     var taskOwnerUUID: String?
-	var taskRef: DocumentReference
+    var taskRef: DocumentReference
     var taskUUID: String
-
-	
+    var isComplete: Bool
+    
+    
     init(taskTitle: String, taskType: String, taskPoints: Int = 0, taskBeginDate: Date, taskEndDate: Date, taskUUID: String, taskGroupRef: DocumentReference, taskOwnerRef: DocumentReference,
-         taskRef: DocumentReference){
+         taskRef: DocumentReference, isComplete: Bool = false){
         
         self.taskTitle = taskTitle
         self.taskType = taskType
@@ -68,27 +69,29 @@ class Task {
         self.taskGroupRef = taskGroupRef
         self.taskOwnerRef = taskOwnerRef
         self.taskUUID = taskUUID
+        self.isComplete = isComplete
     }
-	
+    
     convenience init?(docSnapshot: DocumentSnapshot){
         
         let taskRefs = TaskController.shared.dbRef.document(docSnapshot.documentID)
         guard
             let dictionary = docSnapshot.data(),
-        let title = dictionary["taskTitle"] as? String,
-        let type = dictionary["taskType"] as? String,
-        let points = dictionary["taskPoints"] as? Int,
-        let begin = dictionary["taskBeginDate"] as? Timestamp,
-        let end = dictionary["taskEndDate"] as? Timestamp,
-        let taskUUID = dictionary["taskUUID"] as? String,
-        let taskGroupRef = dictionary["taskGroupRef"] as? DocumentReference,
-        let taskOwnerRef = dictionary["taskOwnerRef"] as? DocumentReference,
-        let taskOwnerUUID = dictionary["taskOwnerUUID"] as? String
+            let title = dictionary["taskTitle"] as? String,
+            let type = dictionary["taskType"] as? String,
+            let points = dictionary["taskPoints"] as? Int,
+            let begin = dictionary["taskBeginDate"] as? Timestamp,
+            let end = dictionary["taskEndDate"] as? Timestamp,
+            let taskUUID = dictionary["taskUUID"] as? String,
+            let taskGroupRef = dictionary["taskGroupRef"] as? DocumentReference,
+            let taskOwnerRef = dictionary["taskOwnerRef"] as? DocumentReference,
+            let taskOwnerUUID = dictionary["taskOwnerUUID"] as? String,
+            let isComplete = dictionary["isComplete"] as? Bool
             else {return nil}
         
         
         self.init(taskTitle: title, taskType: type, taskPoints: points, taskBeginDate: begin.dateValue(), taskEndDate: end.dateValue(), taskUUID: taskUUID, taskGroupRef: taskGroupRef, taskOwnerRef: taskOwnerRef,
-                  taskRef: taskRefs)
+                  taskRef: taskRefs, isComplete: isComplete)
         
     }
     convenience init?(dictionary: [String: Any]){
@@ -102,10 +105,11 @@ class Task {
             let taskUUID = dictionary["taskUUID"] as? String,
             let taskGroupRef = dictionary["taskGroupRef"] as? DocumentReference,
             let taskOwnerRef = dictionary["taskOwnerRef"] as? DocumentReference,
-            let taskRef = dictionary["taskRef"] as? DocumentReference
+            let taskRef = dictionary["taskRef"] as? DocumentReference,
+            let isComplete = dictionary["isComplete"] as? Bool
             else {return nil}
         self.init(taskTitle: title, taskType: type, taskPoints: points, taskBeginDate: begin, taskEndDate: end, taskUUID: taskUUID, taskGroupRef: taskGroupRef, taskOwnerRef: taskOwnerRef,
-                  taskRef: taskRef)
+                  taskRef: taskRef, isComplete: isComplete)
     }
     
     var asDict: [String:Any] {
@@ -118,8 +122,24 @@ class Task {
                 "taskGroupRef": taskGroupRef,
                 "taskBeginDate": taskBeginDate,
                 "taskOwnerUUID": taskOwnerRef.documentID,
-                "taskEndDate": taskEndDate]
+                "taskEndDate": taskEndDate,
+                "isComplete": isComplete]
         
+    }
+    func returnCategory ()-> TaskCategory {
+        switch self.taskType {
+        case "fitness":
+            return .fitness
+        case "mindfulness":
+            return .mindfulness
+        case "nutrition":
+            return .nutrition
+        case "sleep":
+            return .sleep
+        default:
+            print("not a taskCategory")
+            return .fitness
+        }
     }
 }
 

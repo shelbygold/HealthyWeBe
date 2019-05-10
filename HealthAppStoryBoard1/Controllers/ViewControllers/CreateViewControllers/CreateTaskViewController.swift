@@ -22,6 +22,7 @@ class CreateTaskViewController: UIViewController, UITextFieldDelegate{
     
     var taskCategory: TaskCategory?
     var points: Int = 0
+    
     var group: Group?
     
     var datePicker:UIDatePicker = UIDatePicker()
@@ -108,7 +109,7 @@ let taskType = taskTypeLabel.text,
         let taskUUID = TaskController.shared.dbRef.document().documentID
         let taskRef = TaskController.shared.dbRef.document()
         
-        let group = GroupController.shared.groups.first!
+        guard let group = group else {print("no group passed"); return}
         let groupRef = group.groupRef
         
         let newTask = Task(taskTitle: addText, taskType: taskType, taskBeginDate: beginD, taskEndDate: endD, taskUUID: taskUUID, taskGroupRef: groupRef, taskOwnerRef: groupRef, taskRef: taskRef)

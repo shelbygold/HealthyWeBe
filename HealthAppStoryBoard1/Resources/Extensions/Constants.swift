@@ -22,6 +22,7 @@ struct healthColors {
     static let myBlack = UIColor.init(named: "HealthyBlack")
     static let myDarkGray = UIColor.init(named: "HealthyDarkGray")
     static let myGray = UIColor.init(named: "HealthyGray")
+    static let myLightGray = UIColor.init(named: "HealthyLightGray")
     static let myWhite = UIColor.white
 }
 struct  spacingConstants {
@@ -71,3 +72,5 @@ extension UIView {
         alertController.addAction(dismiss)
     }
 }
+
+

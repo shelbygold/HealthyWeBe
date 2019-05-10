@@ -10,6 +10,8 @@ import UIKit
 
 class ChooseCategoryViewController: UIViewController {
 
+    var group: Group?
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -18,6 +20,7 @@ class ChooseCategoryViewController: UIViewController {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let viewController = storyboard.instantiateViewController(withIdentifier: "taskCreate") as? CreateTaskViewController
             viewController?.taskCategory = type
+        viewController?.group = group
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             appDelegate.window?.rootViewController = viewController
     }

@@ -20,16 +20,16 @@ class PersonalProfileViewController: UIViewController {
     
     
     
-    let member = NetworkClient.shared.currentMember
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        nameLabel.text = member?.userFirstName
-        bioLabel.text = member?.userBio
-        pointsLabel.text = "\(member?.userPoints ?? 0)"
-        numberofGroupsLabel.text = "\(member?.groupsRef.count ?? 0)"
+guard let member = MemberController.shared.members else {return}
+        nameLabel.text = member.userFirstName
+        bioLabel.text = member.userBio
+        pointsLabel.text = "\(member.userPoints ?? 0)"
+        numberofGroupsLabel.text = "\(member.groupsRef.count ?? 0)"
        profileImageView.addCornerRadiusImage(25)
-        downloadImage(member: member!)
+        downloadImage(member: member)
     }
     
     func downloadImage(member: Member) {

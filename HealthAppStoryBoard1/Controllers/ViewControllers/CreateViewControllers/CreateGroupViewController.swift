@@ -48,7 +48,7 @@ class CreateGroupViewController: UIViewController {
         guard let groupName = groupNameTextField.text,
             let groupslogan = sloganTextField.text,
         let groupPic = groupProfileImageView.image else {return}
-        guard let member = MemberController.shared.currentMember else {print("error with member"); return}
+        guard let member = MemberController.shared.members else {return}
         let userRef = member.memberRef
        
         let groupUUID = GroupController.shared.dbRef.document().documentID

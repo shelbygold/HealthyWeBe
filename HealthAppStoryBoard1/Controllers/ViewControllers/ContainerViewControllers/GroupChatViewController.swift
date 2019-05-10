@@ -10,6 +10,8 @@ import UIKit
 
 class GroupChatViewController: UIViewController {
 
+    var group: Group?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 

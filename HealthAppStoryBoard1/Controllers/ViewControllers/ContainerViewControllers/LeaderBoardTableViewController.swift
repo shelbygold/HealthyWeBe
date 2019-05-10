@@ -9,6 +9,9 @@
 import UIKit
 
 class LeaderBoardTableViewController: UITableViewController {
+    
+    var group: Group?
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
