@@ -87,7 +87,7 @@ class CreateProfileViewController: UIViewController {
                     }
                     
                     guard let urls = urls else {return}
-                    guard let member = MemberController.shared.members else {return}
+                    guard let member = MemberController.shared.currentMember else {return}
                     var userURL = member.userPicURL
                     userURL = urls.absoluteString
                     member.userPicURL = urls.absoluteString
@@ -106,7 +106,7 @@ class CreateProfileViewController: UIViewController {
             
             MemberController.shared.createMemberFrom(member: member, uuid: uuid)
             
-            MemberController.shared.members = member
+            MemberController.shared.currentMember = member
             
             let dispatchGroup = DispatchGroup()
                     dispatchGroup.notify(queue: .main, execute: {

@@ -10,6 +10,24 @@ import UIKit
 
 class TaskListTableViewController: UITableViewController, buttonTableViewCellDelegate {
     
+    @IBOutlet weak var pointsLabel: UILabel!
+    
+    static let shared = TaskListTableViewController()
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        pointsLabel.text = "\(MemberController.shared.currentMember?.userPoints ?? 0) pts"
+        
+        designNavBar()
+    }
+    
+    func designNavBar(){
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationItem.largeTitleDisplayMode = .always
+   
+        
+    }
+    
     func buttonCellButtonTapped(_ sender: TaskListTableViewCell) {
         guard let indexPath = tableView.indexPath(for: sender) else {return}
         let task = GroupController.shared.groups[indexPath.section].tasks[indexPath.row]
@@ -21,13 +39,6 @@ class TaskListTableViewController: UITableViewController, buttonTableViewCellDel
         tableView.reloadRows(at: [indexPath], with: .automatic)
     }
     
-
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        navigationController?.navigationBar.prefersLargeTitles = true
-        
-    }
     
     
 
@@ -43,10 +54,11 @@ class TaskListTableViewController: UITableViewController, buttonTableViewCellDel
         return GroupController.shared.groups[section].tasks.count
         
     }
+    
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = UIView()
         headerView.sizeToFit()
-        
+        headerView.backgroundColor = .white
         let borderTop = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: 1))
         borderTop.backgroundColor = healthColors.myBlack
         headerView.addSubview(borderTop)
@@ -63,6 +75,7 @@ class TaskListTableViewController: UITableViewController, buttonTableViewCellDel
         headerView.addSubview(label)
         return headerView
     }
+    
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         let height = CGFloat(integerLiteral: 40)
         return height

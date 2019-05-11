@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -27,14 +31,14 @@
             <objects>
                 <viewController storyboardIdentifier="Page1" id="nlD-Uz-fY2" customClass="ChooseCategoryViewController" customModule="HealthAppStoryBoard1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ItZ-ht-7yw">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="rZN-nQ-Xkx">
-                                <rect key="frame" x="8" y="52" width="359" height="69"/>
+                                <rect key="frame" x="8" y="52" width="398" height="69"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a0V-v5-KAJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="359" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="398" height="30"/>
                                         <color key="backgroundColor" name="HealthyRed"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="80b-rv-dBP"/>
@@ -48,7 +52,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a Category" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wZR-xP-28r">
-                                        <rect key="frame" x="0.0" y="39" width="359" height="30"/>
+                                        <rect key="frame" x="0.0" y="39" width="398" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="eMd-Ll-yEH"/>
                                         </constraints>
@@ -59,16 +63,16 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="dii-io-lFZ">
-                                <rect key="frame" x="67" y="129" width="241" height="299"/>
+                                <rect key="frame" x="-126.5" y="129" width="667" height="725"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="nmi-Pn-N1H">
-                                        <rect key="frame" x="0.0" y="0.0" width="241" height="139.66666666666666"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="667" height="352.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="-3" translatesAutoresizingMaskIntoConstraints="NO" id="Lbn-ak-mJl">
-                                                <rect key="frame" x="0.0" y="0.0" width="112.66666666666667" height="139.66666666666666"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="325.5" height="352.5"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="fitness" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kwi-Od-ARX">
-                                                        <rect key="frame" x="0.0" y="0.0" width="112.66666666666667" height="112.66666666666667"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="325.5" height="325.5"/>
                                                         <color key="backgroundColor" name="HealthyRed"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="Kwi-Od-ARX" secondAttribute="height" id="cBY-v5-zD5"/>
@@ -79,7 +83,7 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fitness" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5oF-WA-B8J">
-                                                        <rect key="frame" x="0.0" y="109.66666666666669" width="112.66666666666667" height="30"/>
+                                                        <rect key="frame" x="0.0" y="322.5" width="325.5" height="30"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="1h8-Yn-pKV"/>
                                                         </constraints>
@@ -90,10 +94,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="-4" translatesAutoresizingMaskIntoConstraints="NO" id="NwN-Jb-ojg">
-                                                <rect key="frame" x="128.66666666666666" y="0.0" width="112.33333333333334" height="139.66666666666666"/>
+                                                <rect key="frame" x="341.5" y="0.0" width="325.5" height="352.5"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="mindfulness" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qm4-Qn-HRa">
-                                                        <rect key="frame" x="0.0" y="0.0" width="112.33333333333333" height="113.66666666666667"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="325.5" height="326.5"/>
                                                         <color key="backgroundColor" name="HealthyOrange"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="qm4-Qn-HRa" secondAttribute="height" id="4tw-RW-52n"/>
@@ -104,7 +108,7 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mindfulness" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ML-qB-468">
-                                                        <rect key="frame" x="0.0" y="109.66666666666669" width="112.33333333333333" height="30"/>
+                                                        <rect key="frame" x="0.0" y="322.5" width="325.5" height="30"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="P11-ZF-cfH"/>
                                                         </constraints>
@@ -117,13 +121,13 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="2F4-d3-vM0">
-                                        <rect key="frame" x="0.0" y="154.66666666666669" width="241" height="144.33333333333331"/>
+                                        <rect key="frame" x="0.0" y="367.5" width="667" height="357.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="LtH-Va-PFM">
-                                                <rect key="frame" x="0.0" y="0.0" width="112.66666666666667" height="144.33333333333334"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="325.5" height="357.5"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="nutrition" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b0s-D7-688">
-                                                        <rect key="frame" x="0.0" y="0.0" width="112.66666666666667" height="112.33333333333333"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="325.5" height="325.5"/>
                                                         <color key="backgroundColor" name="HealthyGreen"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="b0s-D7-688" secondAttribute="height" id="14O-yj-jRb"/>
@@ -134,7 +138,7 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nutrition" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vgi-tg-Dtq">
-                                                        <rect key="frame" x="0.0" y="114.33333333333331" width="112.66666666666667" height="30"/>
+                                                        <rect key="frame" x="0.0" y="327.5" width="325.5" height="30"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="sZu-Vu-XYN"/>
                                                         </constraints>
@@ -145,10 +149,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="-2" translatesAutoresizingMaskIntoConstraints="NO" id="gzl-uQ-0Vk">
-                                                <rect key="frame" x="128.66666666666666" y="0.0" width="112.33333333333334" height="144.33333333333334"/>
+                                                <rect key="frame" x="341.5" y="0.0" width="325.5" height="357.5"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="sleep" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sf2-TT-Suz">
-                                                        <rect key="frame" x="0.0" y="0.0" width="112.33333333333333" height="116.33333333333333"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="325.5" height="329.5"/>
                                                         <color key="backgroundColor" name="HealthyPurple"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="Sf2-TT-Suz" secondAttribute="height" id="0Rl-AD-1jO"/>
@@ -159,7 +163,7 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sleep" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dSk-v5-azI">
-                                                        <rect key="frame" x="0.0" y="114.33333333333331" width="112.33333333333333" height="30"/>
+                                                        <rect key="frame" x="0.0" y="327.5" width="325.5" height="30"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="zEB-dK-suS"/>
                                                         </constraints>
@@ -199,28 +203,28 @@
             <objects>
                 <tableViewController storyboardIdentifier="Page4" id="Wph-32-A15" customClass="LeaderBoardTableViewController" customModule="HealthAppStoryBoard1" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="tjM-tc-Bd7">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="93" id="ctq-OK-uxw">
-                                <rect key="frame" x="0.0" y="28" width="375" height="93"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="93"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ctq-OK-uxw" id="srq-g8-aQd">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="92.666666666666671"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="92.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="K6G-b7-wg9">
-                                            <rect key="frame" x="284.33333333333331" y="24" width="42.666666666666686" height="45"/>
+                                            <rect key="frame" x="355.5" y="24" width="42.5" height="45"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="235" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gs7-zm-VJu">
-                                                    <rect key="frame" x="0.0" y="0.0" width="42.666666666666664" height="24"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="42.5" height="24"/>
                                                     <fontDescription key="fontDescription" name="KohinoorDevanagari-Light" family="Kohinoor Devanagari" pointSize="17"/>
                                                     <color key="textColor" name="HealthyBlack"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Points" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I6U-b4-cwq">
-                                                    <rect key="frame" x="0.0" y="24" width="42.666666666666664" height="21"/>
+                                                    <rect key="frame" x="0.0" y="24" width="42.5" height="21"/>
                                                     <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="15"/>
                                                     <color key="textColor" name="HealthyBlack"/>
                                                     <nil key="highlightedColor"/>
@@ -228,14 +232,14 @@
                                             </subviews>
                                         </stackView>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="p2Z-qo-sCK">
-                                            <rect key="frame" x="8" y="8" width="76.666666666666671" height="76.666666666666671"/>
+                                            <rect key="frame" x="8" y="8" width="76.5" height="76.5"/>
                                             <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="p2Z-qo-sCK" secondAttribute="height" id="SPk-A0-CD0"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shelby Gold" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VTb-Em-9Ka">
-                                            <rect key="frame" x="100.66666666666669" y="27.333333333333332" width="99.333333333333314" height="38.333333333333343"/>
+                                            <rect key="frame" x="100.5" y="27" width="99.5" height="38.5"/>
                                             <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="18"/>
                                             <color key="textColor" name="HealthyBlack"/>
                                             <nil key="highlightedColor"/>
@@ -269,20 +273,20 @@
             <objects>
                 <viewController storyboardIdentifier="Page2" id="JKt-RV-Nhf" customClass="GroupChatViewController" customModule="HealthAppStoryBoard1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pU9-e8-ByZ">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="gtX-Fq-rHe">
-                                <rect key="frame" x="16" y="766" width="343" height="30"/>
+                                <rect key="frame" x="16" y="850" width="382" height="30"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What do you have to say?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vq6-UG-kOc">
-                                        <rect key="frame" x="0.0" y="0.0" width="291" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="330" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tzt-tt-PJh">
-                                        <rect key="frame" x="307" y="0.0" width="36" height="30"/>
+                                        <rect key="frame" x="346" y="0.0" width="36" height="30"/>
                                         <state key="normal" title="Send">
                                             <color key="titleColor" name="HealthyRed"/>
                                         </state>
@@ -290,14 +294,14 @@
                                 </subviews>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pcV-Gj-3xb">
-                                <rect key="frame" x="16" y="16" width="343" height="734"/>
+                                <rect key="frame" x="16" y="16" width="382" height="818"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="74" id="pH1-NK-Tcr">
-                                        <rect key="frame" x="0.0" y="28" width="343" height="74"/>
+                                        <rect key="frame" x="0.0" y="28" width="382" height="74"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pH1-NK-Tcr" id="dWf-uZ-7fe">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="73.666666666666671"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="382" height="73.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eUX-eo-I9O">
@@ -309,7 +313,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I bet you can't do it Jeff I am going to destroy YOU!!" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JR8-ud-ZhJ">
-                                                    <rect key="frame" x="77" y="7.9999999999999964" width="218" height="57.666666666666657"/>
+                                                    <rect key="frame" x="77" y="8" width="250" height="57.5"/>
                                                     <fontDescription key="fontDescription" name="KohinoorDevanagari-Light" family="Kohinoor Devanagari" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -350,28 +354,28 @@
             <objects>
                 <tableViewController storyboardIdentifier="Page3" id="1mF-iy-vrU" customClass="GroupTaskTableViewController" customModule="HealthAppStoryBoard1" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="den-Kj-nd2">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="101" id="5Eu-Vx-LSO">
-                                <rect key="frame" x="0.0" y="28" width="375" height="101"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="101"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5Eu-Vx-LSO" id="ZFn-hk-l3W">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="100.66666666666667"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="100.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="5EI-zl-Sym">
-                                            <rect key="frame" x="31.000000000000007" y="19" width="101.66666666666669" height="63"/>
+                                            <rect key="frame" x="31" y="19" width="102" height="63"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Run 25 Miles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A76-Dt-yhW">
-                                                    <rect key="frame" x="0.0" y="0.0" width="101.66666666666667" height="27"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="102" height="27"/>
                                                     <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="17"/>
                                                     <color key="textColor" name="HealthyBlack"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Due 05/05/19" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QWl-qW-HUV">
-                                                    <rect key="frame" x="0.0" y="42" width="101.66666666666667" height="21"/>
+                                                    <rect key="frame" x="0.0" y="42" width="102" height="21"/>
                                                     <fontDescription key="fontDescription" name="KohinoorDevanagari-Light" family="Kohinoor Devanagari" pointSize="15"/>
                                                     <color key="textColor" name="HealthyBlack"/>
                                                     <nil key="highlightedColor"/>
@@ -379,17 +383,17 @@
                                             </subviews>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="gtf-NM-fx0">
-                                            <rect key="frame" x="252.00000000000003" y="24.999999999999996" width="48.333333333333336" height="47.666666666666664"/>
+                                            <rect key="frame" x="252.00000000000003" y="24.999999999999996" width="48.5" height="47.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="35" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nOy-W8-saw">
-                                                    <rect key="frame" x="16" y="0.0" width="16.666666666666671" height="22.666666666666668"/>
+                                                    <rect key="frame" x="16" y="0.0" width="16.5" height="22.5"/>
                                                     <fontDescription key="fontDescription" name="KohinoorDevanagari-Light" family="Kohinoor Devanagari" pointSize="16"/>
                                                     <color key="textColor" name="HealthyBlack"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Points" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q5o-fc-CGO">
-                                                    <rect key="frame" x="0.0" y="23.666666666666671" width="48.333333333333336" height="24"/>
+                                                    <rect key="frame" x="0.0" y="23.5" width="48.5" height="24"/>
                                                     <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="17"/>
                                                     <color key="textColor" name="HealthyBlack"/>
                                                     <nil key="highlightedColor"/>
@@ -397,7 +401,7 @@
                                             </subviews>
                                         </stackView>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="M2M-LI-uPj">
-                                            <rect key="frame" x="0.0" y="0.0" width="15" height="100.66666666666667"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="15" height="100.5"/>
                                             <color key="backgroundColor" name="HealthyRed"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="15" id="3ns-57-sgg"/>
@@ -430,35 +434,35 @@
             <objects>
                 <viewController storyboardIdentifier="taskCreate" id="L1t-o8-l5t" customClass="CreateTaskViewController" customModule="HealthAppStoryBoard1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" id="a9i-Ik-jS6">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fGX-Fr-EHA">
-                                <rect key="frame" x="0.0" y="44" width="375" height="859"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="943"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Fitness" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iQV-iL-v1q">
-                                        <rect key="frame" x="160.33333333333334" y="286" width="54.666666666666657" height="20.333333333333314"/>
+                                        <rect key="frame" x="179.5" y="305.5" width="55" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add New Task" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="reQ-XU-QzT">
-                                        <rect key="frame" x="129.33333333333334" y="49" width="116.66666666666666" height="25.333333333333329"/>
+                                        <rect key="frame" x="149" y="49" width="116.5" height="25.5"/>
                                         <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="18"/>
                                         <color key="textColor" name="HealthyBlack"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="Gv9-m0-Mlz">
-                                        <rect key="frame" x="40" y="369.33333333333331" width="295" height="33"/>
+                                        <rect key="frame" x="40" y="389" width="334" height="33"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repeat task:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GH4-SP-enF">
-                                                <rect key="frame" x="0.0" y="0.0" width="90.333333333333329" height="33"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="102.5" height="33"/>
                                                 <fontDescription key="fontDescription" name="KohinoorDevanagari-Light" family="Kohinoor Devanagari" pointSize="14"/>
                                                 <color key="textColor" name="HealthyBlack"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hNn-17-hLF">
-                                                <rect key="frame" x="99.333333333333343" y="0.0" width="40" height="33"/>
+                                                <rect key="frame" x="111.5" y="0.0" width="45" height="33"/>
                                                 <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="15"/>
                                                 <color key="tintColor" name="HealthyRed"/>
                                                 <state key="normal" title="Daily">
@@ -469,7 +473,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="don-cS-9Pi">
-                                                <rect key="frame" x="148.33333333333334" y="0.0" width="59" height="33"/>
+                                                <rect key="frame" x="165.5" y="0.0" width="66.5" height="33"/>
                                                 <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="15"/>
                                                 <color key="tintColor" name="HealthyRed"/>
                                                 <state key="normal" title="Weekly">
@@ -480,7 +484,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6bl-au-3vk">
-                                                <rect key="frame" x="216.33333333333331" y="0.0" width="78.666666666666686" height="33"/>
+                                                <rect key="frame" x="241" y="0.0" width="93" height="33"/>
                                                 <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="15"/>
                                                 <color key="tintColor" name="HealthyBlack"/>
                                                 <state key="normal" title="One-time">
@@ -493,7 +497,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="j85-vD-44j">
-                                        <rect key="frame" x="16" y="418.33333333333331" width="120" height="68"/>
+                                        <rect key="frame" x="16" y="438" width="120" height="68"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Begin date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aLD-zk-ome" customClass="HealthTextField" customModule="HealthAppStoryBoard1" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="120" height="30"/>
@@ -527,7 +531,7 @@
                                         </constraints>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HHD-iD-J4V">
-                                        <rect key="frame" x="254.66666666666663" y="419" width="15" height="15"/>
+                                        <rect key="frame" x="255" y="438.5" width="15" height="15"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="15" id="g5Q-rY-qca"/>
                                         </constraints>
@@ -537,7 +541,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QlR-2u-L0B">
-                                        <rect key="frame" x="254.66666666666663" y="470.33333333333337" width="15" height="15"/>
+                                        <rect key="frame" x="255" y="490.5" width="15" height="15"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="15" id="Ird-Hr-p0o"/>
                                         </constraints>
@@ -547,7 +551,7 @@
                                         </connections>
                                     </button>
                                     <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NWC-nD-3NZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                         <items>
                                             <navigationItem id="uhd-4y-MUL">
                                                 <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="sw6-Gc-VvP">
@@ -560,7 +564,7 @@
                                         </items>
                                     </navigationBar>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add task" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c5e-cY-Atr" customClass="HealthTextField" customModule="HealthAppStoryBoard1" customModuleProvider="target">
-                                        <rect key="frame" x="16" y="322.33333333333331" width="343" height="35"/>
+                                        <rect key="frame" x="16" y="342" width="382" height="35"/>
                                         <color key="backgroundColor" red="0.89990482230000002" green="0.89990482230000002" blue="0.89990482230000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="Mqf-29-rVI"/>
@@ -570,22 +574,22 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Points" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M3b-eI-oIx">
-                                        <rect key="frame" x="186" y="442" width="47.333333333333343" height="20.333333333333314"/>
+                                        <rect key="frame" x="186" y="462" width="47.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VCH-Hy-cee">
-                                        <rect key="frame" x="93.666666666666671" y="82.333333333333329" width="187.66666666666663" height="187.66666666666669"/>
+                                        <rect key="frame" x="103.5" y="82.5" width="207" height="207"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="VCH-Hy-cee" secondAttribute="height" id="T03-qU-WES"/>
                                         </constraints>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cfn-yc-FRw">
-                                        <rect key="frame" x="238.33333333333334" y="439" width="47.333333333333343" height="26.333333333333314"/>
+                                        <rect key="frame" x="238.5" y="458.5" width="47.5" height="27"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OK7-LI-7db">
-                                                <rect key="frame" x="16.666666666666657" y="4" width="14.333333333333336" height="18.333333333333332"/>
+                                                <rect key="frame" x="16.5" y="4.5" width="14.5" height="18.5"/>
                                                 <fontDescription key="fontDescription" name="KohinoorDevanagari-Light" family="Kohinoor Devanagari" pointSize="13"/>
                                                 <color key="textColor" name="HealthyBlack"/>
                                                 <nil key="highlightedColor"/>
@@ -598,7 +602,7 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPD-w8-4QK">
-                                        <rect key="frame" x="222.66666666666666" y="525.33333333333337" width="112.33333333333334" height="30"/>
+                                        <rect key="frame" x="250" y="545.5" width="124" height="30"/>
                                         <color key="backgroundColor" red="0.54162649919999994" green="0.71236516500000002" blue="0.43776091960000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="Thi-7I-p8H"/>

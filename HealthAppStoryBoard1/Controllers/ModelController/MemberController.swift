@@ -15,7 +15,7 @@ class MemberController{
     static let shared = MemberController()
     private init (){}
     
-    var members: Member?
+    var currentMember: Member?
     
     let dbRef = Firestore.firestore().collection("member")
     
@@ -29,7 +29,7 @@ class MemberController{
                 print("💩🧜🏻‍♂️ 🧜🏻‍♂️error in \(#function) ; \(error) ; \(error.localizedDescription)")
                 return
             }
-            self.members = member
+            self.currentMember = member
             
         }
     }
@@ -46,23 +46,32 @@ class MemberController{
             // Fetch Image for newMember
                 //Assign the UIImage to newMember
             
-            self.members = newMember!
+            self.currentMember = newMember!
             completion(newMember, nil)
         }
     }
     
     func addGroupToUser(group: Group, completion: @escaping (Bool) -> Void) {
         
-        self.members?.groupsRef.append(group.groupRef)
+        self.currentMember?.groupsRef.append(group.groupRef)
         saveCurrentUserToFirestore(completion: completion)
     }
     func addURLtoUser(member: Member, completion: @escaping (Bool) -> Void) {
-        self.members?.userPicURL.append(member.userPicURL)
+        self.currentMember?.userPicURL.append(member.userPicURL)
+        saveCurrentUserToFirestore(completion: completion)
+    }
+    
+    func addPoints(_ taskPoints: Task, to memberPoints: Member, completion: @escaping(Bool) -> Void){
+        if taskPoints.isComplete {
+            memberPoints.userPoints += taskPoints.taskPoints
+        } else {
+            print("don't add")
+        }
         saveCurrentUserToFirestore(completion: completion)
     }
     
     func saveCurrentUserToFirestore(completion: @escaping (Bool) -> Void) {
-        self.members!.memberRef.setData(members!.asDict, completion: { (error) in
+        self.currentMember!.memberRef.setData(currentMember!.asDict, completion: { (error) in
             if let error = error {
                 print("💩🧜🏻‍♂️ 🧜🏻‍♂️error in \(#function) ; \(error) ; \(error.localizedDescription)")
             }

@@ -40,6 +40,30 @@ enum TaskCategory: String {
             return healthColors.myOrange!
         }
     }
+    var uncheckedTaskButton: UIImage {
+        switch self {
+        case .fitness:
+            return #imageLiteral(resourceName: "redCircle")
+        case .mindfulness:
+            return #imageLiteral(resourceName: "purpleCircle")
+        case .nutrition:
+            return #imageLiteral(resourceName: "greenCircle")
+        case .sleep:
+            return #imageLiteral(resourceName: "orangeCircle")
+        }
+    }
+    var checkedTaskButton: UIImage {
+        switch self {
+        case .fitness:
+            return #imageLiteral(resourceName: "redCircleChecked")
+        case .mindfulness:
+            return #imageLiteral(resourceName: "purpleCircleChecked")
+        case .nutrition:
+            return #imageLiteral(resourceName: "greenCircleChecked")
+        case .sleep:
+            return #imageLiteral(resourceName: "orangeCircleChecked")
+        }
+    }
 }
 
 class Task {

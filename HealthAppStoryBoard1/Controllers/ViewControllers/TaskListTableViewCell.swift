@@ -19,10 +19,16 @@ class TaskListTableViewCell: UITableViewCell {
     
      var delegate: buttonTableViewCellDelegate?
     
+    var pointCount: Int?
+    
+    let member = MemberController.shared.currentMember
+    
+    
     var tasks: Task? {
         didSet{
             print("task was set")
             print("\(self.tasks?.taskPoints)")
+
         }
     }
     
@@ -43,12 +49,25 @@ class TaskListTableViewCell: UITableViewCell {
         dueDateLabel.text = task.taskEndDate.stringWith(dateStyle: .short, timeStyle: .short)
         taskPointsLabel.text = "\(task.taskPoints)"
     }
+    
     fileprivate func updateButton(_ isComplete: Bool) {
-        let imageName = isComplete ? "checkedRed" : "uncheckedRed"
-        checkButton.setImage(UIImage(named: imageName), for: .normal)
+        let addComplete = isComplete ? print("is complete") : print("is not complete")
+        let checked = tasks?.returnCategory().checkedTaskButton
+        let unchecked = tasks?.returnCategory().uncheckedTaskButton
+        let imageName = isComplete ? checked : unchecked
+        checkButton.setImage(imageName, for: .normal)
         guard let task = tasks else {return}
         let dueDate = isComplete ? "Completed" : "\(task.taskEndDate.stringWith(dateStyle: .short, timeStyle: .short))"
         dueDateLabel.text = dueDate
+        guard let member = member else {return}
+
+        MemberController.shared.addPoints(task, to: member) { (success) in
+            if success {
+                print(success)
+                self.pointCount = MemberController.shared.currentMember?.userPoints
+            }
+        }
+        
     }
     
 }

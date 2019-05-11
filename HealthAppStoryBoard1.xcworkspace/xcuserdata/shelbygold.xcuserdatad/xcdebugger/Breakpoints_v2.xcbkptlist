@@ -51,5 +51,69 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HealthAppStoryBoard1/Controllers/ViewControllers/TaskListTableViewCell.swift"
+            timestampString = "579227583.061257"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "updateButton(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HealthAppStoryBoard1/Controllers/ViewControllers/TaskListTableViewCell.swift"
+            timestampString = "579227583.061837"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "updateButton(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HealthAppStoryBoard1.TaskListTableViewCell.(updateButton in _BB6B67BECD207CD88DD38D42C73EC5A0)(Swift.Bool) -&gt; ()"
+                  moduleName = "HealthAppStoryBoard1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shelbygold/Desktop/HealthAppStoryBoard1/HealthAppStoryBoard1/Controllers/ViewControllers/TaskListTableViewCell.swift"
+                  timestampString = "579222584.188822"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "1915">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool) -&gt; () in HealthAppStoryBoard1.TaskListTableViewCell.(updateButton in _BB6B67BECD207CD88DD38D42C73EC5A0)(Swift.Bool) -&gt; ()"
+                  moduleName = "HealthAppStoryBoard1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shelbygold/Desktop/HealthAppStoryBoard1/HealthAppStoryBoard1/Controllers/ViewControllers/TaskListTableViewCell.swift"
+                  timestampString = "579222584.193119"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "62"
+                  endingLineNumber = "62"
+                  offsetFromSymbolStart = "102">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
