@@ -34,8 +34,7 @@ class GroupProfileViewController: UIViewController {
         sloganLabel.text = group.groupSlogan
         
     }
-    
-    
+	
     @IBAction func groupTabButtons(_ sender: UISegmentedControl) {
         switch tabSegmentControl.selectedSegmentIndex {
         case 0:
@@ -78,5 +77,4 @@ class GroupProfileViewController: UIViewController {
             destinVC?.group = self.group
         }
     }
-   
 }
