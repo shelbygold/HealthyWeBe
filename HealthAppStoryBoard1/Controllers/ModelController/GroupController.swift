@@ -68,11 +68,17 @@ class GroupController {
         })
     }
 	
-	func add(member: Member, toGroup group: String, completion: @escaping (Bool) -> Void) {
-	}
-	
-	func fetchGroup(withID ID: String, completion: @escaping (Group?) -> Void) {
-		
+	func add(member: Member, toGroupID groupID: String, completion: @escaping (Bool) -> Void) {
+		dbRef.document(groupID).updateData([
+			"memberUUIDs" : FieldValue.arrayUnion([member.userUUID])
+		]) { (error) in
+			if let error = error {
+				print("Error adding member to group: \((error, error.localizedDescription))")
+				completion(false)
+				return
+			}
+			completion(true)
+		}
 	}
 }
 

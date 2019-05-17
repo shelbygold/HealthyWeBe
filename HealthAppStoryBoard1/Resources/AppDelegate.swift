@@ -51,8 +51,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 				print("Error reacting to dynamic link: \((error, error.localizedDescription))")
 				return
 			}
-			let components = URLComponents(string: link!.url!.absoluteString)
-			let groupId = components!.queryItems![0].value
+			let components = URLComponents(url: link!.url!, resolvingAgainstBaseURL: false)
+			let groupID = components!.queryItems![0].value
+			guard let activeMember = MemberController.shared.activeMember,
+				let _ = groupID else { print("No active member to add to group or groupID was missing") ; return }
+			// TODO: - Deal with other cases like user being logged out 
+			GroupController.shared.add(member: activeMember, toGroupID: groupID!, completion: { (success) in
+				if success {
+					print("yes")
+				}
+			})
 		}
 		return handled
 	}

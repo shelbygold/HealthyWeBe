@@ -41,7 +41,7 @@ class LoginViewController: UIViewController {
                     return
                 }
                 guard let member = member else {return}
-                MemberController.shared.members = member
+                MemberController.shared.activeMember = member
                 
                 GroupController.shared.fetchGroups(for: member, completion: { (groups, error) in
                     if let error = error{

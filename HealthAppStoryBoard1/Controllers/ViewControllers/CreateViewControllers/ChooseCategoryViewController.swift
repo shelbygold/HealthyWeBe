@@ -35,7 +35,7 @@ class ChooseCategoryViewController: UIViewController {
     
     @IBAction func inviteFriendsButtonTapped(_ sender: Any) {
 		// URL to pass back into app when opened
-		guard let link = URL(string: "groupId=\(group!.groupUUID)") else { print("URL creation failed") ; return }
+		guard let link = URL(string: "?groupId=\(group!.groupUUID)") else { print("URL creation failed") ; return }
 		//http://www.therollingpineapple.com/
 		// Firebase deep link domain
 		let dynamicLinksDomainURIPrefix = "https://healthappstoryboard2.page.link"
