@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseDynamicLinks
 
 class ChooseCategoryViewController: UIViewController {
 
@@ -33,6 +34,20 @@ class ChooseCategoryViewController: UIViewController {
     }
     
     @IBAction func inviteFriendsButtonTapped(_ sender: Any) {
+		// URL to pass back into app when opened
+		guard let link = URL(string: "?groupId=\(group!.groupUUID)") else { print("URL creation failed") ; return }
+		//http://www.therollingpineapple.com/
+		// Firebase deep link domain
+		let dynamicLinksDomainURIPrefix = "https://healthappstoryboard2.page.link"
+		let linkBuilder = DynamicLinkComponents(link: link, domainURIPrefix: dynamicLinksDomainURIPrefix)
+		linkBuilder?.iOSParameters = DynamicLinkIOSParameters(bundleID: "myapps.HealthAppStoryBoard2")
+		linkBuilder?.iOSParameters?.appStoreID = "1463225445"
+		guard let longDynamicLink = linkBuilder?.url else { return }
+		// Create message text to send & encode into url
+		let body = "Hey, join my group '\(group?.groupName ?? "Untitled")' on Fit With Friends by clicking the link below:\n\(longDynamicLink)"
+		guard let escapedBody = body.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else { print("Encoding failed") ; return }
+		guard let phoneUrl = URL(string: "sms:&body=\(escapedBody)") else { print("URL creation failed") ; return }
+		// Open in iMessage
+		UIApplication.shared.open(phoneUrl)
     }
-    
 }

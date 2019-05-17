@@ -63,16 +63,16 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="dii-io-lFZ">
-                                <rect key="frame" x="-126.5" y="129" width="667" height="725"/>
+                                <rect key="frame" x="75" y="129" width="264" height="322"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="nmi-Pn-N1H">
-                                        <rect key="frame" x="0.0" y="0.0" width="667" height="352.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="264" height="151"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="-3" translatesAutoresizingMaskIntoConstraints="NO" id="Lbn-ak-mJl">
-                                                <rect key="frame" x="0.0" y="0.0" width="325.5" height="352.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="124" height="151"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="fitness" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kwi-Od-ARX">
-                                                        <rect key="frame" x="0.0" y="0.0" width="325.5" height="325.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="124" height="124"/>
                                                         <color key="backgroundColor" name="HealthyRed"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="Kwi-Od-ARX" secondAttribute="height" id="cBY-v5-zD5"/>
@@ -83,7 +83,7 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fitness" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5oF-WA-B8J">
-                                                        <rect key="frame" x="0.0" y="322.5" width="325.5" height="30"/>
+                                                        <rect key="frame" x="0.0" y="121" width="124" height="30"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="1h8-Yn-pKV"/>
                                                         </constraints>
@@ -94,10 +94,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="-4" translatesAutoresizingMaskIntoConstraints="NO" id="NwN-Jb-ojg">
-                                                <rect key="frame" x="341.5" y="0.0" width="325.5" height="352.5"/>
+                                                <rect key="frame" x="140" y="0.0" width="124" height="151"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="mindfulness" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qm4-Qn-HRa">
-                                                        <rect key="frame" x="0.0" y="0.0" width="325.5" height="326.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="124" height="125"/>
                                                         <color key="backgroundColor" name="HealthyOrange"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="qm4-Qn-HRa" secondAttribute="height" id="4tw-RW-52n"/>
@@ -108,7 +108,7 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mindfulness" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ML-qB-468">
-                                                        <rect key="frame" x="0.0" y="322.5" width="325.5" height="30"/>
+                                                        <rect key="frame" x="0.0" y="121" width="124" height="30"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="P11-ZF-cfH"/>
                                                         </constraints>
@@ -121,13 +121,13 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="2F4-d3-vM0">
-                                        <rect key="frame" x="0.0" y="367.5" width="667" height="357.5"/>
+                                        <rect key="frame" x="0.0" y="166" width="264" height="156"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="LtH-Va-PFM">
-                                                <rect key="frame" x="0.0" y="0.0" width="325.5" height="357.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="124" height="156"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="nutrition" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b0s-D7-688">
-                                                        <rect key="frame" x="0.0" y="0.0" width="325.5" height="325.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="124" height="124"/>
                                                         <color key="backgroundColor" name="HealthyGreen"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="b0s-D7-688" secondAttribute="height" id="14O-yj-jRb"/>
@@ -138,7 +138,7 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nutrition" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vgi-tg-Dtq">
-                                                        <rect key="frame" x="0.0" y="327.5" width="325.5" height="30"/>
+                                                        <rect key="frame" x="0.0" y="126" width="124" height="30"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="sZu-Vu-XYN"/>
                                                         </constraints>
@@ -149,10 +149,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="-2" translatesAutoresizingMaskIntoConstraints="NO" id="gzl-uQ-0Vk">
-                                                <rect key="frame" x="341.5" y="0.0" width="325.5" height="357.5"/>
+                                                <rect key="frame" x="140" y="0.0" width="124" height="156"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="sleep" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sf2-TT-Suz">
-                                                        <rect key="frame" x="0.0" y="0.0" width="325.5" height="329.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="124" height="128"/>
                                                         <color key="backgroundColor" name="HealthyPurple"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="Sf2-TT-Suz" secondAttribute="height" id="0Rl-AD-1jO"/>
@@ -163,7 +163,7 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sleep" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dSk-v5-azI">
-                                                        <rect key="frame" x="0.0" y="327.5" width="325.5" height="30"/>
+                                                        <rect key="frame" x="0.0" y="126" width="124" height="30"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="zEB-dK-suS"/>
                                                         </constraints>
@@ -313,7 +313,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I bet you can't do it Jeff I am going to destroy YOU!!" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JR8-ud-ZhJ">
-                                                    <rect key="frame" x="77" y="8" width="250" height="57.5"/>
+                                                    <rect key="frame" x="77" y="8" width="289" height="57.5"/>
                                                     <fontDescription key="fontDescription" name="KohinoorDevanagari-Light" family="Kohinoor Devanagari" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -383,7 +383,7 @@
                                             </subviews>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="gtf-NM-fx0">
-                                            <rect key="frame" x="252.00000000000003" y="24.999999999999996" width="48.5" height="47.5"/>
+                                            <rect key="frame" x="252" y="25" width="48.5" height="47.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="35" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nOy-W8-saw">

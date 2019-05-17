@@ -44,7 +44,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
+	
+	func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
+		let handled = DynamicLinks.dynamicLinks().handleUniversalLink(userActivity.webpageURL!) { (link, error) in
+			if let error = error {
+				print("Error reacting to dynamic link: \((error, error.localizedDescription))")
+				return
+			}
+			let components = URLComponents(url: link!.url!, resolvingAgainstBaseURL: false)
+			let groupID = components!.queryItems![0].value
+			guard let activeMember = MemberController.shared.activeMember,
+				let _ = groupID else { print("No active member to add to group or groupID was missing") ; return }
+			// TODO: - Deal with other cases like user being logged out 
+			GroupController.shared.add(member: activeMember, toGroupID: groupID!, completion: { (success) in
+				if success {
+					print("yes")
+				}
+			})
+		}
+		return handled
+	}
+	
+	func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+		print(url)
+		return true
+	}
 }
 

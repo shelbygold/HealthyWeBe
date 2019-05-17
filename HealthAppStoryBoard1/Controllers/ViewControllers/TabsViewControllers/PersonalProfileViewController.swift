@@ -23,7 +23,7 @@ class PersonalProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-guard let member = MemberController.shared.members else {return}
+guard let member = MemberController.shared.activeMember else {return}
         nameLabel.text = member.userFirstName
         bioLabel.text = member.userBio
         pointsLabel.text = "\(member.userPoints ?? 0)"

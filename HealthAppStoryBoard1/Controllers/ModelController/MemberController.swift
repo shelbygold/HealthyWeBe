@@ -15,7 +15,7 @@ class MemberController{
     static let shared = MemberController()
     private init (){}
     
-    var members: Member?
+    var activeMember: Member?
     
     let dbRef = Firestore.firestore().collection("member")
     
@@ -29,7 +29,7 @@ class MemberController{
                 print("💩🧜🏻‍♂️ 🧜🏻‍♂️error in \(#function) ; \(error) ; \(error.localizedDescription)")
                 return
             }
-            self.members = member
+            self.activeMember = member
             
         }
     }
@@ -46,23 +46,23 @@ class MemberController{
             // Fetch Image for newMember
                 //Assign the UIImage to newMember
             
-            self.members = newMember!
+            self.activeMember = newMember!
             completion(newMember, nil)
         }
     }
     
     func addGroupToUser(group: Group, completion: @escaping (Bool) -> Void) {
         
-        self.members?.groupsRef.append(group.groupRef)
+        self.activeMember?.groupsRef.append(group.groupRef)
         saveCurrentUserToFirestore(completion: completion)
     }
     func addURLtoUser(member: Member, completion: @escaping (Bool) -> Void) {
-        self.members?.userPicURL.append(member.userPicURL)
+        self.activeMember?.userPicURL.append(member.userPicURL)
         saveCurrentUserToFirestore(completion: completion)
     }
     
     func saveCurrentUserToFirestore(completion: @escaping (Bool) -> Void) {
-        self.members!.memberRef.setData(members!.asDict, completion: { (error) in
+        self.activeMember!.memberRef.setData(activeMember!.asDict, completion: { (error) in
             if let error = error {
                 print("💩🧜🏻‍♂️ 🧜🏻‍♂️error in \(#function) ; \(error) ; \(error.localizedDescription)")
             }

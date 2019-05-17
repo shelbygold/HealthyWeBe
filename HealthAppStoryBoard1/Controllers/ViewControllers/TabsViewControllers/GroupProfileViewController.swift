@@ -44,7 +44,6 @@ class GroupProfileViewController: UIViewController {
                     destinVC?.group = self.group
                 }
             }
-           
         case 1:
             func prepare(for segue: UIStoryboardSegue, sender: Any?) {
                 if segue.identifier == "Page2" {

@@ -10,6 +10,7 @@
 		7AD1C904227A608B00987C66 /* ContactController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD1C903227A608B00987C66 /* ContactController.swift */; };
 		7AD1C906227A609C00987C66 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD1C905227A609C00987C66 /* Contact.swift */; };
 		A89042AB2F1E866ABE6D72F0 /* Pods_HealthAppStoryBoard1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F80C31F2680FD6DBB350BE7 /* Pods_HealthAppStoryBoard1.framework */; };
+		CA1A6E53228DFA6000DBC90D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA1A6E52228DFA6000DBC90D /* GoogleService-Info.plist */; };
 		CAF8DC64227A82810006FD18 /* TaskCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF8DC63227A82810006FD18 /* TaskCollectionViewCell.swift */; };
 		DD4BDED422790A3400F4BD64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD4BDED322790A3400F4BD64 /* Main.storyboard */; };
 		DD4D955B227CA6A10096CD82 /* HealthTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4D955A227CA6A10096CD82 /* HealthTextField.swift */; };
@@ -47,7 +48,6 @@
 		DDF5367222776B6900FF313B /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF5367122776B6900FF313B /* Group.swift */; };
 		DDF5367422776D7700FF313B /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF5367322776D7700FF313B /* Task.swift */; };
 		DDF5367622776F0600FF313B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF5367522776F0600FF313B /* Constants.swift */; };
-		DDF5367F2277B58700FF313B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DDF5367E2277B58600FF313B /* GoogleService-Info.plist */; };
 		DDF536812277C5F700FF313B /* MemberController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF536802277C5F700FF313B /* MemberController.swift */; };
 		DDF536832277CB9D00FF313B /* TaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF536822277CB9D00FF313B /* TaskController.swift */; };
 		DDF536852277E7F500FF313B /* GroupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF536842277E7F500FF313B /* GroupController.swift */; };
@@ -59,6 +59,8 @@
 		7AD1C903227A608B00987C66 /* ContactController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactController.swift; sourceTree = "<group>"; };
 		7AD1C905227A609C00987C66 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		AF99D0925515B8026E60AF72 /* Pods-HealthAppStoryBoard1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthAppStoryBoard1.debug.xcconfig"; path = "Target Support Files/Pods-HealthAppStoryBoard1/Pods-HealthAppStoryBoard1.debug.xcconfig"; sourceTree = "<group>"; };
+		CA1A6E52228DFA6000DBC90D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CAE87A702286590A004FBAED /* HealthAppStoryBoard1.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HealthAppStoryBoard1.entitlements; sourceTree = "<group>"; };
 		CAF8DC63227A82810006FD18 /* TaskCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCollectionViewCell.swift; sourceTree = "<group>"; };
 		DD4BDED322790A3400F4BD64 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		DD4D955A227CA6A10096CD82 /* HealthTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthTextField.swift; sourceTree = "<group>"; };
@@ -98,7 +100,6 @@
 		DDF5367122776B6900FF313B /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		DDF5367322776D7700FF313B /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		DDF5367522776F0600FF313B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		DDF5367E2277B58600FF313B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DDF536802277C5F700FF313B /* MemberController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberController.swift; sourceTree = "<group>"; };
 		DDF536822277CB9D00FF313B /* TaskController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskController.swift; sourceTree = "<group>"; };
 		DDF536842277E7F500FF313B /* GroupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupController.swift; sourceTree = "<group>"; };
@@ -205,6 +206,7 @@
 		DDEFEE722270CA78009F29E1 /* HealthAppStoryBoard1 */ = {
 			isa = PBXGroup;
 			children = (
+				CAE87A702286590A004FBAED /* HealthAppStoryBoard1.entitlements */,
 				DDF5367B2277732200FF313B /* Resources */,
 				DDF53679227772F400FF313B /* Models */,
 				DDF5367A2277730D00FF313B /* Views */,
@@ -267,7 +269,7 @@
 				DDEFEE7F2270CA7A009F29E1 /* Info.plist */,
 				DDEFEE7A2270CA79009F29E1 /* Assets.xcassets */,
 				DDEFEE732270CA78009F29E1 /* AppDelegate.swift */,
-				DDF5367E2277B58600FF313B /* GoogleService-Info.plist */,
+				CA1A6E52228DFA6000DBC90D /* GoogleService-Info.plist */,
 				DDF53678227772E300FF313B /* Extensions */,
 			);
 			path = Resources;
@@ -316,6 +318,11 @@
 				TargetAttributes = {
 					DDEFEE6F2270CA78009F29E1 = {
 						CreatedOnToolsVersion = 10.2;
+						SystemCapabilities = {
+							com.apple.SafariKeychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -342,11 +349,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDF5367F2277B58700FF313B /* GoogleService-Info.plist in Resources */,
 				DD86733D227A5913003A0A22 /* Dashboard.storyboard in Resources */,
 				DD50E8662285ED6E00A2C3A9 /* GroupEmbed.storyboard in Resources */,
 				DDEFEE7E2270CA7A009F29E1 /* LaunchScreen.storyboard in Resources */,
 				DD50E8642285EC5C00A2C3A9 /* GroupDashboard.storyboard in Resources */,
+				CA1A6E53228DFA6000DBC90D /* GoogleService-Info.plist in Resources */,
 				DDEFEE7B2270CA79009F29E1 /* Assets.xcassets in Resources */,
 				DD4BDED422790A3400F4BD64 /* Main.storyboard in Resources */,
 			);
@@ -593,14 +600,15 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AF99D0925515B8026E60AF72 /* Pods-HealthAppStoryBoard1.debug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = HealthAppStoryBoard1/HealthAppStoryBoard1.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UWK99QK89X;
+				DEVELOPMENT_TEAM = J8Z88H6B28;
 				INFOPLIST_FILE = "$(SRCROOT)/HealthAppStoryBoard1/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = myapps.HealthAppStoryBoard1;
+				PRODUCT_BUNDLE_IDENTIFIER = myapps.HealthAppStoryBoard2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -611,14 +619,15 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5B84A3AE73DF6ADD4E3714CE /* Pods-HealthAppStoryBoard1.release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = HealthAppStoryBoard1/HealthAppStoryBoard1.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UWK99QK89X;
+				DEVELOPMENT_TEAM = J8Z88H6B28;
 				INFOPLIST_FILE = "$(SRCROOT)/HealthAppStoryBoard1/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = myapps.HealthAppStoryBoard1;
+				PRODUCT_BUNDLE_IDENTIFIER = myapps.HealthAppStoryBoard2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
