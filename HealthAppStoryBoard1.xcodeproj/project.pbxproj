@@ -7,25 +7,102 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DDDA835D22739D830025B33C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDA835C22739D830025B33C /* ProfileViewController.swift */; };
+		7AD1C904227A608B00987C66 /* ContactController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD1C903227A608B00987C66 /* ContactController.swift */; };
+		7AD1C906227A609C00987C66 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD1C905227A609C00987C66 /* Contact.swift */; };
+		A89042AB2F1E866ABE6D72F0 /* Pods_HealthAppStoryBoard1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F80C31F2680FD6DBB350BE7 /* Pods_HealthAppStoryBoard1.framework */; };
+		CA1A6E53228DFA6000DBC90D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA1A6E52228DFA6000DBC90D /* GoogleService-Info.plist */; };
+		CAF8DC64227A82810006FD18 /* TaskCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF8DC63227A82810006FD18 /* TaskCollectionViewCell.swift */; };
+		DD4BDED422790A3400F4BD64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD4BDED322790A3400F4BD64 /* Main.storyboard */; };
+		DD4D955B227CA6A10096CD82 /* HealthTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4D955A227CA6A10096CD82 /* HealthTextField.swift */; };
+		DD4E145B2282771000B5D70A /* GroupListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4E145A2282771000B5D70A /* GroupListTableViewController.swift */; };
+		DD4E145D228342BA00B5D70A /* TaskListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4E145C228342B900B5D70A /* TaskListTableViewController.swift */; };
+		DD4E14642283941700B5D70A /* GroupProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4E14632283941700B5D70A /* GroupProfileCollectionViewCell.swift */; };
+		DD4E14662283993D00B5D70A /* GroupsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4E14652283993D00B5D70A /* GroupsTableViewCell.swift */; };
+		DD4E146822839C0800B5D70A /* DownloadImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4E146722839C0800B5D70A /* DownloadImages.swift */; };
+		DD4E146A2283A30500B5D70A /* CreateNewGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4E14692283A30500B5D70A /* CreateNewGroupTableViewCell.swift */; };
+		DD50E8622285D3C800A2C3A9 /* TaskListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD50E8612285D3C800A2C3A9 /* TaskListTableViewCell.swift */; };
+		DD50E8642285EC5C00A2C3A9 /* GroupDashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD50E8632285EC5B00A2C3A9 /* GroupDashboard.storyboard */; };
+		DD50E8662285ED6E00A2C3A9 /* GroupEmbed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD50E8652285ED6E00A2C3A9 /* GroupEmbed.storyboard */; };
+		DD867320227A37C3003A0A22 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD86731F227A37C3003A0A22 /* LoginViewController.swift */; };
+		DD867322227A37DB003A0A22 /* CreateProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD867321227A37DB003A0A22 /* CreateProfileViewController.swift */; };
+		DD867324227A37FE003A0A22 /* CreateGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD867323227A37FE003A0A22 /* CreateGroupViewController.swift */; };
+		DD867326227A382A003A0A22 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD867325227A382A003A0A22 /* ListViewController.swift */; };
+		DD867328227A3844003A0A22 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD867327227A3844003A0A22 /* DashboardViewController.swift */; };
+		DD86732C227A3879003A0A22 /* PersonalProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD86732B227A3879003A0A22 /* PersonalProfileViewController.swift */; };
+		DD86732E227A3892003A0A22 /* GroupProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD86732D227A3892003A0A22 /* GroupProfileViewController.swift */; };
+		DD867330227A38B7003A0A22 /* ChooseCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD86732F227A38B7003A0A22 /* ChooseCategoryViewController.swift */; };
+		DD867332227A38C9003A0A22 /* CreateTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD867331227A38C9003A0A22 /* CreateTaskViewController.swift */; };
+		DD867334227A38EA003A0A22 /* GroupChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD867333227A38EA003A0A22 /* GroupChatViewController.swift */; };
+		DD867336227A3919003A0A22 /* LeaderBoardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD867335227A3919003A0A22 /* LeaderBoardTableViewController.swift */; };
+		DD867338227A3931003A0A22 /* GroupTaskTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD867337227A3931003A0A22 /* GroupTaskTableViewController.swift */; };
+		DD86733B227A4FF6003A0A22 /* AttachmentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD86733A227A4FF6003A0A22 /* AttachmentHandler.swift */; };
+		DD86733D227A5913003A0A22 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD86733C227A5913003A0A22 /* Dashboard.storyboard */; };
+		DDD0A9A8227BE0E3004475D2 /* datePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD0A9A7227BE0E3004475D2 /* datePicker.swift */; };
+		DDDBC27222848E0700927144 /* TasksCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDBC27122848E0700927144 /* TasksCardTableViewCell.swift */; };
+		DDE7BED42278F9B4007E1ADD /* UserAuthenticationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE7BED32278F9B4007E1ADD /* UserAuthenticationController.swift */; };
 		DDEFEE742270CA78009F29E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEFEE732270CA78009F29E1 /* AppDelegate.swift */; };
-		DDEFEE792270CA78009F29E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDEFEE772270CA78009F29E1 /* Main.storyboard */; };
 		DDEFEE7B2270CA79009F29E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDEFEE7A2270CA79009F29E1 /* Assets.xcassets */; };
 		DDEFEE7E2270CA7A009F29E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDEFEE7C2270CA7A009F29E1 /* LaunchScreen.storyboard */; };
-		DDEFEE862270DB93009F29E1 /* DailTasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEFEE852270DB93009F29E1 /* DailTasksViewController.swift */; };
-		DDEFEE882270DCA6009F29E1 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEFEE872270DCA6009F29E1 /* HomePageViewController.swift */; };
+		DDEFEE862270DB93009F29E1 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEFEE852270DB93009F29E1 /* PageViewController.swift */; };
+		DDF53670227766C000FF313B /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF5366F227766C000FF313B /* Member.swift */; };
+		DDF5367222776B6900FF313B /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF5367122776B6900FF313B /* Group.swift */; };
+		DDF5367422776D7700FF313B /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF5367322776D7700FF313B /* Task.swift */; };
+		DDF5367622776F0600FF313B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF5367522776F0600FF313B /* Constants.swift */; };
+		DDF536812277C5F700FF313B /* MemberController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF536802277C5F700FF313B /* MemberController.swift */; };
+		DDF536832277CB9D00FF313B /* TaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF536822277CB9D00FF313B /* TaskController.swift */; };
+		DDF536852277E7F500FF313B /* GroupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF536842277E7F500FF313B /* GroupController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		DDDA835C22739D830025B33C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		5B84A3AE73DF6ADD4E3714CE /* Pods-HealthAppStoryBoard1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthAppStoryBoard1.release.xcconfig"; path = "Target Support Files/Pods-HealthAppStoryBoard1/Pods-HealthAppStoryBoard1.release.xcconfig"; sourceTree = "<group>"; };
+		5F80C31F2680FD6DBB350BE7 /* Pods_HealthAppStoryBoard1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HealthAppStoryBoard1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7AD1C903227A608B00987C66 /* ContactController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactController.swift; sourceTree = "<group>"; };
+		7AD1C905227A609C00987C66 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		AF99D0925515B8026E60AF72 /* Pods-HealthAppStoryBoard1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthAppStoryBoard1.debug.xcconfig"; path = "Target Support Files/Pods-HealthAppStoryBoard1/Pods-HealthAppStoryBoard1.debug.xcconfig"; sourceTree = "<group>"; };
+		CA1A6E52228DFA6000DBC90D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CAE87A702286590A004FBAED /* HealthAppStoryBoard1.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HealthAppStoryBoard1.entitlements; sourceTree = "<group>"; };
+		CAF8DC63227A82810006FD18 /* TaskCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCollectionViewCell.swift; sourceTree = "<group>"; };
+		DD4BDED322790A3400F4BD64 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		DD4D955A227CA6A10096CD82 /* HealthTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthTextField.swift; sourceTree = "<group>"; };
+		DD4E145A2282771000B5D70A /* GroupListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupListTableViewController.swift; sourceTree = "<group>"; };
+		DD4E145C228342B900B5D70A /* TaskListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListTableViewController.swift; sourceTree = "<group>"; };
+		DD4E14632283941700B5D70A /* GroupProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupProfileCollectionViewCell.swift; sourceTree = "<group>"; };
+		DD4E14652283993D00B5D70A /* GroupsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsTableViewCell.swift; sourceTree = "<group>"; };
+		DD4E146722839C0800B5D70A /* DownloadImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImages.swift; sourceTree = "<group>"; };
+		DD4E14692283A30500B5D70A /* CreateNewGroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewGroupTableViewCell.swift; sourceTree = "<group>"; };
+		DD50E8612285D3C800A2C3A9 /* TaskListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TaskListTableViewCell.swift; path = ../TaskListTableViewCell.swift; sourceTree = "<group>"; };
+		DD50E8632285EC5B00A2C3A9 /* GroupDashboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GroupDashboard.storyboard; sourceTree = "<group>"; };
+		DD50E8652285ED6E00A2C3A9 /* GroupEmbed.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GroupEmbed.storyboard; sourceTree = "<group>"; };
+		DD86731F227A37C3003A0A22 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		DD867321227A37DB003A0A22 /* CreateProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileViewController.swift; sourceTree = "<group>"; };
+		DD867323227A37FE003A0A22 /* CreateGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupViewController.swift; sourceTree = "<group>"; };
+		DD867325227A382A003A0A22 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		DD867327227A3844003A0A22 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		DD86732B227A3879003A0A22 /* PersonalProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalProfileViewController.swift; sourceTree = "<group>"; };
+		DD86732D227A3892003A0A22 /* GroupProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupProfileViewController.swift; sourceTree = "<group>"; };
+		DD86732F227A38B7003A0A22 /* ChooseCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseCategoryViewController.swift; sourceTree = "<group>"; };
+		DD867331227A38C9003A0A22 /* CreateTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTaskViewController.swift; sourceTree = "<group>"; };
+		DD867333227A38EA003A0A22 /* GroupChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupChatViewController.swift; sourceTree = "<group>"; };
+		DD867335227A3919003A0A22 /* LeaderBoardTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderBoardTableViewController.swift; sourceTree = "<group>"; };
+		DD867337227A3931003A0A22 /* GroupTaskTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTaskTableViewController.swift; sourceTree = "<group>"; };
+		DD86733A227A4FF6003A0A22 /* AttachmentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttachmentHandler.swift; sourceTree = "<group>"; };
+		DD86733C227A5913003A0A22 /* Dashboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
+		DDD0A9A7227BE0E3004475D2 /* datePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = datePicker.swift; sourceTree = "<group>"; };
+		DDDBC27122848E0700927144 /* TasksCardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksCardTableViewCell.swift; sourceTree = "<group>"; };
+		DDE7BED32278F9B4007E1ADD /* UserAuthenticationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthenticationController.swift; sourceTree = "<group>"; };
 		DDEFEE702270CA78009F29E1 /* HealthAppStoryBoard1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthAppStoryBoard1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDEFEE732270CA78009F29E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DDEFEE782270CA78009F29E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DDEFEE7A2270CA79009F29E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DDEFEE7D2270CA7A009F29E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DDEFEE7F2270CA7A009F29E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DDEFEE852270DB93009F29E1 /* DailTasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailTasksViewController.swift; sourceTree = "<group>"; };
-		DDEFEE872270DCA6009F29E1 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
+		DDEFEE852270DB93009F29E1 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		DDF5366F227766C000FF313B /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
+		DDF5367122776B6900FF313B /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		DDF5367322776D7700FF313B /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		DDF5367522776F0600FF313B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		DDF536802277C5F700FF313B /* MemberController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberController.swift; sourceTree = "<group>"; };
+		DDF536822277CB9D00FF313B /* TaskController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskController.swift; sourceTree = "<group>"; };
+		DDF536842277E7F500FF313B /* GroupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +110,88 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A89042AB2F1E866ABE6D72F0 /* Pods_HealthAppStoryBoard1.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		628F4C629AA72BF260993CC5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5F80C31F2680FD6DBB350BE7 /* Pods_HealthAppStoryBoard1.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CA6D4B422280FCB400E4A584 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DD4E14692283A30500B5D70A /* CreateNewGroupTableViewCell.swift */,
+				DD4E14632283941700B5D70A /* GroupProfileCollectionViewCell.swift */,
+				DDE7BED22278E55E007E1ADD /* ModelController */,
+				DDF53677227772C700FF313B /* ViewControllers */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		DD4E145E228354A300B5D70A /* CreateViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				DD86731F227A37C3003A0A22 /* LoginViewController.swift */,
+				DD867321227A37DB003A0A22 /* CreateProfileViewController.swift */,
+				DD867323227A37FE003A0A22 /* CreateGroupViewController.swift */,
+				DD86732F227A38B7003A0A22 /* ChooseCategoryViewController.swift */,
+				DD867331227A38C9003A0A22 /* CreateTaskViewController.swift */,
+			);
+			path = CreateViewControllers;
+			sourceTree = "<group>";
+		};
+		DD4E145F2283550200B5D70A /* TabsViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				DD867327227A3844003A0A22 /* DashboardViewController.swift */,
+				CAF8DC63227A82810006FD18 /* TaskCollectionViewCell.swift */,
+				DDDBC27122848E0700927144 /* TasksCardTableViewCell.swift */,
+				DD4E145C228342B900B5D70A /* TaskListTableViewController.swift */,
+				DD50E8612285D3C800A2C3A9 /* TaskListTableViewCell.swift */,
+				DD86732B227A3879003A0A22 /* PersonalProfileViewController.swift */,
+				DD86732D227A3892003A0A22 /* GroupProfileViewController.swift */,
+			);
+			path = TabsViewControllers;
+			sourceTree = "<group>";
+		};
+		DD4E14602283557600B5D70A /* ContainerViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				DD867333227A38EA003A0A22 /* GroupChatViewController.swift */,
+				DD867335227A3919003A0A22 /* LeaderBoardTableViewController.swift */,
+				DD867337227A3931003A0A22 /* GroupTaskTableViewController.swift */,
+				DDEFEE852270DB93009F29E1 /* PageViewController.swift */,
+			);
+			path = ContainerViewControllers;
+			sourceTree = "<group>";
+		};
+		DDE7BED22278E55E007E1ADD /* ModelController */ = {
+			isa = PBXGroup;
+			children = (
+				DDF536802277C5F700FF313B /* MemberController.swift */,
+				DDE7BED32278F9B4007E1ADD /* UserAuthenticationController.swift */,
+				DDF536842277E7F500FF313B /* GroupController.swift */,
+				DDF536822277CB9D00FF313B /* TaskController.swift */,
+				7AD1C903227A608B00987C66 /* ContactController.swift */,
+			);
+			path = ModelController;
+			sourceTree = "<group>";
+		};
 		DDEFEE672270CA78009F29E1 = {
 			isa = PBXGroup;
 			children = (
 				DDEFEE722270CA78009F29E1 /* HealthAppStoryBoard1 */,
 				DDEFEE712270CA78009F29E1 /* Products */,
+				E89C9EC4C901EA95E50EBC04 /* Pods */,
+				628F4C629AA72BF260993CC5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,16 +206,82 @@
 		DDEFEE722270CA78009F29E1 /* HealthAppStoryBoard1 */ = {
 			isa = PBXGroup;
 			children = (
-				DDEFEE732270CA78009F29E1 /* AppDelegate.swift */,
-				DDEFEE772270CA78009F29E1 /* Main.storyboard */,
-				DDEFEE872270DCA6009F29E1 /* HomePageViewController.swift */,
-				DDDA835C22739D830025B33C /* ProfileViewController.swift */,
-				DDEFEE852270DB93009F29E1 /* DailTasksViewController.swift */,
-				DDEFEE7A2270CA79009F29E1 /* Assets.xcassets */,
-				DDEFEE7C2270CA7A009F29E1 /* LaunchScreen.storyboard */,
-				DDEFEE7F2270CA7A009F29E1 /* Info.plist */,
+				CAE87A702286590A004FBAED /* HealthAppStoryBoard1.entitlements */,
+				DDF5367B2277732200FF313B /* Resources */,
+				DDF53679227772F400FF313B /* Models */,
+				DDF5367A2277730D00FF313B /* Views */,
+				CA6D4B422280FCB400E4A584 /* Controllers */,
 			);
 			path = HealthAppStoryBoard1;
+			sourceTree = "<group>";
+		};
+		DDF53677227772C700FF313B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				DD4E145E228354A300B5D70A /* CreateViewControllers */,
+				DD4E145F2283550200B5D70A /* TabsViewControllers */,
+				DD4E14602283557600B5D70A /* ContainerViewControllers */,
+				DD867325227A382A003A0A22 /* ListViewController.swift */,
+				DD4E145A2282771000B5D70A /* GroupListTableViewController.swift */,
+				DD4E14652283993D00B5D70A /* GroupsTableViewCell.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		DDF53678227772E300FF313B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DDF5367522776F0600FF313B /* Constants.swift */,
+				DD86733A227A4FF6003A0A22 /* AttachmentHandler.swift */,
+				DD4D955A227CA6A10096CD82 /* HealthTextField.swift */,
+				DD4E146722839C0800B5D70A /* DownloadImages.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DDF53679227772F400FF313B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DDF5366F227766C000FF313B /* Member.swift */,
+				7AD1C905227A609C00987C66 /* Contact.swift */,
+				DDF5367322776D7700FF313B /* Task.swift */,
+				DDF5367122776B6900FF313B /* Group.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DDF5367A2277730D00FF313B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DD4BDED322790A3400F4BD64 /* Main.storyboard */,
+				DD50E8652285ED6E00A2C3A9 /* GroupEmbed.storyboard */,
+				DD50E8632285EC5B00A2C3A9 /* GroupDashboard.storyboard */,
+				DD86733C227A5913003A0A22 /* Dashboard.storyboard */,
+				DDEFEE7C2270CA7A009F29E1 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DDF5367B2277732200FF313B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DDD0A9A7227BE0E3004475D2 /* datePicker.swift */,
+				DDEFEE7F2270CA7A009F29E1 /* Info.plist */,
+				DDEFEE7A2270CA79009F29E1 /* Assets.xcassets */,
+				DDEFEE732270CA78009F29E1 /* AppDelegate.swift */,
+				CA1A6E52228DFA6000DBC90D /* GoogleService-Info.plist */,
+				DDF53678227772E300FF313B /* Extensions */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E89C9EC4C901EA95E50EBC04 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AF99D0925515B8026E60AF72 /* Pods-HealthAppStoryBoard1.debug.xcconfig */,
+				5B84A3AE73DF6ADD4E3714CE /* Pods-HealthAppStoryBoard1.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,9 +291,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DDEFEE822270CA7A009F29E1 /* Build configuration list for PBXNativeTarget "HealthAppStoryBoard1" */;
 			buildPhases = (
+				6950D69FAF855B692420C73E /* [CP] Check Pods Manifest.lock */,
 				DDEFEE6C2270CA78009F29E1 /* Sources */,
 				DDEFEE6D2270CA78009F29E1 /* Frameworks */,
 				DDEFEE6E2270CA78009F29E1 /* Resources */,
+				F36DF384839CA9C5847CB841 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -102,6 +318,11 @@
 				TargetAttributes = {
 					DDEFEE6F2270CA78009F29E1 = {
 						CreatedOnToolsVersion = 10.2;
+						SystemCapabilities = {
+							com.apple.SafariKeychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -128,37 +349,126 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD86733D227A5913003A0A22 /* Dashboard.storyboard in Resources */,
+				DD50E8662285ED6E00A2C3A9 /* GroupEmbed.storyboard in Resources */,
 				DDEFEE7E2270CA7A009F29E1 /* LaunchScreen.storyboard in Resources */,
+				DD50E8642285EC5C00A2C3A9 /* GroupDashboard.storyboard in Resources */,
+				CA1A6E53228DFA6000DBC90D /* GoogleService-Info.plist in Resources */,
 				DDEFEE7B2270CA79009F29E1 /* Assets.xcassets in Resources */,
-				DDEFEE792270CA78009F29E1 /* Main.storyboard in Resources */,
+				DD4BDED422790A3400F4BD64 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6950D69FAF855B692420C73E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HealthAppStoryBoard1-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F36DF384839CA9C5847CB841 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HealthAppStoryBoard1/Pods-HealthAppStoryBoard1-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HealthAppStoryBoard1/Pods-HealthAppStoryBoard1-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DDEFEE6C2270CA78009F29E1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AD1C906227A609C00987C66 /* Contact.swift in Sources */,
+				DD867338227A3931003A0A22 /* GroupTaskTableViewController.swift in Sources */,
+				DDF536852277E7F500FF313B /* GroupController.swift in Sources */,
+				DDF536812277C5F700FF313B /* MemberController.swift in Sources */,
+				DD4E14642283941700B5D70A /* GroupProfileCollectionViewCell.swift in Sources */,
+				DD867334227A38EA003A0A22 /* GroupChatViewController.swift in Sources */,
+				DD867336227A3919003A0A22 /* LeaderBoardTableViewController.swift in Sources */,
+				DD4E14662283993D00B5D70A /* GroupsTableViewCell.swift in Sources */,
+				DD4E146A2283A30500B5D70A /* CreateNewGroupTableViewCell.swift in Sources */,
 				DDEFEE742270CA78009F29E1 /* AppDelegate.swift in Sources */,
-				DDEFEE862270DB93009F29E1 /* DailTasksViewController.swift in Sources */,
-				DDDA835D22739D830025B33C /* ProfileViewController.swift in Sources */,
-				DDEFEE882270DCA6009F29E1 /* HomePageViewController.swift in Sources */,
+				DDEFEE862270DB93009F29E1 /* PageViewController.swift in Sources */,
+				DD86732C227A3879003A0A22 /* PersonalProfileViewController.swift in Sources */,
+				DDDBC27222848E0700927144 /* TasksCardTableViewCell.swift in Sources */,
+				DD867324227A37FE003A0A22 /* CreateGroupViewController.swift in Sources */,
+				DD4E146822839C0800B5D70A /* DownloadImages.swift in Sources */,
+				DDF5367222776B6900FF313B /* Group.swift in Sources */,
+				DD86732E227A3892003A0A22 /* GroupProfileViewController.swift in Sources */,
+				DD867330227A38B7003A0A22 /* ChooseCategoryViewController.swift in Sources */,
+				DD867322227A37DB003A0A22 /* CreateProfileViewController.swift in Sources */,
+				DD4D955B227CA6A10096CD82 /* HealthTextField.swift in Sources */,
+				DD50E8622285D3C800A2C3A9 /* TaskListTableViewCell.swift in Sources */,
+				DDF53670227766C000FF313B /* Member.swift in Sources */,
+				DDF5367422776D7700FF313B /* Task.swift in Sources */,
+				DD867332227A38C9003A0A22 /* CreateTaskViewController.swift in Sources */,
+				7AD1C904227A608B00987C66 /* ContactController.swift in Sources */,
+				DDE7BED42278F9B4007E1ADD /* UserAuthenticationController.swift in Sources */,
+				DDD0A9A8227BE0E3004475D2 /* datePicker.swift in Sources */,
+				DD4E145D228342BA00B5D70A /* TaskListTableViewController.swift in Sources */,
+				DD86733B227A4FF6003A0A22 /* AttachmentHandler.swift in Sources */,
+				CAF8DC64227A82810006FD18 /* TaskCollectionViewCell.swift in Sources */,
+				DD4E145B2282771000B5D70A /* GroupListTableViewController.swift in Sources */,
+				DDF536832277CB9D00FF313B /* TaskController.swift in Sources */,
+				DD867320227A37C3003A0A22 /* LoginViewController.swift in Sources */,
+				DD867326227A382A003A0A22 /* ListViewController.swift in Sources */,
+				DDF5367622776F0600FF313B /* Constants.swift in Sources */,
+				DD867328227A3844003A0A22 /* DashboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		DDEFEE772270CA78009F29E1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DDEFEE782270CA78009F29E1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DDEFEE7C2270CA7A009F29E1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -288,16 +598,17 @@
 		};
 		DDEFEE832270CA7A009F29E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF99D0925515B8026E60AF72 /* Pods-HealthAppStoryBoard1.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HealthAppStoryBoard1/HealthAppStoryBoard1.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UWK99QK89X;
-				INFOPLIST_FILE = HealthAppStoryBoard1/Info.plist;
+				DEVELOPMENT_TEAM = J8Z88H6B28;
+				INFOPLIST_FILE = "$(SRCROOT)/HealthAppStoryBoard1/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = myapps.HealthAppStoryBoard1;
+				PRODUCT_BUNDLE_IDENTIFIER = myapps.HealthAppStoryBoard2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -306,16 +617,17 @@
 		};
 		DDEFEE842270CA7A009F29E1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B84A3AE73DF6ADD4E3714CE /* Pods-HealthAppStoryBoard1.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HealthAppStoryBoard1/HealthAppStoryBoard1.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UWK99QK89X;
-				INFOPLIST_FILE = HealthAppStoryBoard1/Info.plist;
+				DEVELOPMENT_TEAM = J8Z88H6B28;
+				INFOPLIST_FILE = "$(SRCROOT)/HealthAppStoryBoard1/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = myapps.HealthAppStoryBoard1;
+				PRODUCT_BUNDLE_IDENTIFIER = myapps.HealthAppStoryBoard2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
